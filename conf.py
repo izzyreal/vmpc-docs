@@ -64,9 +64,9 @@ html_context = {
     "current_version": version,
     "display_github": True, # Integrate GitHub
     "github_user": "izzyreal", # Username
-    "github_repo": "vmpc-juce", # Repo name
+    "github_repo": "vmpc-docs", # Repo name
     "github_version": "master", # Version
-    "conf_py_path": "/docs/" # Path in the checkout to the docs root
+    "conf_py_path": "/" # Path in the checkout to the docs root
 }
 
 # Add any paths that contain templates here, relative to this directory.
