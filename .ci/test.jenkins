@@ -10,7 +10,7 @@ node('Linux') {
 
     def image = null
     stage('Build docker image') {
-        image = docker.build('conan-docs', '-f .ci/Dockerfile .')  // It should cache the image
+        image = docker.build('vmpc-docs', '-f .ci/Dockerfile .')  // It should cache the image
     }
 
     stage('Test build') {
@@ -42,9 +42,9 @@ node('Linux') {
 
     // 'master' branch is published to GH pages
     if (isMaster) {
-        build(job: 'Conan-Docs-Publish', propagate: true, wait: true, parameters: [
+        build(job: 'VMPC2000XL-Docs-Publish', propagate: true, wait: true, parameters: [
             [$class: 'StringParameterValue', name: 'latest', value: masterBranch],
-            [$class: 'StringParameterValue', name: 'prefix', value: 'https://docs.conan.io/'],
+            [$class: 'StringParameterValue', name: 'prefix', value: 'https://vmpc-docs.izmar.nl/'],
             [$class: 'BooleanParameterValue', name: 'publish', value: true]
         ])
     }
