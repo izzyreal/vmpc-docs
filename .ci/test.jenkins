@@ -19,16 +19,6 @@ node('Linux') {
                 sh 'make html'
             }
         },
-        pdf: {
-            image.inside {
-                sh 'make latex'
-            }
-        },
-        spelling: {
-            image.inside {
-                sh 'make spelling'
-            }
-        },
         linkcheck: {
             image.inside {
                 int output = sh(script: 'make linkcheck', returnStatus: true)
