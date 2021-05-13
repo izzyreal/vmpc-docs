@@ -6,7 +6,7 @@ Map<String, String> versions = [
         ]
 
 node('Linux') {
-
+    step([$class: 'WsCleanup'])
     String prefix = params.prefix ?: "${BUILD_URL}artifact/gh-pages/"
     stage('Check params') {
         assert params.latest, 'Provide a name to the "latest" branch'
