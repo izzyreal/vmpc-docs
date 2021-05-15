@@ -34,7 +34,7 @@ node('Linux') {
     if (isMaster) {
         build(job: 'VMPC2000XL-Docs-Publish', propagate: true, wait: true, parameters: [
             [$class: 'StringParameterValue', name: 'latest', value: masterBranch],
-            [$class: 'StringParameterValue', name: 'prefix', value: 'https://vmpc-docs.izmar.nl/'],
+            [$class: 'StringParameterValue', name: 'prefix', value: 'https://vmpcdocs.izmar.nl/'],
             [$class: 'BooleanParameterValue', name: 'publish', value: true]
         ])
     }
