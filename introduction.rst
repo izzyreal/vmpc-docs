@@ -50,4 +50,4 @@ Community
 
 It is unknown how many users of VMPC2000XL there are today. Interest in the project has fluctuated, and the Downloads page has been visited over 50.000 times, but it's safe to say the community is still small and largely idle.
 
-That said, the `VMPC2000XL Facebook group <https://www.facebook.com/groups/1645275515725344>`_ is active and maintained by the author. Everyone with an interest in the emulator is welcome to join, ask questions, report bugs, make suggestions and discuss technical issues.
+That said, the `VMPC2000XL Facebook group <https://www.facebook.com/groups/vmpc2000xl>`_ is active and maintained by the author. Everyone with an interest in the emulator is welcome to join, ask questions, report bugs, make suggestions and discuss technical issues.
