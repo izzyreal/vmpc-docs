@@ -98,7 +98,7 @@ Run any VMPC2000XL and vMPC uninstallers you have in Add/Remove Programs.
 
 Assuming you have installed VMPC2000XL into its default location, you can manually delete :file:`C:\\Program Files\\VMPC2000XL` and :file:`C:\\Program Files\\vMPC` afterwards. On 32 bit systems, and some v0.2 and older installations on 64 bit systems, you can delete the same directories from :file:`C:\\Program Files (x86)`.
 
-VST3 plugins can be removed from :file:`C:\\Program Files\\Common Files\VST3`, :file:`C:\\Program Files (x86)\\Common Files\\VST3` or any other locations where you store plugins.
+VST3 plugins can be removed from :file:`C:\\Program Files\\Common Files\\VST3`, :file:`C:\\Program Files (x86)\\Common Files\\VST3` or any other locations where you store plugins.
 
 Linux
 +++++
