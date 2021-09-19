@@ -44,7 +44,7 @@ If you only want to erase note events that match the level of the pad you're pre
 
 Configuring the Keyboard in the KEYBRD tab
 ------------------------------------------
-After pressing :code:`Shift + 0`, press :code:`F2` to go to the :code:`KEYBRD` tab.
+After pressing :kbd:`Shift + 0`, press :kbd:`F2` to go to the :code:`KEYBRD` tab.
 
 If you can't use the keyboard as expected, you can also click the keyboard icon in the far top-right.
 
@@ -71,7 +71,7 @@ Use **up** and **down** to scroll through the list of functions. To change one o
 
 As long as the elements are blinking and you see :code:`CANCEL` and :code:`ACCEPT`, you can press another key that you wish to assign to the selected function.
 
-**To accept your new key you have to use the mouse or touchpad and click F4!** To cancel the learning process, use the mouse or touchpad and click F3.
+**To accept your new key you have to use the mouse or touchpad and click F4.** To cancel the learning process, use the mouse or touchpad and click F3.
 
 Reset mapping to default
 ++++++++++++++++++++++++
@@ -106,6 +106,7 @@ Besides discarding your changes, you can choose to stay in the :code:`KEYBRD` sc
 
 Configuring auto-save in the AUTSAV tab
 ---------------------------------------
+After pressing :kbd:`Shift + 0`, press :kbd:`F3` to go to the :code:`AUTSAV` tab.
 
 Though auto-save also happens when running VMPC2000XL as a plugin, these settings **only affect behaviour of the standalone version**.
 
@@ -150,4 +151,67 @@ A similar logic applies to the :code:`Auto-load on start` setting. When it's set
 
 When it's set to :code:`Disabled`, your sessions will never be auto-saved when you exit. When it's set to :code:`Enabled` your sessions will be silently restored when you open VMPC2000XL.
 
+Configuring disk devices in the DISKS tab
+-----------------------------------------
+.. warning::
+
+  Read the instructions carefully to avoid corrupting CF cards and other media. Make backups if you're working with important data that you have no other copies of.
+
+After pressing :kbd:`Shift + 0`, press :kbd:`F4` to go to the :code:`DISKS` tab. The default configuration is like this:
+
+.. image:: images/vmpc_specific_settings/default_disks_configuration.png
+   :width: 400 px
+   :align: center
+
+The DEFAULT volume
+++++++++++++++++++
+
+The :code:`DEFAULT` volume is the default directory where VMPC2000XL stores user data, including your sounds, programs and sequences. It is located in :file:`~/Documents/VMPC2000XL/Volumes/MPC2000XL`. This volume ensures VMPC2000XL is always in a useful state with regard to loading and saving SND, PGM and other files.
+
+This behaviour deviates from the real MPC2000XL, in the sense that if no disk drive, CF reader or other disk device is connected to the real MPC2000XL, you will not be able to load or save anything.
+
+.. warning::
+
+  Any files placed in the :code:`DEFAULT` directory will be renamed to names that are compatible with the Akai FAT16 filesystem. For example, :file:`Fantastic Bassdrum 14.wav` will become :file:`FANTASTICBASSDRU.WAV`. This is a destructive operation, meaning that the file in this location will be permanently renamed. For this reason it is recommended to always **keep a copy of the original files elsewhere**. Never assume you can copy files from this directory back into where you copied them from.
+
+Raw USB volumes
++++++++++++++++
+Though this is a unique and cool feature of VMPC2000XL, **proceed with care** when accessing raw USB volumes. At the moment this feature is **experimental**.
+
+Background
+^^^^^^^^^^
+This subsection should be seen as an addendum to Akai's MPC2000XL manual. It does not discuss anything that is directly related to VMPC2000XL.
+
+The real MPC2000XL uses a hacky implementation of `FAT16 <https://www.win.tue.nl/~aeb/linux/fs/fat/fat-1.html>`_. In Akai's implementation, 8 bytes of each FAT directory entry that are ordinarily reserved for relatively trivial attributes like creation and last access date/time, are used to store 8 additional characters for the filename.
+
+It is via this mechanism that the MPC2000XL has 16.3 filenames rather than 8.3 in a single FAT16 entry. The only problem, however, is that this leaves the MPC2000XL user in a kind of limbo state with regard to file exchange. Any Mac, Windows or Linux machine can read an MPC2000XL CF card without complaining, but it will not be able to parse the filenames correctly. It will register the 8 additional bytes as invalid date/time values, since that is what these bytes are expected to mean in a common FAT16 implementation.
+
+For this reason, an MPC2000XL CF card with for example a :file:`DRUMKIT.PGM` that refers to a :file:`FUNKY_SNARE1.SND` will not be copied correctly to most computers. Likely you will end up with a file named :file:`FUNKY_SN.SND`. What's worse, operating systems have a tendency to rewrite the FAT entries of any directory that is explored, leaving you with a broken :file:`DRUMKIT.PGM` after exploring your CF card in MacOS Finder or Windows Explorer, since the PGM still contains a reference to :file:`FUNKY_SNARE1.SND`.
+
+.. note::
+
+  To avoid corrupting MPC2000XL data on a CF card, your options are:
+
+  1. Never insert the CF card in a USB reader connected to your computer
+  2. Use up to 8 characters for the names of your sounds
+
+**Always keep backups of important work!** If you don't have a hotswappable CF reader in your MPC2000XL, your best bet for making backups is probably a Linux computer.
+
+Feature description
+^^^^^^^^^^^^^^^^^^^
+Raw USB volume access allows VMPC2000XL to read an MPC2000XL CF card almost like the MPC2000XL itself, meaning you can load and save PGM and APS files that refer to sounds with long names over 8 characters.
+
+This type of access is achieved by performing the following steps:
+
+1. VMPC2000XL unmounts a USB volume from the operating system (meaning MacOS, Windows or Linux)
+2. VMPC2000XL requests the operating system to provide it with exclusive access to the USB volume
+3. VMPC2000XL can now read from and write to the USB volume at the byte level
+4. VMPC2000XL gives up exclusive access to the USB volume
+5. VMPC2000XL mounts the USB volume back to the operating system
+
+Note that 3) is where all the action takes place that the user is interested in -- loading and saving SND, PGM, APS and other files. 
+
+Steps 1, 2, 4 and 5 are only performed when necessary, which is typically at application startup and shutdown, and the first time a user configures a particular USB volume in VMPC2000XL.
+
+Also note that step 2 and 4 require elevated permissions, so **you need to be a system administrator to make use of this functionality**.
 
