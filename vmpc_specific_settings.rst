@@ -35,7 +35,7 @@ When recording has finished the following screen appears:
 
 In the specified directory there will always be a set of 5 stereo recordings: :file:`L-R.WAV` and :file:`1-2.WAV` ... :file:`7-8.WAV`, even if one of these output pairs is 100% silent. Each recording reflects the output of a given stereo output of VMPC2000XL. If a particular pad is routed only to :code:`ASSIGNABLE MIX OUT 1/2` in the :code:`MIXER` screen, this is respected while recording directly to disk. This allows you to create up to 5 different stereo parts or stems that can be mixed and mastered in a DAW.
 
-Like the :code:`Recording Finished` prompt indicates, **always move potentially valuable recordings out of the :file:`Recordings` directory**! At the moment VMPC2000XL is not very smart about where to store its recordings and what the files are named, so any recording session will overwrite the previous one. This will be addressed in a future release of VMPC2000XL.
+Like the :code:`Recording Finished` prompt indicates, **always move potentially valuable recordings out of the Recordings directory**! At the moment VMPC2000XL is not very smart about where to store its recordings and what the files are named, so any recording session will overwrite the previous one. This will be addressed in a future release of VMPC2000XL.
 
 The SETNGS tab
 --------------
@@ -260,7 +260,7 @@ When you first connect a USB pendrive or CF card with a FAT16 volume, the config
 
 .. note::
 
-  A USB volume has to be connected **before** starting VMPC2000XL. You will be prompted for an administrator password, or on Windows, if your account has administrator rights, to simply give permission by clicking "Yes".
+  A USB volume has to be connected **before** starting VMPC2000XL. You will be prompted for an administrator password, or on Windows, if your account has administrator rights, to give permission by clicking "Yes".
 
 Navigate to the volume you want to enable and select :code:`READ-ONLY` or :code:`READ/WRITE`. If you want to make sure your volume is not altered by VMPC2000XL, select :code:`READ-ONLY`. When you are done configuring your volume(s), press :kbd:`F6` to save the configuration.
 
