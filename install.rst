@@ -132,6 +132,7 @@ There are three categories of files:
     * NVRAM data (main screen user defaults): :file:`config/nvram.vmp`
     * VMPC2000XL-specific: :file:`config/vmpc-specific.ini`
     * Audio/MIDI configuration and auto-save data: :file:`VMPC2000XL.settings`
+    * USB volumes: :file:`volumes.json`
 
 On MacOS and Windows, demo data is bundled into the installer, which places it in a safe location from which it can always be restored. When you start VMPC2000XL, a check is performed to see if a :file:`DEMOS` directory exists in your user data directory. If not, a fresh copy of the original demo data will be placed in :file:`VMPC2000XL/Volumes/MPC2000XL/DEMOS`.
 

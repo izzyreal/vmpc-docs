@@ -1,5 +1,5 @@
-VMPC2000XL Specific Settings
-============================
+VMPC2000XL Specific Settings & Functionality
+============================================
 
 In this section we will discuss settings that can't be found on the real MPC2000XL. To access these settings, press :kbd:`Shift + 0`.
 
@@ -42,7 +42,7 @@ If you only want to erase note events that match the level of the pad you're pre
 
 .. _configuring_the_keyboard:
 
-Configuring the Keyboard in the KEYBRD tab
+Configuring the keyboard in the KEYBRD tab
 ------------------------------------------
 After pressing :kbd:`Shift + 0`, press :kbd:`F2` to go to the :code:`KEYBRD` tab.
 
@@ -151,8 +151,8 @@ A similar logic applies to the :code:`Auto-load on start` setting. When it's set
 
 When it's set to :code:`Disabled`, your sessions will never be auto-saved when you exit. When it's set to :code:`Enabled` your sessions will be silently restored when you open VMPC2000XL.
 
-Configuring disk devices in the DISKS tab
------------------------------------------
+Configuring (USB) disk devices in the DISKS tab
+-----------------------------------------------
 .. warning::
 
   Read the instructions carefully to avoid corrupting CF cards and other media. Make backups if you're working with important data that you have no other copies of.
@@ -195,7 +195,7 @@ For this reason, an MPC2000XL CF card with for example a :file:`DRUMKIT.PGM` tha
   1. Never insert the CF card in a USB reader connected to your computer
   2. Use up to 8 characters for the names of your sounds
 
-**Always keep backups of important work!** If you don't have a hotswappable CF reader in your MPC2000XL, your best bet for making backups is probably a Linux computer.
+**Always keep backups of important work!** If you don't have a hotswappable CF reader or SCSI harddrive connected to your MPC2000XL, your best bet for making backups is probably a Linux computer.
 
 Feature description
 ^^^^^^^^^^^^^^^^^^^
@@ -215,3 +215,28 @@ Steps 1, 2, 4 and 5 are only performed when necessary, which is typically at app
 
 Also note that step 2 and 4 require elevated permissions, so **you need to be a system administrator to make use of this functionality**.
 
+Enabling a USB volume
+^^^^^^^^^^^^^^^^^^^^^
+When you first connect a USB pendrive or CF card with a FAT16 volume, the configuration in the DISKS screen will look like this:
+
+.. image:: images/vmpc_specific_settings/default_disks_configuration_usb_disabled.png
+   :width: 400 px
+   :align: center
+
+.. note::
+
+  A USB volume has to be connected **before** starting VMPC2000XL. You will be prompted for an administrator password, or on Windows, if your account has administrator rights, to simply give permission by clicking "Yes".
+
+Navigate to the volume you want to enable and select :code:`READ-ONLY` or :code:`READ/WRITE`. If you want to make sure your volume is not altered by VMPC2000XL, select :code:`READ-ONLY`. When you are done configuring your volume(s), press :kbd:`F6` to save the configuration.
+
+Any enabled volumes will now be available in the :code:`LOAD` screen's :code:`Device:` field. The volume name will be used to identify each volume. Where the real MPC2000XL instantly makes SCSI and other connected devices your active disk device as you cycle through them, one additional action is required on VMPC2000XL to make a USB volume active -- pressing :kbd:`F5` to :code:`APPLY` that setting:
+
+.. image:: images/vmpc_specific_settings/load_apply.png
+   :width: 400 px
+   :align: center
+
+The reason for this deviation from the real MPC2000XL is to allow the user to explore any options before committing to an actual change in the situation.
+
+If after pressing :code:`APPLY` no error messages appear, your USB volume is ready for load operations, and for save operations as well, if you configured :code:`READ/WRITE` earlier in the :code:`DISKS` screen.
+
+VMPC2000XL remembers configurations for any USB volumes that have been previously connected and enabled, as well as the :code:`Device:` you used in the last session. In other words, after a restart it is easy to continue using your USB volume (though you may be asked for administrator permissions again).

@@ -26,7 +26,7 @@ In the same vein some special characters are clarified by appending their name i
 
 .. note::
 
-  The default keyboard mapping is geared towards US keyboard layout, but it's fully configurable. See :ref:`Configuring the Keyboard <configuring_the_keyboard>` for instructions.
+  The default keyboard mapping is geared towards US keyboard layout, but it's fully configurable. See :ref:`Configuring the keyboard <configuring_the_keyboard>` for instructions.
 
 .. _basic_operations:
 
