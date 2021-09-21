@@ -1,10 +1,45 @@
 VMPC2000XL Specific Settings & Functionality
 ============================================
 
-In this section we will discuss settings that can't be found on the real MPC2000XL. To access these settings, press :kbd:`Shift + 0`.
+In this section we will discuss settings and functionality that can't be found on the real MPC2000XL.
+
+.. _direct_to_disk_recording:
+
+Direct-to-disk recording a.k.a. bouncing
+----------------------------------------
+.. warning::
+
+  This feature is currently experimental. Some options like :code:`JAM` and :code:`Split L/R` don't work yet. The recordings are always stored in the same directory, overwriting any previous ones. Additionally there will always be a set of 5 stereo recordings: :file:`L-R.WAV` and :file:`1-2.WAV` ... :file:`7-8.WAV`, even if one of these outputs is 100% silent.
+
+VMPC2000XL allows various ways to record your beats and other projects directly to disk as WAV files. Often this is referred to as bouncing or rendering. This way you can take your VMPC2000XL creations to a DAW or sample editor for further processing.
+
+You might for example want to master your instrumental beats by processing them with EQs, compressors and so on before sending them to someone who will add a vocal track on top. Or maybe you like to make drum tracks with VMPC2000XL, but you want to add synths and other layers in a DAW.
+
+Press :kbd:`Shift + <PLAY START>` to access the :code:`Direct-to-Disk Recorder` screen. On a default US keyboard mapping the exact keyboard shortcut is :kbd:`Shift + \\`. You can also press and hold :kbd:`Shift` on your computer keyboard and click the :code:`PLAY START` button with the mouse.
+
+The :code:`Direct-to-Disk Recorder` screen looks like this:
+
+.. image:: images/vmpc_specific_settings/direct_to_disk_recorder.png
+   :width: 400 px
+   :align: center
+
+In the :code:`Record:` field you can select what to record: a :code:`SEQUENCE`, a :code:`LOOP` (i.e. a part of a sequence as selected in the :code:`Loop` window that is accessed via the :code:`MAIN` screen), a :code:`CUSTOM RANGE` or a :code:`SONG`. Different settings appear depending on what you have selected, to further configure what to record.
+
+In the :code:`Offline:` field select :code:`YES` to enable silent, non-realtime rendering. This allows you to record even a few minutes worth of material in a matter of seconds, depending on the performance of your computer.
+
+When recording has finished the following screen appears:
+
+.. image:: images/vmpc_specific_settings/recording_finished.png
+   :width: 400 px
+   :align: center
+
+In the specified directory there will always be a set of 5 stereo recordings: :file:`L-R.WAV` and :file:`1-2.WAV` ... :file:`7-8.WAV`, even if one of these output pairs is 100% silent. Each recording reflects the output of a given stereo output of VMPC2000XL. If a particular pad is routed only to :code:`ASSIGNABLE MIX OUT 1/2` in the :code:`MIXER` screen, this is respected while recording directly to disk. This allows you to create up to 5 different stereo parts or stems that can be mixed and mastered in a DAW.
+
+Like the :code:`Recording Finished` prompt indicates, **always move potentially valuable recordings out of the :file:`Recordings` directory**! At the moment VMPC2000XL is not very smart about where to store its recordings and what the files are named, so any recording session will overwrite the previous one. This will be addressed in a future release of VMPC2000XL.
 
 The SETNGS tab
 --------------
+Press :kbd:`Shift + 0` to go to the :code:`SETNGS` tab.
 
 Initial pad mapping
 +++++++++++++++++++

@@ -36,7 +36,7 @@ More than a hundred LCD screens have been reproduced, in most cases with pixel-p
 * digital sampling of sound
 * MIDI in/out
 
-Additionally the MPC2000XL's native file formats have been reverse engineered, allowing exchange of SND, PGM, APS, MCP2000XL MID and ALL files. If you have a real MPC2000XL, you can load and modify its projects in VMPC2000XL and vice versa.
+Additionally the MPC2000XL's native file formats have been reverse engineered, allowing exchange of SND, PGM, APS, MPC2000XL MID and ALL files. If you have a real MPC2000XL, you can load and modify its projects in VMPC2000XL and vice versa. This functionality can be combined with VMPC2000XL's :ref:`direct-to-disk recording <direct_to_disk_recording>` to solve the common problem of multi-tracking or "tracking out" to a DAW -- a common operation when working toward a final mixdown of a hiphop beat. Instead of hooking up your hardware MPC2000XL to an audio interface, you can now load your projects into VMPC2000XL and bounce them to up to 5 individual stereo WAV files in a matter of seconds.
 
 Stability
 ---------
