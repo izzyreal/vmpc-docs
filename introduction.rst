@@ -44,10 +44,3 @@ Stability
 At the time of writing, the latest version of VMPC2000XL is 0.4. The project is still in a phase of taking shape and fixing crucial bugs, though much progress has been made in the past year.
 
 VMPC2000XL 0.4 is stable enough for hobbyists who can forgive the odd crash. But before 1.0 has been reached, VMPC2000XL is not recommended for professional use, certainly not in a live setting.
-
-Community
----------
-
-It is unknown how many users of VMPC2000XL there are today. Interest in the project has fluctuated, and the Downloads page has been visited over 50.000 times, but it's safe to say the community is still small and largely idle.
-
-That said, the `VMPC2000XL Facebook group <https://www.facebook.com/groups/vmpc2000xl>`_ is active and maintained by the author. Everyone with an interest in the emulator is welcome to join, ask questions, report bugs, make suggestions and discuss technical issues.
