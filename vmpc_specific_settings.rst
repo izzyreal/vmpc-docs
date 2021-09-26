@@ -205,6 +205,8 @@ The :code:`DEFAULT` volume is the default directory where VMPC2000XL stores user
 
 This behaviour deviates from the real MPC2000XL, in the sense that if no disk drive, CF reader or other disk device is connected to the real MPC2000XL, you will not be able to load or save anything.
 
+The :code:`Mode` setting for the :code:`DEFAULT` volume can't be changed. It is always set to :code:`READ/WRITE`.
+
 .. warning::
 
   Any files placed in the :code:`DEFAULT` directory will be renamed to names that are compatible with the Akai FAT16 filesystem. For example, :file:`Fantastic Bassdrum 14.wav` will become :file:`FANTASTICBASSDRU.WAV`. This is a destructive operation, meaning that the file in this location will be permanently renamed. For this reason it is recommended to always **keep a copy of the original files elsewhere**. Never assume you can copy files from this directory back into where you copied them from.
@@ -262,7 +264,7 @@ When you first connect a USB pendrive or CF card with a FAT16 volume, the config
 
   A USB volume has to be connected **before** starting VMPC2000XL. You will be prompted for an administrator password, or on Windows, if your account has administrator rights, to give permission by clicking "Yes".
 
-Navigate to the volume you want to enable and select :code:`READ-ONLY` or :code:`READ/WRITE`. If you want to make sure your volume is not altered by VMPC2000XL, select :code:`READ-ONLY`. When you are done configuring your volume(s), press :kbd:`F6` to save the configuration.
+Navigate to the volume you want to enable and set its :code:`Mode` to :code:`READ-ONLY` or :code:`READ/WRITE`. If you want to make sure your volume is not altered by VMPC2000XL, set it to :code:`READ-ONLY`. When you are done configuring your volume(s), press :kbd:`F6` to save the configuration.
 
 Any enabled volumes will now be available in the :code:`LOAD` screen's :code:`Device:` field. The volume name will be used to identify each volume. Where the real MPC2000XL instantly makes SCSI and other connected devices your active disk device as you cycle through them, one additional action is required on VMPC2000XL to make a USB volume active -- pressing :kbd:`F5` to :code:`APPLY` that setting:
 
@@ -270,7 +272,7 @@ Any enabled volumes will now be available in the :code:`LOAD` screen's :code:`De
    :width: 400 px
    :align: center
 
-The reason for this deviation from the real MPC2000XL is to allow the user to explore any options before committing to an actual change in the situation.
+The reason for this deviation from the real MPC2000XL is to allow the user to explore any options before actually changing the active disk device.
 
 If after pressing :code:`APPLY` no error messages appear, your USB volume is ready for load operations, and for save operations as well, if you configured :code:`READ/WRITE` earlier in the :code:`DISKS` screen.
 
