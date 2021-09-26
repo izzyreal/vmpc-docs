@@ -99,29 +99,47 @@ Mouse & touchscreen
 
 Pads
 ++++
-
 The pads can be hit by by clicking them with the mouse, or, if you have a touchscreen, by touching them. The further away from the center of the pad, the lower the velocity. When a pad is hit, it will light up blue.
 
 Buttons
 +++++++
-
 All buttons can be pressed by clicking them with the mouse, or, if you have a touchscreen, by touching them.
 
 Data wheel
 ++++++++++
-
 The data wheel can be turned by dragging or scrolling. Precise, single-step changes can be performed by holding any of the modifier keys (Shift, Ctrl, Alt/Option) while dragging.
 
 Slider/Rec gain/Main volume
 +++++++++++++++++++++++++++
-
 These controls can be operated by dragging or scrolling.
 
 .. note::
 
   If your mouse or touchpad emits momentum/inertia events, VMPC2000XL will process these accordingly. The data wheel, slider, rec gain and main volume controls will come to a gradual stop.
 
+Resize and Reset window size
+++++++++++++++++++++++++++++
+The first time you run VMPC2000XL it opens in its minimum window size, which is 649 x 497 plus the border that your operating system or DAW adds to it. This should fit on most computer screens. Then you have the option to resize it up to two times that resolution, making 1298 x 994. Resizing is done by dragging the bottom right corner of the window.
+
+To reset the window size back to its minimum size, click the "Reset window size" button in the top-right.
+
+.. figure:: images/controls/reset-window-size.png
+   :width: 50 px
+   :align: center
+
+   The "Reset window size" button
+
+Configure computer keyboard
++++++++++++++++++++++++++++
+Click the "Configure computer keyboard" icon in the top-right to go to the KEYBRD tab. See :ref:`Configuring the keyboard <configuring_the_keyboard>` for instructions.
+
+.. figure:: images/controls/configure-computer-keyboard.png
+   :width: 100 px
+   :align: center
+
+   The "Configure computer keyboard" button
+
 MIDI
 ----
-
 Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p185) to see the details of assigning MIDI Continuous Controllers to MPC2000XL functionality.
+
