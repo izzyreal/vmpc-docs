@@ -3,6 +3,16 @@ VMPC2000XL Specific Settings & Functionality
 
 In this section we will discuss settings and functionality that can't be found on the real MPC2000XL.
 
+Normalize
+---------
+Sometimes you want to boost the volume of soft (portions of) sounds.
+
+When you're in the :code:`TRIM`, :code:`LOOP` or :code:`ZONE` screen, you can normalize the selection to 100% by following these steps:
+
+1. Press :kbd:`F5` to open the :code:`Edit` window
+2. Select :code:`NORMALIZE`
+3. Press :kbd:`F5` to normalize
+
 .. _direct_to_disk_recording:
 
 Direct-to-disk recording a.k.a. bouncing
