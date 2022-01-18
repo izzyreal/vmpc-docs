@@ -85,6 +85,18 @@ If you only want to erase note events that match the level of the pad you're pre
    :width: 400 px
    :align: center
 
+Auto-convert WAVs
++++++++++++++++++
+VMPC2000XL has the ability to convert PCM WAV files that are unsupported on the original MPC2000XL to a supported format. Eligible are 24- and 32-bit WAV files, as well as WAVs with a sampling rate over 44100Hz.
+
+By default VMPC2000XL will prompt you with a dialog when you are trying to load an unsupported file that is eligible for conversion. To always skip this prompt, set :code:`Auto-convert WAVs` to :code:`YES`.
+
+.. image:: images/vmpc_specific_settings/auto_convert_wavs.png
+   :width: 400 px
+   :align: center
+
+
+
 .. _configuring_the_keyboard:
 
 Configuring the keyboard in the KEYBRD tab
