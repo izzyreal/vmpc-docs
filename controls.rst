@@ -78,11 +78,14 @@ Next step/event        w
 Locate/Go to           e
 Previous bar/Start     r
 Next bar/End           t
-Tape tempo/Note repeat y
+Tap tempo/Note repeat  y
+Erase                  F8
 Full level             o
 16 levels              p
 Next seq               [
 Track mute             ]
+After/Assign           F9
+Undo seq               F10
 ====================== ======
 
 VMPC-specific operations
