@@ -146,3 +146,37 @@ MIDI
 ----
 Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p185) to see the details of assigning MIDI Continuous Controllers to MPC2000XL functionality.
 
+Import files and folders (iOS)
+------------------------------
+Importing files and folders is the process of copying files from arbitrary locations on your iPad onto VMPC2000XL's default virtual disk volume. In the standalone version this is located in On My iPad -> VMPC2000XL -> Volumes -> MPC2000XL. In the AUv3 version this location is in an undisclosed sandbox (due to limitations beyond my control).
+
+.. figure:: images/controls/import.png
+   :width: 50 px
+   :align: center
+
+   The "Import" button
+
+After tapping the "Import" button, a document browser opens. Tap a file or folder to import it. Alternatively tap "Select" to perform a multi-selection:
+
+.. figure:: images/controls/ios-doc-browser.png
+   :width: 500 px
+   :align: center
+
+   The document browser after tapping "Select"
+
+Importing files from iCloud is fully supported.
+Google Drive (and possibly other 3rd party cloud service providers) currently does not support importing folders.
+
+After tapping a single file or folder, or after making a multi-selection and tapping "Open", you might see some quick graphics flashing. These are progress indicators. After each file is processed, you are back in VMPC2000XL.
+
+When a file or folder already exists, you will be asked if you want to overwrite the existing file. You can also choose to overwrite none or all of the existing files of your selection.
+
+The imported files and folders are located in the MPC2000XL ROOT. Navigate to the ROOT like this:
+
+1. Shift + 3 to go to the LOAD screen
+2. Open Window to open the Directory window
+3. Press left arrow repeatedly until arriving at ROOT
+
+.. note::  In the standalone version of VMPC2000XL for iOS, you can also copy sounds, programs and other files into VMPC2000XL's documents in the Files app by going to the "On My iPad" location. You will find a VMPC2O00XL folder there, with the usual file locations. Typically you will want to place some sounds, and maybe some programs and sequences, in VMPC2000XL/Volumes/MPC2000XL (the default virtual disk of VMPC2000XL).
+
+    Due to a limitation beyond my control, in the AUv3 version this is not possible.

@@ -128,7 +128,7 @@ There are three categories of files:
     * Direct-to-disk recordings: :file:`VMPC2000XL/Recordings`
     * Log file: :file:`VMPC2000XL/vmpc.log`
 #. **Configuration files:**
-    * Keyboard mapping: :file:`config/keys.txt`
+    * Keyboard mapping: :file:`config/keys.txt` (only present when you have changed the default mapping)
     * NVRAM data (main screen user defaults): :file:`config/nvram.vmp`
     * VMPC2000XL-specific: :file:`config/vmpc-specific.ini`
     * Audio/MIDI configuration and auto-save data: :file:`VMPC2000XL.settings`
