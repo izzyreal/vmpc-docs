@@ -35,7 +35,6 @@ sys.path.insert(0, os.path.abspath('./_themes'))
 extensions = [
     'sphinx.ext.todo',
     'vmpc2000xl',
-    'sphinxcontrib.spelling',
     'sphinx_sitemap',
     'notfound.extension',
 ]
