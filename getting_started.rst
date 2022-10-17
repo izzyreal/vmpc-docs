@@ -19,35 +19,41 @@ By default this path is in your :envvar:`PATH` environment variable, so you can 
 
 If you want to detach the process from the terminal completely, so you can use it for something else or close it, run :command:`VMPC2000XL &; disown`.
 
-MacOS
+macOS
 ^^^^^
 Navigate to :file:`Applications` in Finder, locate :file:`VMPC2000XL` and double-click it. Alternatively use Spotlight and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
+
+iOS
+^^^
+After installing VMPC2000XL, tap the VMPC2000XL icon in your Home Screen to start it.
 
 Windows
 ^^^^^^^
 Open the Start Menu and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
 
-Plugin
-++++++
+Plugin (all platforms except iOS)
++++++++++++++++++++++++++++++++++
 If your DAW or plugin host is compatible with the format of VMPC2000XL that you installed (LV2, VST3 or AU), it should detect VMPC2000XL as a software instrument with 10x mono audio out, 2x mono audio in and MIDI in/out.
 
 Please refer to your DAW's manual if you are not familiar with adding software instruments to your projects.
 
+Plugin (iOS)
+++++++++++++
+On iOS, VMPC2000XL comes as an AUv3 plugin. Most of the testing has been done in AUM, but in theory the AUv3 should work well in other hosts as well.
 
 .. _audio_midi_configuration:
 
 Audio/MIDI configuration
 ------------------------
-
-Standalone
-++++++++++
-When you start VMPC2000XL for the first time, you have to configure which audio and MIDI devices you want to use. Click on the :code:`Options` button in the top-left and click :code:`Audio/MIDI Settings`.
+Standalone (all platforms except iOS)
++++++++++++++++++++++++++++++++++++++
+When you start VMPC2000XL for the first time, you have to configure which audio and MIDI devices you want to use. Click on the gear icon in the top-right.
 
 Audio output/input
 ^^^^^^^^^^^^^^^^^^
-VMPC2000XL can function fine on audio output only, so this is the absolute minimum you will need to configure correctly. Audio input and MIDI in/out can be configured to your liking.
+VMPC2000XL can function fine on audio output only, so one audio output is the absolute minimum you will need to configure correctly. Audio input and MIDI in/out can be configured to your liking.
 
-Note that an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has been fitted with the M208P 8 output expansion board.
+Note that an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has the M208P 8 output expansion board.
 
 Up to 2 mono inputs can be activated. A single mono input, such as the internal microphone of a MacBook, also works (though VMPC2000XL will treat this single input as a left channel and duplicate it to the right channel).
 
@@ -63,39 +69,26 @@ Below is an overview of the smallest buffer sizes that still work well on most m
 
 * Windows Audio: 192
 * Windows ASIO: 128
-* MacOS CoreAudio: 64
+* macOS CoreAudio: 64
 * Linux JACK: 128
 
 .. note::
 
     These are very rough approximations. Depending on what other software you are running and various system configurations, you may need a larger buffer, or maybe you can go lower than the suggested buffer sizes without audio artifacts.
 
+Standalone (iOS)
+++++++++++++++++
+VMPC2000XL uses your default iOS audio devices for audio input and output. You can switch which audio device you're using by pairing a Bluetooth speaker with your iPad, plugging a cable into your iPad's analog audio out, etc.
+
+.. note::
+
+  VMPC2000XL does not allow recording from Bluetooth devices, because this would result in 16KHz playback rates (a limitation that is beyond my control). When you connect for example a pair of Bluetooth headphones that have a built-in mic, this built-in mic will be ignored, and VMPC2000XL will keep using the iPad's internal mic for recording new sounds, while playback will keep going over the Bluetooth headphones.
+
 Plugin
 ++++++
 When you open VMPC2000XL as a plugin in your DAW or plugin host, there are no audio/MIDI settings that can be configured in VMPC2000XL. It is your DAW/host that determines the buffer size and sampling rate. If you notice a big delay between triggering a pad and hearing the sound, please refer to the documentation of your DAW/host to find out how to change the buffer size.
 
 For some suggested buffer size settings, see `Audio buffer size`_.
-
-.. _soundcheck:
-
-Soundcheck - Hearing the metronome
-----------------------------------
-Now that we've configured our audio/MIDI settings, let's verify that VMPC2000XL's internal audio engine is running correctly.
-
-An easy way to verify that your main stereo audio output is configured correctly, is by playing an empty sequence while the metronome is enabled. 
-
-If you're not in the :code:`Main` screen, press the :code:`Esc` key to go there. Use the cursor keys to navigate to the :code:`Count:` field. Press the :code:`-` and :code:`+` keys, or drag the DATA wheel with the mouse, to change the value of :code:`Count:` to :code:`ON` like below:
-
-.. image:: images/getting_started/count_on.png
-   :width: 400 px
-   :align: center
-
-Click the :code:`PLAY` button or press :code:`Space` to start playing the empty sequence. The green LED next to the :code:`PLAY` button should light up, :code:`Now:001.01.00` should start counting and you should hear a metronome click on every beat.
-
-.. The :file: role below is not a typo. For some reason 2 backslashes appear when
-   the :code: role is used.
-
-Click the :code:`STOP` button or press :file:`\\` to stop the sequencer.
 
 .. note::
 

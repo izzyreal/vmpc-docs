@@ -112,6 +112,8 @@ Data wheel
 ++++++++++
 The data wheel can be turned by dragging or scrolling. Precise, single-step changes can be performed by holding any of the modifier keys (Shift, Ctrl, Alt/Option) while dragging.
 
+On iOS you can drag the data wheel with one finger for precise, single-step changes, or with 2 fingers for large increments.
+
 Slider/Rec gain/Main volume
 +++++++++++++++++++++++++++
 These controls can be operated by dragging or scrolling.
@@ -145,6 +147,19 @@ Click the "Configure computer keyboard" icon in the top-right to go to the KEYBR
 MIDI
 ----
 Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p185) to see the details of assigning MIDI Continuous Controllers to MPC2000XL functionality.
+
+
+MIDI pad controllers
+--------------------
+In principle VMPC2000XL can be controlled with any MIDI controller. The problem is that pad controllers tend to have varying pad-to-note mappings. Again in principle, VMPC2000XL allows you to define your own pad-to-note mappings inside a program, but adopting a workflow that incorporates this is everything but trivial for most users.
+
+Therefor VMPC2000XL aims to support common pad controllers out-of-the-box. The process of adding known controller mappings has just started, so the current list is quite small:
+
+* Akai MPD16 and early MPC family (aka "Original")
+* iRig Pads
+
+The feature of selecting the controllers is currently tied to which "Initial pad mapping" you have selected. If you have any of the above controllers, head over to :ref:`Initial pad mapping <initial_pad_mapping>` for instructions how to change your initial pad mapping.
+
 
 Import files and folders (iOS)
 ------------------------------

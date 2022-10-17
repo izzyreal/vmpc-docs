@@ -51,6 +51,8 @@ The SETNGS tab
 --------------
 Press :kbd:`Shift + 0` to go to the :code:`SETNGS` tab.
 
+.. _initial_pad_mapping:
+
 Initial pad mapping
 +++++++++++++++++++
 The way all MPCs work is that each pad can be assigned a MIDI note number, and a note number can b assigned a sound, envelope settings and more. For a pad to play a sound, a MIDI note has to be assigned to it. This information is stored in programs and their associated :file:`PGM` files.
@@ -59,9 +61,9 @@ When a new program is created on the MPC2000XL, its default MIDI note mapping is
 
 There are rumours this mapping stems from `General MIDI <https://en.wikipedia.org/wiki/General_MIDI#Percussion>`_.
 
-Whatever its origins, it causes confusion the moment you connect a MIDI keyboard or pad controller to the real MPC2000XL. In this scenario, a typical expectation is that adjacent keys or pads on the connected MIDI device trigger adjacent pads on the MPC2000XL. Instead, pad 1 is triggered by note 37, pad 2 by note 36, pad 3 by note 42, pad 4 by note 82, etc.
+Whatever its origins, it causes confusion the moment you connect a MIDI keyboard to the real MPC2000XL. In this scenario, a typical expectation is that adjacent keys on the connected MIDI device trigger adjacent pads on the MPC2000XL. Instead, pad 1 is triggered by note 37, pad 2 by note 36, pad 3 by note 42, pad 4 by note 82, etc.
 
-VMPC2000XL defaults to a chromatic mapping: 37, 38, 39, 40 ... 95, 96, 97, 98 for pads 1, 2, 3, 4 ... 61, 62, 63, 64. You can verify this is the initial pad mapping in the :code:`SETNGS` tab. The :code:`Initial pad mapping` field should be set to :code:`VMPC2000XL` like below:
+VMPC2000XL defaults to a chromatic mapping: 35, 36, 37, 38 ... 95, 96, 97, 98 for pads 1, 2, 3, 4 ... 61, 62, 63, 64. You can verify this is the initial pad mapping in the :code:`SETNGS` tab. The :code:`Initial pad mapping` field should be set to :code:`VMPC2000XL` like below:
 
 .. image:: images/vmpc_specific_settings/initial_pad_mapping.png
    :width: 400 px
@@ -69,9 +71,11 @@ VMPC2000XL defaults to a chromatic mapping: 37, 38, 39, 40 ... 95, 96, 97, 98 fo
 
 To get the original pad mapping, set :code:`Initial pad mapping` to :code:`ORIGINAL`.
 
+If you have an iRig Pads, set :code:`Initial pad mapping` to :code:`iRig Pads` to always map a given iRig Pads pad to a VMPC2000XL one, regardless of the mapping in your program.
+
 .. note::
 
-  Changes to this field are only applied to programs created after the change.
+  Changes to this field are only applied to programs created after the change. Any MIDI input that can be mapped to a pad will do so regardless of the mapping in your programs.
 
 16 levels erase mode
 ++++++++++++++++++++
@@ -245,7 +249,7 @@ The real MPC2000XL uses a hacky implementation of `FAT16 <https://www.win.tue.nl
 
 It is via this mechanism that the MPC2000XL has 16.3 filenames rather than 8.3 in a single FAT16 entry. The only problem, however, is that this leaves the MPC2000XL user in a kind of limbo state with regard to file exchange. Any Mac, Windows or Linux machine can read an MPC2000XL CF card without complaining, but it will not be able to parse the filenames correctly. It will register the 8 additional bytes as invalid date/time values, since that is what these bytes are expected to mean in a common FAT16 implementation.
 
-For this reason, an MPC2000XL CF card with for example a :file:`DRUMKIT.PGM` that refers to a :file:`FUNKY_SNARE1.SND` will not be copied correctly to most computers. Likely you will end up with a file named :file:`FUNKY_SN.SND`. What's worse, operating systems have a tendency to rewrite the FAT entries of any directory that is explored, leaving you with a broken :file:`DRUMKIT.PGM` after exploring your CF card in MacOS Finder or Windows Explorer, since the PGM still contains a reference to :file:`FUNKY_SNARE1.SND`.
+For this reason, an MPC2000XL CF card with for example a :file:`DRUMKIT.PGM` that refers to a :file:`FUNKY_SNARE1.SND` will not be copied correctly to most computers. Likely you will end up with a file named :file:`FUNKY_SN.SND`. What's worse, operating systems have a tendency to rewrite the FAT entries of any directory that is explored, leaving you with a broken :file:`DRUMKIT.PGM` after exploring your CF card in macOS Finder or Windows Explorer, since the PGM still contains a reference to :file:`FUNKY_SNARE1.SND`.
 
 .. note::
 
@@ -262,7 +266,7 @@ Raw USB volume access allows VMPC2000XL to read an MPC2000XL CF card almost like
 
 This type of access is achieved by performing the following steps:
 
-1. VMPC2000XL unmounts a USB volume from the operating system (meaning MacOS, Windows or Linux)
+1. VMPC2000XL unmounts a USB volume from the operating system (meaning macOS, Windows or Linux)
 2. VMPC2000XL requests the operating system to provide it with exclusive access to the USB volume
 3. VMPC2000XL can now read from and write to the USB volume at the byte level
 4. VMPC2000XL gives up exclusive access to the USB volume

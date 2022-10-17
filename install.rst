@@ -2,10 +2,9 @@
 
 Install
 =======
+VMPC2000XL can be installed in Linux, macOS, iOS and Windows.
 
-VMPC2000XL can be installed in Linux, MacOS and Windows. The current version should run reliable enough to satisfy enthousiasts and hobbyists, given the fact that they can `report bugs and request features <http://izmar.nl/index.php/bug-reports-feature-requests>`_ by contacting the author. 
-
-Stability is roughly equal for the standalone and plugin versions, though your best bet is the standalone version. Standalone is the recommended way to use VMPC2000XL for other reasons too -- the original is a complex piece of equipment with `a 200 page manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_. `Roger Linn <https://en.wikipedia.org/wiki/Roger_Linn>`_ poured a tremendous amount of interconnecting functionality in the MPC2000XL's ancestors, the MPC60 and the MPC3000. A modern computer, let alone a full-on DAW, offers a lot of potential distraction from all this.
+The recommended way to use VMPC2000XL is in standalone mode. The original is a complex piece of equipment with `a 200 page manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_. `Roger Linn <https://en.wikipedia.org/wiki/Roger_Linn>`_ poured a tremendous amount of interconnecting functionality in the MPC2000XL's ancestors, the MPC60 and the MPC3000. A modern computer, let alone a full-on DAW, offers a lot of potential distraction from all this.
 
 On the other hand, the usefulness of a DAW can't be denied -- it's great fun to load up an instrumental you made on a real 2000XL and run it through your favorite software effects, via 10 individual mono outputs if you wish. Let VMPC2000XL control your software instruments via MIDI. Or maybe you want to add some of the MPC workflow to your projects just for parts of the beat.
 
@@ -15,7 +14,6 @@ By exposing VMPC2000XL in standalone, LV2, AU and VST3 formats it is completely 
 
 Manual installation (Ubuntu 18)
 -------------------------------
-
 At the moment there is no package of VMPC2000XL for any Linux distribution. If all goes well and the project is in good enough shape, and if enough Linux audio users ask for packages, these will hopefully become available.
 
 Some effort was put into making VMPC2000XL more attractive for the Linux community, for example by following the `XDG Base Directory Specification <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_. Various self-contained standalone and LV2 Ubuntu builds are provided. You can `generate ninja and Make build files <https://github.com/izzyreal/vmpc-workspace>`_.
@@ -44,27 +42,25 @@ Builds for other distributions can be requested, or made by yourself.
 
 Building from source
 --------------------
-
 You should be able to build VMPC2000XL on many platforms, for example most Linux distributions.
 
-If you wish to build the VMPC2000XL JUCE implementation as is, which is the implementation used for the available binaries, please follow `the instructions here <https://github.com/izzyreal/vmpc-workspace>`_.
+If you wish to build VMPC2000XL from source, please follow `the instructions here <https://github.com/izzyreal/vmpc-juce>`_.
 
-Additionally the project has been set up in such a way that alternative front-ends can be implemented. Start exploring `the source code <https://github.com/izzyreal/vmpc-workspace>`_ of the JUCE implementation.
+Additionally the project has been set up in such a way that alternative front-ends can be implemented. Start exploring `the source code <https://github.com/izzyreal/vmpc-juce>`_ of the JUCE implementation, which, in this context, serves as a reference implementation.
 
-The main idea for an alternative front-end is to do what `vmpc juce <https://github.com/izzyreal/vmpc-juce>`_ is doing, i.e. exchange audio i/o with and direct controller input into `mpc <https://github.com/izzyreal/mpc>`_ and present the state of this library's core entity, :code:`Mpc`, and its children, to the user. This presentation can be for example an ASCII display, a hardware LCD or a `vector GUI <https://github.com/izzyreal/vmpc>`_, and the controller input can come from a dedicated MPC-like board. A `somewhat functional VR concept <https://github.com/izzyreal/vmpc-unreal-plugin>`_ was implemented in Unreal.
+The main idea for an alternative front-end is to do what `vmpc juce <https://github.com/izzyreal/vmpc-juce>`_ is doing, i.e. exchange audio i/o with, and direct controller input into, `mpc <https://github.com/izzyreal/mpc>`_, and present the state of this library's core entity, :code:`Mpc`, and its children, to the user. This presentation can be for example an ASCII display, a hardware LCD or a `vector GUI <https://github.com/izzyreal/vmpc>`_, and the controller input can come from a dedicated MPC-like board. A `somewhat functional VR concept <https://github.com/izzyreal/vmpc-unreal-plugin>`_ was implemented in Unreal.
 
-Install using the installers (MacOS/Windows)
+Install using the installers (macOS/Windows)
 --------------------------------------------
-
 * Visit http://izmar.nl/index.php/downloads
 * Download the installer you need and run it
 * Follow the installer's instructions
 
 The installers allows you to select which format(s) (standalone, VST3 and AU) you want to install. After installation you can place move plugins from their default directories (see below) to anywhere you like.
 
-MacOS
+macOS
 +++++
-The MacOS installer deploys universal binaries, compatible with Intel and Apple Silicon systems, in standalone, VST3 and AU formats. Plugins are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
+The macOS installer deploys universal binaries, compatible with Intel and Apple Silicon systems, in standalone, VST3 and AU formats. Plugins are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
 
 Windows
 +++++++
@@ -76,21 +72,23 @@ The Windows installer deploys 64 bit binaries on 64 bit systems, and 32 bit bina
 
 Update
 ------
-
 If you have installed VMPC2000XL before, the installer may offer various options to migrate your previous configuration and user data. Please run the installer to see what applies to your system.
 
-In general it is recommended to regularly backup your data, especially before right updating VMPC2000XL.
+In general it is recommended to regularly backup your data, especially right before updating VMPC2000XL.
 
 Additionally the update process may not always succeed in cleaning up the old application files. Please refer to the Uninstall section below if you come across any files you'd like to delete, or simply want to clean up what can be.
 
 Uninstall
 ---------
-
-MacOS
+macOS
 +++++
-Remove :file:`/Applications/VMPC2000XL.app` for v0.3 and later. Remove :file:`/Applications/vMPC.app` if you have v0.2 or older.
+Remove :file:`/Applications/VMPC2000XL.app` for v0.3 and later.
 
 Plugins can be removed from :file:`/Library/Audio/Plug-Ins`.
+
+iOS
++++
+Tap and hold the VMPC2000XL icon in your Home Screen and tap "Remove App".
 
 Windows
 +++++++
@@ -114,10 +112,8 @@ Cleanup
 +++++++
 For a full cleanup including demo beats, configuration files and user data (your sounds, sequences, etc.), refer to the `File Locations`_ section below and delete from those what you wish.
 
-
 File Locations
 --------------
-
 For locations of the executable and plugin binaries, refer to the `Uninstall`_ section above. The discussion below is restricted to all other files that are installed and generated by VMPC2000XL.
 
 There are three categories of files:
@@ -134,7 +130,10 @@ There are three categories of files:
     * Audio/MIDI configuration and auto-save data: :file:`VMPC2000XL.settings`
     * USB volumes: :file:`volumes.json`
 
-On MacOS and Windows, demo data is bundled into the installer, which places it in a safe location from which it can always be restored. When you start VMPC2000XL, a check is performed to see if a :file:`DEMOS` directory exists in your user data directory. If not, a fresh copy of the original demo data will be placed in :file:`VMPC2000XL/Volumes/MPC2000XL/DEMOS`.
+On macOS and Windows, demo data is bundled into the installer, which places it in a safe location from which it can always be restored. When you start VMPC2000XL, a check is performed to see if a :file:`DEMOS` directory exists in your user data directory. If not, a fresh copy of the original demo data will be placed in :file:`VMPC2000XL/Volumes/MPC2000XL/DEMOS`.
+
+.. note::
+   On Linux and iOS there is currently no demo data included.
 
 Resources that are absolutely required by the application, such as background images and the metronome click PCM WAV data, are bundled into the executables and plugins, making them fully portable and self-contained. Hence you will not find such files anywhere in your filesystem.
 
@@ -146,13 +145,23 @@ Linux
 
 **Configuration files** :file:`~/.config/VMPC2000XL/config` and :file:`~/.config/VMPC2000XL.settings`
 
-MacOS
+macOS
 +++++
 **Demo recovery data** :file:`/Library/Application Support/VMPC2000XL/DemoData`
 
 **Documents** :file:`/Users/you/Documents/VMPC2000XL`
 
 **Configuration files** :file:`/Users/you/Library/Application Support/VMPC2000XL/config` and :file:`/Users/you/Library/Application Support/VMPC2000XL.settings`
+
+iOS
++++
+**Demo recovery data** Unavailable
+
+**Documents standalone** :file:`On My iPad/VMPC2000XL`
+
+**AUv3** Not visible due to a limitation beyond my control, subject to change
+
+**Configuration files** Unknown
 
 Windows
 +++++++
@@ -161,19 +170,3 @@ Windows
 **Documents** :file:`C:\\Users\\you\\Documents\\VMPC2000XL`
 
 **Configuration files** :file:`C:\\Users\\you\\AppData\\Roaming\\VMPC2000XL\\config` and :file:`C:\\Users\\you\\AppData\\Roaming\\VMPC2000XL\\VMPC2000XL.settings`
-
-
-File Locations (v0.3 and lower)
--------------------------------
-
-In older releases most non-application files are stored in :file:`/Users/you/vMPC` on MacOS and Windows. 
-
-On Linux most non-application files are stored in :file:`/home/you/vMPC`.
-
-When you are cleaning up, you can remove this :file:`vMPC` directory completely, or you can backup your sounds, sequences, programs and so on from :file:`vMPC/Stores/MPC2000XL`.
-
-On Windows audio/MIDI preferences are saved in :file:`C:\\Users\\you\\AppData\\Roaming\\vmpc.settings`.
-
-On MacOS this is :file:`/Users/you/Library/Application Support/vmpc.settings`.
-
-On Linux it is :file:`~/.config/vmpc.settings`.
