@@ -4,17 +4,20 @@ Install
 =======
 VMPC2000XL can be installed in Linux, macOS, iOS and Windows.
 
-The recommended way to use VMPC2000XL is in standalone mode. The original is a complex piece of equipment with `a 200 page manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_. `Roger Linn <https://en.wikipedia.org/wiki/Roger_Linn>`_ poured a tremendous amount of interconnecting functionality in the MPC2000XL's ancestors, the MPC60 and the MPC3000. A modern computer, let alone a full-on DAW, offers a lot of potential distraction from all this.
+The recommended way to use VMPC2000XL is in standalone mode. The original is a complex piece of equipment with `a 200 page manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_. `Roger Linn <https://en.wikipedia.org/wiki/Roger_Linn>`_ poured a tremendous amount of interconnecting functionality in the MPC2000XL's ancestors, the MPC60 and the MPC3000. A modern computer, let alone a full-on DAW, offers a lot of distraction from all this.
 
 On the other hand, the usefulness of a DAW can't be denied -- it's great fun to load up an instrumental you made on a real 2000XL and run it through your favorite software effects, via 10 individual mono outputs if you wish. Let VMPC2000XL control your software instruments via MIDI. Or maybe you want to add some of the MPC workflow to your projects just for parts of the beat.
 
-By exposing VMPC2000XL in standalone, LV2, AU and VST3 formats it is completely up to you.
+By releasing VMPC2000XL in standalone, LV2, AU, AUv3 and VST3 formats it is completely up to you where and how you run it.
 
 .. _manual_installation_for_ubuntu:
 
 Manual installation (Ubuntu 18)
 -------------------------------
-At the moment there is no package of VMPC2000XL for any Linux distribution. If all goes well and the project is in good enough shape, and if enough Linux audio users ask for packages, these will hopefully become available.
+At the moment there is no package of VMPC2000XL for any Linux distribution. If all goes well and the project is in good enough shape, and if enough Linux audio users ask for packages, these will become available.
+
+.. note::
+   For Linux packager people: As per version 0.5.0, VMPC2000XL's Linux build process fully relies on CMake, and portable source packages suitable for offline builds can be generated with ease.
 
 Some effort was put into making VMPC2000XL more attractive for the Linux community, for example by following the `XDG Base Directory Specification <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_. Various self-contained standalone and LV2 Ubuntu builds are provided. You can `generate ninja and Make build files <https://github.com/izzyreal/vmpc-workspace>`_.
 
@@ -22,8 +25,8 @@ Suggestions, or even better, contributions, to improve the Linux side of VMPC200
 
 For now the recommended process for Ubuntu 18 is as follows:
 
-* Visit http://izmar.nl/index.php/downloads
-* Download what you need, place it where you want and run it
+* Visit https://izmar.nl/downloads
+* Download the binary you need, place it where you should and run it
 * Optionally download `the demo beats <https://github.com/izzyreal/mpc/tree/master/demo_data>`_ and save them into :file:`~/Documents/VMPC2000XL/Volumes/MPC2000XL`.
 
 As per the `Filesystem Hierarchy Standard <https://www.pathname.com/fhs/pub/fhs-2.3.html#PURPOSE23>`_, the recommended location to store the portable `VMPC2000XL` executable is in :file:`/usr/local/bin`.
@@ -36,7 +39,7 @@ As per the `LV2 docs <https://lv2plug.in/pages/filesystem-hierarchy-standard.htm
 
 The standalone is built with JACK support, which is the recommended driver type to use.
 
-The LV2 has run successfully in Carla.
+The LV2 has been tested mostly in Carla.
 
 Builds for other distributions can be requested, or made by yourself.
 
@@ -52,15 +55,15 @@ The main idea for an alternative front-end is to do what `vmpc juce <https://git
 
 Install using the installers (macOS/Windows)
 --------------------------------------------
-* Visit http://izmar.nl/index.php/downloads
+* Visit https://izmar.nl/downloads
 * Download the installer you need and run it
 * Follow the installer's instructions
 
-The installers allows you to select which format(s) (standalone, VST3 and AU) you want to install. After installation you can place move plugins from their default directories (see below) to anywhere you like.
+The installers allows you to select which formats (standalone, VST3 and AU) to install. After installation you can move plugins from their default directories (see below) to anywhere you like.
 
 macOS
 +++++
-The macOS installer deploys universal binaries, compatible with Intel and Apple Silicon systems, in standalone, VST3 and AU formats. Plugins are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
+The macOS installer deploys Universal 2 binaries of VMPC2000XL standalone, VST3 and AU. When you install the standalone variety, the AUv3 comes with it -- it is embedded in the application. You need to run the standalone application at least once before AUv3 hosts pick up on it. The other plugins are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
 
 Windows
 +++++++
@@ -74,17 +77,20 @@ Update
 ------
 If you have installed VMPC2000XL before, the installer may offer various options to migrate your previous configuration and user data. Please run the installer to see what applies to your system.
 
-In general it is recommended to regularly backup your data, especially right before updating VMPC2000XL.
+It is recommended to regularly backup your data, especially right before updating VMPC2000XL.
 
-Additionally the update process may not always succeed in cleaning up the old application files. Please refer to the Uninstall section below if you come across any files you'd like to delete, or simply want to clean up what can be.
+Moreover, the update process may not always succeed in cleaning up the old application files. Please refer to the Uninstall section below if you come across any files you'd like to delete, or simply want to clean up what can be.
 
 Uninstall
 ---------
 macOS
 +++++
-Remove :file:`/Applications/VMPC2000XL.app` for v0.3 and later.
+Remove :file:`/Applications/VMPC2000XL.app`.
 
 Plugins can be removed from :file:`/Library/Audio/Plug-Ins`.
+
+.. note::
+   If you are an existing user and the last time you tried VMPC2000XL was a while ago, you might have a :file:`vMPC.app`, which should also be removed.
 
 iOS
 +++
@@ -92,17 +98,20 @@ Tap and hold the VMPC2000XL icon in your Home Screen and tap "Remove App".
 
 Windows
 +++++++
-Run any VMPC2000XL and vMPC uninstallers you have in Add/Remove Programs.
+Run the VMPC2000XL uninstaller you have in Add/Remove Programs.
 
-Assuming you have installed VMPC2000XL into its default location, you can manually delete :file:`C:\\Program Files\\VMPC2000XL` and :file:`C:\\Program Files\\vMPC` afterwards. On 32 bit systems, and some v0.2 and older installations on 64 bit systems, you can delete the same directories from :file:`C:\\Program Files (x86)`.
+Assuming you have installed VMPC2000XL into its default location, you can manually delete :file:`C:\\Program Files\\VMPC2000XL` afterwards. On 32 bit systems, and some v0.2 and older installations on 64 bit systems, you can delete :file:`C:\\Program Files (x86)\\VMPC2000XL`.
 
 VST3 plugins can be removed from :file:`C:\\Program Files\\Common Files\\VST3`, :file:`C:\\Program Files (x86)\\Common Files\\VST3` or any other locations where you store plugins.
 
+.. note::
+   If you are an existing user and the last time you tried VMPC2000XL was a while ago, you might have a :file:`vMPC` directory in your :file:`Program Files`/:file:`Program Files (x86)`, which can also be removed.
+
 Linux
 +++++
-As per the `Filesystem Hierarchy Standard <https://www.pathname.com/fhs/pub/fhs-2.3.html#PURPOSE23>`_, you have likely placed your portable :file:`VMPC2000XL` executable in :file:`/usr/local/bin`.
+As per the `Filesystem Hierarchy Standard <https://www.pathname.com/fhs/pub/fhs-2.3.html#PURPOSE23>`_, you have likely placed your portable :file:`VMPC2000XL` executable in :file:`/usr/local/bin`, from where you can remove it by running :code:`rm vmpc2000xl`.
 
-As per the `LV2 docs <https://lv2plug.in/pages/filesystem-hierarchy-standard.html>`_, you likely have your :file:`VMPC2000XL.lv2` in one of these locations and can remove it from there:
+As per the `LV2 docs <https://lv2plug.in/pages/filesystem-hierarchy-standard.html>`_, you likely have your :file:`VMPC2000XL.lv2` in one of these locations and can :code:`rm` it from there:
 
 * :file:`~/.lv2`
 * :file:`/usr/local/lib/lv2`
@@ -118,12 +127,15 @@ For locations of the executable and plugin binaries, refer to the `Uninstall`_ s
 
 There are three categories of files:
 
-#. **Demo recovery data:** Demo beats that are never modified by VMPC2000XL
-#. **Documents:**
-    * Everything you create: :file:`VMPC2000XL/Volumes/MPC2000XL`
-    * Direct-to-disk recordings: :file:`VMPC2000XL/Recordings`
-    * Log file: :file:`VMPC2000XL/vmpc.log`
-#. **Configuration files:**
+#. **Demo recovery data**
+     * Demo beats that are never modified by VMPC2000XL
+
+#. **Documents**
+     * Everything you create: :file:`VMPC2000XL/Volumes/MPC2000XL`
+     * Direct-to-disk recordings: :file:`VMPC2000XL/Recordings`
+     * Log file: :file:`VMPC2000XL/vmpc.log`
+
+#. **Configuration files**
     * Keyboard mapping: :file:`config/keys.txt` (only present when you have changed the default mapping)
     * NVRAM data (main screen user defaults): :file:`config/nvram.vmp`
     * VMPC2000XL-specific: :file:`config/vmpc-specific.ini`
