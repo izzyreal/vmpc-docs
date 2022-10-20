@@ -6,15 +6,25 @@ VMPC2000XL can be installed in Linux, macOS, iOS and Windows.
 
 The recommended way to use VMPC2000XL is in standalone mode. The original is a complex piece of equipment with `a 200 page manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_. `Roger Linn <https://en.wikipedia.org/wiki/Roger_Linn>`_ poured a tremendous amount of interconnecting functionality in the MPC2000XL's ancestors, the MPC60 and the MPC3000. A modern computer, let alone a full-on DAW, offers a lot of distraction from all this.
 
-On the other hand, the usefulness of a DAW can't be denied -- it's great fun to load up an instrumental you made on a real 2000XL and run it through your favorite software effects, via 10 individual mono outputs if you wish. Let VMPC2000XL control your software instruments via MIDI. Or maybe you want to add some of the MPC workflow to your projects just for parts of the beat.
+On the other hand, the usefulness of a DAW can't be denied -- it's great to load up an instrumental made on a real 2000XL and run it through your favorite software effects, via 10 individual mono outputs if you wish. You can also let VMPC2000XL control your software instruments via MIDI. Or maybe you want to add some of the MPC workflow to your projects just for parts of the beat.
 
-By releasing VMPC2000XL in standalone, LV2, AU, AUv3 and VST3 formats it is completely up to you where and how you run it.
+By releasing VMPC2000XL in standalone, LV2, AU, AUv3 and VST3 formats it's completely up to you where and how you run it.
+
+Install ZYpp packages (openSUSE Tumbleweed and 15.4)
+----------------------------------------------------
+Please follow the instructions below for
+
+* `standalone <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=vmpc2000xl>`_
+* `LV2 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=lv2-vmpc2000xl>`_
+* `VST3 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=vst3-vmpc2000xl>`_
+
+There are binaries available for x86_64, and for Tumbleweed aarch64 as well.
 
 .. _manual_installation_for_ubuntu:
 
-Manual installation (Ubuntu 18)
+Manual installation (Ubuntu 20)
 -------------------------------
-At the moment there is no package of VMPC2000XL for any Linux distribution. If all goes well and the project is in good enough shape, and if enough Linux audio users ask for packages, these will become available.
+At the moment there is no package of VMPC2000XL for Ubuntu yet, but word on the street is it's in the making, and possibly Fedora as well.
 
 .. note::
    For Linux packager people: As per version 0.5.0, VMPC2000XL's Linux build process fully relies on CMake, and portable source packages suitable for offline builds can be generated with ease.
@@ -23,7 +33,7 @@ Some effort was put into making VMPC2000XL more attractive for the Linux communi
 
 Suggestions, or even better, contributions, to improve the Linux side of VMPC2000XL are welcome.
 
-For now the recommended process for Ubuntu 18 is as follows:
+For now the recommended process for Ubuntu 20 is as follows:
 
 * Visit https://izmar.nl/downloads
 * Download the binary you need, place it where you should and run it
@@ -33,13 +43,17 @@ As per the `Filesystem Hierarchy Standard <https://www.pathname.com/fhs/pub/fhs-
 
 As per the `LV2 docs <https://lv2plug.in/pages/filesystem-hierarchy-standard.html>`_, the recommended location to store :file:`VMPC2000XL.lv2` is one of these:
 
-* :file:`~/.lv2`
-* :file:`/usr/local/lib/lv2`
-* :file:`/user/lib/lv2`
+* :file:`~/.lv2/`
+* :file:`/usr/local/lib/lv2/`
+* :file:`/user/lib/lv2/`
 
-The standalone is built with JACK support, which is the recommended driver type to use.
+As per the `VST3 docs <https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Locations+Format/Plugin+Locations.html#on-linux-platform>`, the recommended location to store :file:`VMPC2000XL.vst3` is in one of these:
 
-The LV2 has been tested mostly in Carla.
+* :file:`~/.vst3/`
+* :file:`/usr/local/lib/vst3/`
+* :file:`/user/lib/vst3/`
+
+The standalone is built with JACK support, which is the recommended driver type to use for getting the lowest latency. Alternatively use ALSA. PulseAudio also works, but it is the option with the highest latency.
 
 Builds for other distributions can be requested, or made by yourself.
 
@@ -83,6 +97,10 @@ Moreover, the update process may not always succeed in cleaning up the old appli
 
 Uninstall
 ---------
+Linux
++++++
+See :ref:`Manual installation (Ubuntu 20) <manual_installation_for_ubuntu>` for the likely locations where you can :command:`rm` any VMPC2000XL binaries.
+
 macOS
 +++++
 Remove :file:`/Applications/VMPC2000XL.app`.
@@ -106,16 +124,6 @@ VST3 plugins can be removed from :file:`C:\\Program Files\\Common Files\\VST3`, 
 
 .. note::
    If you are an existing user and the last time you tried VMPC2000XL was a while ago, you might have a :file:`vMPC` directory in your :file:`Program Files`/:file:`Program Files (x86)`, which can also be removed.
-
-Linux
-+++++
-As per the `Filesystem Hierarchy Standard <https://www.pathname.com/fhs/pub/fhs-2.3.html#PURPOSE23>`_, you have likely placed your portable :file:`VMPC2000XL` executable in :file:`/usr/local/bin`, from where you can remove it by running :code:`rm vmpc2000xl`.
-
-As per the `LV2 docs <https://lv2plug.in/pages/filesystem-hierarchy-standard.html>`_, you likely have your :file:`VMPC2000XL.lv2` in one of these locations and can :code:`rm` it from there:
-
-* :file:`~/.lv2`
-* :file:`/usr/local/lib/lv2`
-* :file:`/user/lib/lv2`
 
 Cleanup
 +++++++

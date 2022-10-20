@@ -3,8 +3,6 @@
 Getting Started
 ===============
 
-Let's get started with an example: We are going to create a beat with the TEST1 demo drum kit.
-
 Starting VMPC2000XL
 -------------------
 
@@ -33,13 +31,18 @@ Open the Start Menu and start typing "VMPC2000XL". Pretty soon the application s
 
 Plugin (all platforms except iOS)
 +++++++++++++++++++++++++++++++++
-If your DAW or plugin host is compatible with the format of VMPC2000XL that you installed (LV2, VST3 or AU), it should detect VMPC2000XL as a software instrument with 10x mono audio out, 2x mono audio in and MIDI in/out.
+If your DAW or plugin host is compatible with the format of VMPC2000XL that you installed (LV2, VST3, AU or AUv3), it should detect VMPC2000XL as a software instrument with 10x mono audio out, 2x mono audio in and MIDI in/out.
 
 Please refer to your DAW's manual if you are not familiar with adding software instruments to your projects.
 
+For more information on capabilities within each plugin and DAW combination, consult `the plugin compatibility matrix <https://github.com/izzyreal/vmpc-juce/blob/master/plugin-compatibility-matrix.md>`_.
+
+.. note::
+   For the AUv3 to be detectable by the host, you need to have run the standalone version first.
+
 Plugin (iOS)
 ++++++++++++
-On iOS, VMPC2000XL comes as an AUv3 plugin. Most of the testing has been done in AUM, but in theory the AUv3 should work well in other hosts as well.
+On iOS, VMPC2000XL comes as an AUv3 plugin. Most of the testing has been done in AUM, but in theory the AUv3 should work in other hosts too.
 
 .. _audio_midi_configuration:
 
@@ -51,9 +54,9 @@ When you start VMPC2000XL for the first time, you have to configure which audio 
 
 Audio output/input
 ^^^^^^^^^^^^^^^^^^
-VMPC2000XL can function fine on audio output only, so one audio output is the absolute minimum you will need to configure correctly. Audio input and MIDI in/out can be configured to your liking.
+VMPC2000XL can function fine on audio output only, but this is also the absolute minimum you will need to configure correctly. Audio input and MIDI in/out can be configured to your liking.
 
-Note that an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has the M208P 8 output expansion board.
+Note that for audio out to work well, an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has the M208P 8 output expansion board.
 
 Up to 2 mono inputs can be activated. A single mono input, such as the internal microphone of a MacBook, also works (though VMPC2000XL will treat this single input as a left channel and duplicate it to the right channel).
 
@@ -63,7 +66,7 @@ The sample rate is generally best left at 44.1KHz or 48KHz, but you can run VMPC
 
 Audio buffer size
 ^^^^^^^^^^^^^^^^^
-You generally want to keep the buffer size at 512 samples or below. The bigger the buffer size, the bigger the latency, meaning a bigger delay between triggering a pad and hearing its sound. On the other hand, if the buffer is too small, your audio will sound glitchy or garbled.
+Keep the buffer size as low as possible. You generally want to keep the buffer size at 512 samples or below. The bigger the buffer size, the bigger the latency, meaning a bigger delay between triggering a pad and hearing its sound. On the other hand, if the buffer is too small, your audio will sound glitchy or garbled.
 
 Below is an overview of the smallest buffer sizes that still work well on most modern systems:
 
@@ -75,6 +78,8 @@ Below is an overview of the smallest buffer sizes that still work well on most m
 .. note::
 
     These are very rough approximations. Depending on what other software you are running and various system configurations, you may need a larger buffer, or maybe you can go lower than the suggested buffer sizes without audio artifacts.
+
+    If you are on Windows or Linux and you are picky about your latencies (fully understandable when you're recording MIDI), it is highly recommended to explore all your options until you find the best response-time.
 
 Standalone (iOS)
 ++++++++++++++++

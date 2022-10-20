@@ -36,13 +36,13 @@ extensions = [
     'sphinx.ext.todo',
     'vmpc2000xl',
     'sphinx_sitemap',
-    'notfound.extension',
+    'notfound.extension'
 ]
 
 # The short X.Y version.
-version = "0.4"
+version = "0.5"
 # The full version, including alpha/beta/rc tags.
-release = u'0.4.0'
+release = u'0.5.0'
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 if not os.path.exists(os.path.join(dir_path, "versions.json")):
