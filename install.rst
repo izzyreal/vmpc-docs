@@ -20,6 +20,12 @@ Please follow the instructions below for
 
 There are binaries available for x86_64, and for Tumbleweed aarch64 as well.
 
+The :command:`VMPC2000XL` standalone executable will be installed in :command:`/usr/bin`.
+
+On 64 bit systems the LV2 will be installed in :command:`/usr/lib64/lv2`, and the VST3 in :command:`/usr/lib64/vst3`.
+
+On 32 bit systems the LV2 will be installed in :command:`/usr/lib/lv2`, and the VST3 in :command:`/usr/lib/vst3`.
+
 .. _manual_installation_for_ubuntu:
 
 Manual installation (Ubuntu 20)
