@@ -17,6 +17,9 @@ The other buttons are also mapped to keyboard shortcuts, but you can pick these 
 
 Keyboard
 --------
+For most controls you can display a tooltip that shows you which key on the keyboard is associated with it. In the case of the DATA wheel it's 2 keys -- one for clockwise and one for anti-clockwise. To display a control's keyboard shortcut in a tooltip hover over the control while holding one of the modifier keys on your keyboard (Shift, Control, Alt/Option, Command):
+
+.. image:: animations/keyboard-tooltips.gif
 
 Below are the default keyboard shortcuts for most of the UI components.
 
