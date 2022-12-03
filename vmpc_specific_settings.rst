@@ -288,7 +288,7 @@ When you first connect a USB pendrive or CF card with a FAT16 volume, the config
 
 .. note::
 
-  A USB volume has to be connected **before** starting VMPC2000XL. You will be prompted for an administrator password, or on Windows, if your account has administrator rights, to give permission by clicking "Yes".
+  Every time you go to the DISKS screen, VMPC2000XL will try to detect which USB volumes you have connected. There is no need to restart VMPC2000XL. If you happen to be in the DISKS screen while connecting a USB volume, go to another screen and go back to DISKS to refresh the list of volumes.
 
 Navigate to the volume you want to enable and set its :code:`Mode` to :code:`READ-ONLY` or :code:`READ/WRITE`. If you want to make sure your volume is not altered by VMPC2000XL, set it to :code:`READ-ONLY`. When you are done configuring your volume(s), press :kbd:`F6` to save the configuration.
 
