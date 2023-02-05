@@ -10,7 +10,7 @@ On the other hand, the usefulness of a DAW can't be denied -- it's great to load
 
 By releasing VMPC2000XL in standalone, LV2, AU, AUv3 and VST3 formats it's completely up to you where and how you run it.
 
-Install ZYpp packages (openSUSE Tumbleweed and 15.4)
+Install ZYpp packages (openSUSE and Fedora)
 ----------------------------------------------------
 Please follow the instructions below for
 
@@ -18,7 +18,7 @@ Please follow the instructions below for
 * `LV2 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=lv2-vmpc2000xl>`_
 * `VST3 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=vst3-vmpc2000xl>`_
 
-There are binaries available for x86_64, and for Tumbleweed aarch64 as well.
+There are binaries available for x86_64, and for Tumbleweed aarch64 as well. There are also some Fedora binaries.
 
 The :command:`VMPC2000XL` standalone executable will be installed in :command:`/usr/bin`.
 
@@ -30,7 +30,7 @@ On 32 bit systems the LV2 will be installed in :command:`/usr/lib/lv2`, and the 
 
 Manual installation (Ubuntu 20)
 -------------------------------
-At the moment there is no package of VMPC2000XL for Ubuntu yet, but word on the street is it's in the making, and possibly Fedora as well.
+At the moment there is no package of VMPC2000XL for Ubuntu yet, but word on the street is it's in the making.
 
 .. note::
    For Linux packager people: As per version 0.5.0, VMPC2000XL's Linux build process fully relies on CMake, and portable source packages suitable for offline builds can be generated with ease.
