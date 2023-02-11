@@ -71,8 +71,6 @@ VMPC2000XL defaults to a chromatic mapping: 35, 36, 37, 38 ... 95, 96, 97, 98 fo
 
 To get the original pad mapping, set :code:`Initial pad mapping` to :code:`ORIGINAL`.
 
-If you have an iRig Pads, set :code:`Initial pad mapping` to :code:`iRig Pads` to always map a given iRig Pads pad to a VMPC2000XL one, regardless of the mapping in your program.
-
 .. note::
 
   Changes to this field are only applied to programs created after the change. Any MIDI input that can be mapped to a pad will do so regardless of the mapping in your programs.
@@ -100,6 +98,23 @@ By default VMPC2000XL will prompt you with a dialog when you are trying to load 
    :align: center
 
 
+.. _midi_control_mode:
+
+MIDI control mode
++++++++++++++++++
+VMPC2000XL supports 2 different modes in terms of MIDI controllability:
+
+1. :code:`VMPC`. This is the default mode as per v0.5.0. In this mode you can use predefined or customized MIDI control presets that match your MIDI controller. Supported commands are: pad 1 up to pad 16, datawheel (rotary), datawheel up, datawheel down, rec-gain, main-volume and all hardware buttons. The default presets maps notes 35 - 50 from any MIDI channel to pads 1 - 16, and control change 7 from any channel to the Note Variation Slider.
+
+2. :code:`ORIGINAL`. VMPC2000XL will respond like the original would. This means that incoming MIDI note events will be routed to pads according to how you've programmed your pad-to-MIDI note associations in the PROGRAM ASSIGN screen (Shift + 6, F1 - F4). Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p185) to see the details of assigning MIDI Continuous Controllers to MPC2000XL functionality in this mode, via the :code:`MIDIsw` screen.
+
+To change the :code:`MIDI control mode`, go to the :code:`SETNGS` tab by pressing :kbd:`Shift + 0`:
+
+.. image:: images/vmpc_specific_settings/vmpc-setngs.png
+   :width: 400 px
+   :align: center
+
+Continue reading below in the :ref:`MIDI control <midi_control>` section.
 
 .. _configuring_the_keyboard:
 
@@ -303,3 +318,59 @@ The reason for this deviation from the real MPC2000XL is to allow the user to ex
 If after pressing :code:`APPLY` no error messages appear, your USB volume is ready for load operations, and for save operations as well, if you configured :code:`READ/WRITE` earlier in the :code:`DISKS` screen.
 
 VMPC2000XL remembers configurations for any USB volumes that have been previously connected and enabled, as well as the :code:`Device:` you used in the last session. In other words, after a restart it is easy to continue using your USB volume (though you may be asked for administrator permissions again).
+
+.. _midi_control:
+
+MIDI control
+++++++++++++
+From the :code:`SETNGS` screen press :kbd:`F5` to access the :code:`MIDI` tab:
+
+.. image:: images/vmpc_specific_settings/vmpc-midi.png
+   :width: 400 px
+   :align: center
+
+Each row shows an association between an interactable component of VMPC2000XL, and a specific kind of MIDI input message that should control it.
+
+The first column allows you to specify a status, either :code:`CC` or :code:`Note`.
+
+The second column lets you specify a MIDI channel, which can also be set to :code:`all`.
+
+The third column lets you specify a value to filter by, which for a note message applies to the note number, and for a continuous controller message it applies to the controller number. This value can be set to :code:`OFF` to disable a row.
+
+Press :kbd:`F4` to toggle :code:`LEARN` mode. You can also use the cursors and DATA wheel to modify associations.
+
+When you leave the screen, VMPC2000XL checks if you've made any changes and whether you'd like to save them. When you restart VMPC2000XL, these settings will be automatically restored.
+
+MIDI control preset management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In the :code:`MIDI` screen press :kbd:`OPEN WINDOW` to open the :code:`MIDI controller presets` window:
+
+.. image:: images/vmpc_specific_settings/vmpc-midi-controller-presets.png
+   :width: 400 px
+   :align: center
+
+To load the default preset, press :kbd:`F5` while :code:`New preset` is selected. The default preset is very basic: notes 35 - 50 are associated with pads 1 - 16, and CC 7 is associated with the slider.
+
+You can also load any of the named presets by selecting one and pressing :kbd:`F5`.
+
+To save your own preset under a name, select :code:`New preset` and press :kbd:`F3`. You can also overwrite any of the existing presets this way.
+
+Presets are stored as files under :code:`~/Documents/VMPC2000XL/MidiControlPresets`.
+
+Bundled presets for known controllers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+VMPC2000XL aims to support common pad controllers out-of-the-box. When a known controller is connected, VMPC2000XL detects this and asks if you want to switch the active MIDI control mapping to one for your controller:
+
+.. image:: images/vmpc_specific_settings/vmpc-known-controller-detected.png
+   :width: 400 px
+   :align: center
+
+The process of adding known controller mappings has just started, so the current list is quite small:
+
+* Akai MPD16 and early MPC family
+* Akai MPD218
+* iRig PADS
+
+Let me know which controller you use and I'll try to add it.
+
+If you have accidentally overwritten a bundled preset, delete its file from :code:`~/Documents/VMPC2000XL/MidiControlPresets` and the next time you start VMPC2000XL the original preset will be restored.
