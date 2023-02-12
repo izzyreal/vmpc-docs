@@ -53,6 +53,8 @@ Main screen        Escape
 Open window        i
 ================== ==================
 
+Hold 1 modifier (Ctrl, Alt or Shift) to increase DATA wheel by 10. Hold 2 to increase it by 100. Hold 3 to increase it by 1000. Note that increment modifiers in the TRIM, LOOP and ZONE screens are relative to the sound length: the bigger the sound length, the bigger the jumps.
+
 Pads
 ++++
 
@@ -120,6 +122,8 @@ On iOS you can drag the data wheel with one finger for precise, single-step chan
 Slider/Rec gain/Main volume
 +++++++++++++++++++++++++++
 These controls can be operated by dragging or scrolling.
+
+Note that, like on the original MPC2000XL, you can use the slider to change many of the values in the TRIM, LOOP and ZONE screens, by holding SHIFT while moving the slider.
 
 .. note::
 
