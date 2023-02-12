@@ -322,7 +322,7 @@ VMPC2000XL remembers configurations for any USB volumes that have been previousl
 .. _midi_control:
 
 MIDI control
-++++++++++++
+------------
 From the :code:`SETNGS` screen press :kbd:`F5` to access the :code:`MIDI` tab:
 
 .. image:: images/vmpc_specific_settings/vmpc-midi.png
@@ -342,7 +342,7 @@ Press :kbd:`F4` to toggle :code:`LEARN` mode. You can also use the cursors and D
 When you leave the screen, VMPC2000XL checks if you've made any changes and whether you'd like to save them. When you restart VMPC2000XL, these settings will be automatically restored.
 
 MIDI control preset management
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++
 In the :code:`MIDI` screen press :kbd:`OPEN WINDOW` to open the :code:`MIDI controller presets` window:
 
 .. image:: images/vmpc_specific_settings/vmpc-midi-controller-presets.png
@@ -358,7 +358,7 @@ To save your own preset under a name, select :code:`New preset` and press :kbd:`
 Presets are stored as files under :code:`~/Documents/VMPC2000XL/MidiControlPresets`.
 
 Bundled presets for known controllers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++
 VMPC2000XL aims to support common pad controllers out-of-the-box. When a known controller is connected, VMPC2000XL detects this and asks if you want to switch the active MIDI control mapping to one for your controller:
 
 .. image:: images/vmpc_specific_settings/vmpc-known-controller-detected.png
