@@ -252,9 +252,11 @@ The :code:`Mode` setting for the :code:`DEFAULT` volume can't be changed. It is 
 
   Any files placed in the :code:`DEFAULT` directory will be renamed to names that are compatible with the Akai FAT16 filesystem. For example, :file:`Fantastic Bassdrum 14.wav` will become :file:`FANTASTICBASSDRU.WAV`. This is a destructive operation, meaning that the file in this location will be permanently renamed. For this reason it is recommended to always **keep a copy of the original files elsewhere**. Never assume you can copy files from this directory back into where you copied them from.
 
-Raw USB volumes
-+++++++++++++++
+Raw USB volumes (Linux, macOS and Windows only)
++++++++++++++++++++++++++++++++++++++++++++++++
 Though this is a unique and cool feature of VMPC2000XL, **proceed with care** when accessing raw USB volumes. At the moment this feature is **experimental**.
+
+If you plan to use this functionality on macOS and you want to be able to use sound names longer than 8 characters, use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_.
 
 Background
 ^^^^^^^^^^
@@ -272,6 +274,7 @@ For this reason, an MPC2000XL CF card with for example a :file:`DRUMKIT.PGM` tha
 
   1. Never insert the CF card in a USB reader connected to your computer
   2. Use up to 8 characters for the names of your sounds
+  3. Use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_ for macOS
 
 **Always keep backups of important work!** If you don't have a hotswappable CF reader or SCSI harddrive connected to your MPC2000XL, your best bet for making backups is probably a Linux computer.
 
