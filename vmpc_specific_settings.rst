@@ -254,32 +254,39 @@ The :code:`Mode` setting for the :code:`DEFAULT` volume can't be changed. It is 
 
 Raw USB volumes (Linux, macOS and Windows only)
 +++++++++++++++++++++++++++++++++++++++++++++++
-Though this is a unique and cool feature of VMPC2000XL, **proceed with care** when accessing raw USB volumes. At the moment this feature is **experimental**.
+Raw USB access lets VMPC2000XL directly access your MPC2000XL CF cards. If you never use more than 8 characters for your sound names, this feature doesn't bring a lot of value to your workflow. If you want to use more than 8 characters for sound names, keep on reading.
 
-If you plan to use this functionality on macOS and you want to be able to use sound names longer than 8 characters, use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_.
+Though a unique and cool feature of VMPC2000XL, **proceed with care** when using raw USB volume access. At the moment this feature is **experimental**.
 
-Background
-^^^^^^^^^^
+If you plan to use raw USB access and you want to be able to use sound names longer than 8 characters, on macOS use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_, and on Windows use my `registry patch <https://github.com/izzyreal/win-disable-usbdrive-indexing>`_. Note that these tools can also be used independently from VMPC2000XL, by original MPC2000XL users who want to be able to access MPC2000XL CF cards and other media on their desktop computer, without corrupting their data.
+
+To my knowledge on most Linux distributions no special tools are necessary to prevent corruption of MPC2000XL media, but you must still stick to the principle of not performing any write operations (including creating, deleting and updating files) outside VMPC2000XL.
+
+Akai's MPC2000XL FAT16 filesystem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This subsection should be seen as an addendum to Akai's MPC2000XL manual. It does not discuss anything that is directly related to VMPC2000XL.
 
 The real MPC2000XL uses a hacky implementation of `FAT16 <https://www.win.tue.nl/~aeb/linux/fs/fat/fat-1.html>`_. In Akai's implementation, 8 bytes of each FAT directory entry that are ordinarily reserved for relatively trivial attributes like creation and last access date/time, are used to store 8 additional characters for the filename.
 
 It is via this mechanism that the MPC2000XL has 16.3 filenames rather than 8.3 in a single FAT16 entry. The only problem, however, is that this leaves the MPC2000XL user in a kind of limbo state with regard to file exchange. Any Mac, Windows or Linux machine can read an MPC2000XL CF card without complaining, but it will not be able to parse the filenames correctly. It will register the 8 additional bytes as invalid date/time values, since that is what these bytes are expected to mean in a common FAT16 implementation.
 
-For this reason, an MPC2000XL CF card with for example a :file:`DRUMKIT.PGM` that refers to a :file:`FUNKY_SNARE1.SND` will not be copied correctly to most computers. Likely you will end up with a file named :file:`FUNKY_SN.SND`. What's worse, operating systems have a tendency to rewrite the FAT entries of any directory that is explored, leaving you with a broken :file:`DRUMKIT.PGM` after exploring your CF card in macOS Finder or Windows Explorer, since the PGM still contains a reference to :file:`FUNKY_SNARE1.SND`.
+For this reason, an MPC2000XL CF card with for example a :file:`DRUMKIT.PGM` that refers to a :file:`FUNKY_SNARE1.SND` will not be copied correctly to most computers. Likely you will end up with a file named :file:`FUNKY_SN.SND`.
+
+What's worse, Windows and macOS have a tendency to rewrite the FAT entries of any volume that is connected to your system. This results in truncating file names, for example :file:`FUNKY_SNARE1.SND` will become :file:`FUNKY_SN.SND`. If you have :file:`PGM` files referring to :file:`FUNKY_SNARE1.SND`, loading such program files will result in failure to find the :file:`SND` file.
 
 .. note::
 
   To avoid corrupting MPC2000XL data on a CF card, your options are:
 
-  1. Never insert the CF card in a USB reader connected to your computer
-  2. Use up to 8 characters for the names of your sounds
-  3. Use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_ for macOS
+  1. Never insert the CF card in a USB reader connected to your computer.
+  2. Use up to 8 characters for the names of your sounds.
+  3. Use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_ for macOS.
+  4. Use my `registry patch <https://github.com/izzyreal/win-disable-usbdrive-indexing>`_ for Windows.
 
-**Always keep backups of important work!** If you don't have a hotswappable CF reader or SCSI harddrive connected to your MPC2000XL, your best bet for making backups is probably a Linux computer.
+**Always keep backups of important work!** If you don't have a hotswappable CF reader or SCSI harddrive connected to your MPC2000XL, your best bet for making backups is a Linux computer, or a Mac that is running `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_.
 
-Feature description
-^^^^^^^^^^^^^^^^^^^
+RAW USB access under the hood
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Raw USB volume access allows VMPC2000XL to read an MPC2000XL CF card almost like the MPC2000XL itself, meaning you can load and save PGM and APS files that refer to sounds with long names over 8 characters.
 
 This type of access is achieved by performing the following steps:
