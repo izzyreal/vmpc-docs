@@ -91,12 +91,11 @@ Auto-convert WAVs
 +++++++++++++++++
 VMPC2000XL has the ability to convert PCM WAV files that are unsupported on the original MPC2000XL to a supported format. Eligible are 24- and 32-bit WAV files, as well as WAVs with a sampling rate over 44100Hz.
 
-By default VMPC2000XL will prompt you with a dialog when you are trying to load an unsupported file that is eligible for conversion. To always skip this prompt, set :code:`Auto-convert WAVs` to :code:`YES`.
+By default VMPC2000XL will always try to convert WAV files to a supported format. If you prefer to get a dialog instead, so you are aware of such conversions, set :code:`Auto-convert WAVs` to :code:`ASK`.
 
 .. image:: images/vmpc_specific_settings/auto_convert_wavs.png
    :width: 400 px
    :align: center
-
 
 .. _midi_control_mode:
 
@@ -108,9 +107,7 @@ VMPC2000XL supports 2 different modes in terms of MIDI controllability:
 
 2. :code:`ORIGINAL`. VMPC2000XL will respond like the original would. This means that incoming MIDI note events will be routed to pads according to how you've programmed your pad-to-MIDI note associations in the PROGRAM ASSIGN screen (Shift + 6, F1 - F4). Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p185) to see the details of assigning MIDI Continuous Controllers to MPC2000XL functionality in this mode, via the :code:`MIDIsw` screen.
 
-To change the :code:`MIDI control mode`, go to the :code:`SETNGS` tab by pressing :kbd:`Shift + 0`:
-
-.. image:: images/vmpc_specific_settings/vmpc-setngs.png
+.. image:: images/vmpc_specific_settings/midi_control_mode.png
    :width: 400 px
    :align: center
 
@@ -199,33 +196,22 @@ The following aspects are part of the state that is saved and loaded as part of 
 
   Since all sounds are stored in your DAW project files, be aware of their combined size. If you have 32MB of sounds in memory, your project file will become 32MB bigger.
 
-You can choose to auto-save upon exit and auto-load upon start. Both operations can be in 3 states:
+There are 2 auto-save modes:
+* Disabled
+* Enabled
 
+and there are 3 auto-load modes:
 * Disabled
 * Ask
 * Enabled
 
-The default configuration is like this:
+The default configuration is to enable auto-save, and to ask whether the user wants to auto-load the last saved state.
 
-.. image:: images/vmpc_specific_settings/default_autosave_configuration.png
-   :width: 400 px
-   :align: center
-
-When :code:`Auto-save on exit` is set to :code:`Ask`, you will be asked whether to save your session or don't save (in which case **it will be deleted permanently**):
-
-.. image:: images/vmpc_specific_settings/autosave_this_session.png
-   :width: 400 px
-   :align: center
-
-When it's set to :code:`Disabled`, your sessions will never be auto-saved upon exiting VMPC2000XL. Likewise, when it's set to :code:`Enabled` your sessions will be silently auto-saved when you exit, **overwriting your previous auto-save**.
-
-A similar logic applies to the :code:`Auto-load on start` setting. When it's set to :code:`Ask`, the following dialog appears upon startup if an auto-saved session is detected:
+When :code:`Auto-load on start` is set to :code:`Ask`, the following dialog appears upon startup if an auto-saved session is detected:
 
 .. image:: images/vmpc_specific_settings/continue_previous_session.png
    :width: 400 px
    :align: center
-
-When it's set to :code:`Disabled`, your sessions will never be auto-saved when you exit. When it's set to :code:`Enabled` your sessions will be silently restored when you open VMPC2000XL.
 
 Configuring (USB) disk devices in the DISKS tab
 -----------------------------------------------
