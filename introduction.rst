@@ -19,7 +19,7 @@ VMPC2000XL is a *behavorial* rather than a *hardware* emulator.
 
 Good examples of hardware emulators are the many game console and arcade machine emulators available today. These model the CPU and other relevant circuitry of consoles and arcade machines, resulting in a virtual machine. This virtual machine allows you to run any unmodified copy of a game ROM, cartridge or CD that would run on the original hardware.
 
-The same can be done for the early MPCs. A crude implementation of the MPC3000 is being worked on `in MAME <https://github.com/mamedev/mame/blob/master/src/mame/drivers/mpc3000.cpp>`_.
+The same can be done for the early MPCs. A crude implementation of the MPC3000 is being worked on `in MAME <https://github.com/mamedev/mame/blob/master/src/mame/akai/mpc3000.cpp>`_.
 
 VMPC2000XL, however, models the *behavior* of the MPC2000XL as a whole, rather than its parts that make it a computer: the CPU, memory, BIOS and so on. The source code of VMPC2000XL knows nothing about the microprocessors, DACs and other hardware that resides inside the MPC2000XL. Contrary to the MAME implementation of the MPC3000, VMPC2000XL is not, and does not aim to be, capable of running the original MPC OS.
 
