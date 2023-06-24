@@ -151,6 +151,8 @@ Click the "Configure computer keyboard" icon in the top-right to go to the KEYBR
 
    The "Configure computer keyboard" button
 
+Hover over the button to show an overlay with all current keyboard mappings. Every keyboard-controllable component of VMPC2000XL's UI will temporarily show a glowing square with a description of the key that is mapped to it.
+
 MIDI
 ----
 Read more about MIDI control in the :ref:`MIDI control mode <midi_control_mode>` and :ref:`MIDI control <midi_control>` sections.
