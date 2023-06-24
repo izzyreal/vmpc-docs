@@ -370,3 +370,7 @@ The process of adding known controller mappings has just started, so the current
 Let me know which controller you use and I'll try to add it.
 
 If you have accidentally overwritten a bundled preset, delete its file from :code:`~/Documents/VMPC2000XL/MidiControlPresets` and the next time you start VMPC2000XL the original preset will be restored.
+
+Auxiliary LCD
+-------------
+In some cases it can be useful to have a bigger view on the LCD, maybe even on a dedicated display. Open an additional window that displays just the LCD by double-clicking on the normal LCD. A window with duplicate contents of the LCD will show up. You can drag the window around, resize it and maximize it. To close it, double-click it or double-click the normal LCD.
