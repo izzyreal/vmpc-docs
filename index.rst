@@ -9,7 +9,7 @@ It is highly suitable for those who want to experience what it was like to creat
 
 It is not meant as an alternative to modern equipment with MPC-style pads. Such devices offer a much higher degree of efficiency, intuitiveness and possibilities.
 
-VMPC2000XL is completely `free and open source <https://github.com/izzyreal/vmpc-workspace>`_. Though nothing is currently documented about it, contributions are highly welcome! Contact Izmar if you are interested. Contributions are welcomed in the form of code, graphics, website maintenance, documentation, forum moderation and more.
+VMPC2000XL is completely `free and open source <https://github.com/izzyreal/vmpc-juce>`_. Though nothing is currently documented about it, contributions are highly welcome! Contact Izmar if you are interested. Contributions are welcomed in the form of code, graphics, website maintenance, documentation, forum moderation and more.
 
 .. toctree::
    :maxdepth: 2

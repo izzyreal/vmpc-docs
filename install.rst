@@ -35,7 +35,7 @@ At the moment there is no package of VMPC2000XL for Ubuntu yet, but word on the 
 .. note::
    For Linux packager people: As per version 0.5.0, VMPC2000XL's Linux build process fully relies on CMake, and portable source packages suitable for offline builds can be generated with ease.
 
-Some effort was put into making VMPC2000XL more attractive for the Linux community, for example by following the `XDG Base Directory Specification <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_. Various self-contained standalone and LV2 Ubuntu builds are provided. You can `generate ninja and Make build files <https://github.com/izzyreal/vmpc-workspace>`_.
+Some effort was put into making VMPC2000XL more attractive for the Linux community, for example by following the `XDG Base Directory Specification <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_. Various self-contained standalone and LV2 Ubuntu builds are provided. Building from source should be straight-forward via `the vmpc-juce repo <https://github.com/izzyreal/vmpc-juce>`_.
 
 Suggestions, or even better, contributions, to improve the Linux side of VMPC2000XL are welcome.
 
