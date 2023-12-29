@@ -117,7 +117,7 @@ Data wheel
 ++++++++++
 The data wheel can be turned by dragging or scrolling. Precise, single-step changes can be performed by holding any of the modifier keys (Shift, Ctrl, Alt/Option) while dragging.
 
-On iOS you can drag the data wheel with one finger for precise, single-step changes, or with 2 fingers for large increments.
+On iPadOS you can drag the data wheel with one finger for precise, single-step changes, or with 2 fingers for large increments.
 
 Slider/Rec gain/Main volume
 +++++++++++++++++++++++++++
@@ -157,8 +157,8 @@ MIDI
 ----
 Read more about MIDI control in the :ref:`MIDI control mode <midi_control_mode>` and :ref:`MIDI control <midi_control>` sections.
 
-Import files and folders (iOS)
-------------------------------
+Import files and folders (iPadOS)
+---------------------------------
 Importing files and folders is the process of copying files from arbitrary locations on your iPad onto VMPC2000XL's default virtual disk volume. In the standalone version this is located in On My iPad -> VMPC2000XL -> Volumes -> MPC2000XL. In the AUv3 version this location is in an undisclosed sandbox (due to limitations beyond my control).
 
 .. figure:: images/controls/import.png
@@ -169,7 +169,7 @@ Importing files and folders is the process of copying files from arbitrary locat
 
 After tapping the "Import" button, a document browser opens. Tap a file or folder to import it. Alternatively tap "Select" to perform a multi-selection:
 
-.. figure:: images/controls/ios-doc-browser.png
+.. figure:: images/controls/ipados-doc-browser.png
    :width: 500 px
    :align: center
 
@@ -188,6 +188,6 @@ The imported files and folders are located in the MPC2000XL ROOT. Navigate to th
 2. Open Window to open the Directory window
 3. Press left arrow repeatedly until arriving at ROOT
 
-.. note::  In the standalone version of VMPC2000XL for iOS, you can also copy sounds, programs and other files into VMPC2000XL's documents in the Files app by going to the "On My iPad" location. You will find a VMPC2O00XL folder there, with the usual file locations. Typically you will want to place some sounds, and maybe some programs and sequences, in VMPC2000XL/Volumes/MPC2000XL (the default virtual disk of VMPC2000XL).
+.. note::  In the standalone version of VMPC2000XL for iPadOS, you can also copy sounds, programs and other files into VMPC2000XL's documents in the Files app by going to the "On My iPad" location. You will find a VMPC2O00XL folder there, with the usual file locations. Typically you will want to place some sounds, and maybe some programs and sequences, in VMPC2000XL/Volumes/MPC2000XL (the default virtual disk of VMPC2000XL).
 
     Due to a limitation beyond my control, in the AUv3 version this is not possible.

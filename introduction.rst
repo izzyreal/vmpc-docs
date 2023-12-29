@@ -2,7 +2,7 @@
 
 Introduction
 ============
-VMPC2000XL is an emulator of the `Akai MPC2000XL <https://www.akaipro.com/mpc2000xl>`_ sampling sequencer. It is free and open source, and it works on the most popular platforms: Linux, macOS, iOS and Windows. For all four platforms there is a standalone application version. For Linux there are LV2 and VST3 plugins, for MacOS there are AU and VST3 plugins, for iOS there is an AUv3 version, and for Windows there's a VST3 plugin variety. Experimental LV2 support for macOS and Windows is on its way.
+VMPC2000XL is an emulator of the `Akai MPC2000XL <https://www.akaipro.com/mpc2000xl>`_ sampling sequencer. It is free and open source, and it works on the most popular platforms: Linux, macOS, iOS and Windows. For all four platforms there is a standalone application version. For Linux there are LV2 and VST3 plugins, for MacOS there are AU and VST3 plugins, for iPadOS there is an AUv3 version, and for Windows there's a VST3 plugin variety. Experimental LV2 support for macOS and Windows is on its way.
 
 Conceived by Izmar, VMPC2000XL started early 2014 as a vehicle for learning how to program. The first iterations were `written in Java <https://github.com/izzyreal/vmpc-java>`_. The fact that Java has a garbage collector, however, doesn't make it very suitable for low-latency, glitch-free, realtime audio applications. Almost no professional audio software is written in garbage-collecting languages for this reason, and the same goes for domains like realtime video and high-frequency trading.
 

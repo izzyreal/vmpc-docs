@@ -2,7 +2,7 @@
 
 Install
 =======
-VMPC2000XL can be installed in Linux, macOS, iOS and Windows.
+VMPC2000XL can be installed in Linux, macOS, iPadOS and Windows.
 
 The recommended way to use VMPC2000XL is in standalone mode. The original is a complex piece of equipment with `a 200 page manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_. `Roger Linn <https://en.wikipedia.org/wiki/Roger_Linn>`_ poured a tremendous amount of interconnecting functionality in the MPC2000XL's ancestors, the MPC60 and the MPC3000. A modern computer, let alone a full-on DAW, offers a lot of distraction from all this.
 
@@ -116,8 +116,8 @@ Plugins can be removed from :file:`/Library/Audio/Plug-Ins`.
 .. note::
    If you are an existing user and the last time you tried VMPC2000XL was a while ago, you might have a :file:`vMPC.app`, which should also be removed.
 
-iOS
-+++
+iPadOS
+++++++
 Tap and hold the VMPC2000XL icon in your Home Screen and tap "Remove App".
 
 Windows
@@ -171,8 +171,8 @@ macOS
 
 **Configuration files** :file:`/Users/you/Library/Application Support/VMPC2000XL/config` and :file:`/Users/you/Library/Application Support/VMPC2000XL.settings`
 
-iOS
-+++
+iPadOS
+++++++
 **Documents standalone** :file:`On My iPad/VMPC2000XL`
 
 **AUv3** Not visible due to a limitation beyond my control, subject to change

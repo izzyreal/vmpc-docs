@@ -21,16 +21,16 @@ macOS
 ^^^^^
 Navigate to :file:`Applications` in Finder, locate :file:`VMPC2000XL` and double-click it. Alternatively use Spotlight and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
 
-iOS
-^^^
+iPadOS
+^^^^^^
 After installing VMPC2000XL, tap the VMPC2000XL icon in your Home Screen to start it.
 
 Windows
 ^^^^^^^
 Open the Start Menu and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
 
-Plugin (all platforms except iOS)
-+++++++++++++++++++++++++++++++++
+Plugin (all platforms except iPadOS)
+++++++++++++++++++++++++++++++++++++
 If your DAW or plugin host is compatible with the format of VMPC2000XL that you installed (LV2, VST3, AU or AUv3), it should detect VMPC2000XL as a software instrument with 10x mono audio out, 2x mono audio in and MIDI in/out.
 
 Please refer to your DAW's manual if you are not familiar with adding software instruments to your projects.
@@ -40,17 +40,17 @@ For more information on capabilities within each plugin and DAW combination, con
 .. note::
    For the AUv3 to be detectable by the host, you need to have run the standalone version first.
 
-Plugin (iOS)
-++++++++++++
-On iOS, VMPC2000XL comes as an AUv3 plugin. Most of the testing has been done in AUM, but in theory the AUv3 should work in other hosts too.
+Plugin (iPadOS)
++++++++++++++++
+On iPadOS, VMPC2000XL comes as an AUv3 plugin. Most of the testing has been done in AUM, but in theory the AUv3 should work in other hosts too.
 
 .. _audio_midi_configuration:
 
 Audio/MIDI configuration
 ------------------------
-Standalone (all platforms except iOS)
-+++++++++++++++++++++++++++++++++++++
-When you start VMPC2000XL for the first time, you have to configure which audio and MIDI devices you want to use. Click on the gear icon in the top-right.
+Standalone
+++++++++++
+When you start VMPC2000XL for the first time, it is highly recommended that you configure your audio and MIDI devices. Click on the gear icon in the top-right.
 
 Audio output/input
 ^^^^^^^^^^^^^^^^^^
@@ -59,6 +59,10 @@ VMPC2000XL can function fine on audio output only, but this is also the absolute
 Note that for audio out to work well, an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has the M208P 8 output expansion board.
 
 Up to 2 mono inputs can be activated. A single mono input, such as the internal microphone of a MacBook, also works (though VMPC2000XL will treat this single input as a left channel and duplicate it to the right channel).
+
+.. note::
+
+  On iPadOS, VMPC2000XL does not allow recording from Bluetooth devices, because this would result in 16KHz playback rates. This playback rate is beyond the control of the application and the user. When you connect for example a pair of Bluetooth headphones that have a built-in mic, this built-in mic will be ignored, and VMPC2000XL will keep using the iPad's internal mic for recording new sounds, while playback will keep going over the Bluetooth headphones.
 
 Sample rate
 ^^^^^^^^^^^
@@ -80,14 +84,6 @@ Below is an overview of the smallest buffer sizes that still work well on most m
     These are very rough approximations. Depending on what other software you are running and various system configurations, you may need a larger buffer, or maybe you can go lower than the suggested buffer sizes without audio artifacts.
 
     If you are on Windows or Linux and you are picky about your latencies (fully understandable when you're recording MIDI), it is highly recommended to explore all your options until you find the best response-time.
-
-Standalone (iOS)
-++++++++++++++++
-VMPC2000XL uses your default iOS audio devices for audio input and output. You can switch which audio device you're using by pairing a Bluetooth speaker with your iPad, plugging a cable into your iPad's analog audio out, etc.
-
-.. note::
-
-  VMPC2000XL does not allow recording from Bluetooth devices, because this would result in 16KHz playback rates (a limitation that is beyond my control). When you connect for example a pair of Bluetooth headphones that have a built-in mic, this built-in mic will be ignored, and VMPC2000XL will keep using the iPad's internal mic for recording new sounds, while playback will keep going over the Bluetooth headphones.
 
 Plugin
 ++++++

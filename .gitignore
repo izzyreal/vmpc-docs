@@ -66,4 +66,4 @@ target/
 .DS_store
 .settings
 .idea
-
+.venv
