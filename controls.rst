@@ -159,7 +159,7 @@ Read more about MIDI control in the :ref:`MIDI control mode <midi_control_mode>`
 
 Import files and folders (iPadOS)
 ---------------------------------
-Importing files and folders is the process of copying files from arbitrary locations on your iPad onto VMPC2000XL's default virtual disk volume. In the standalone version this is located in On My iPad -> VMPC2000XL -> Volumes -> MPC2000XL. In the AUv3 version this location is in an undisclosed sandbox (due to limitations beyond my control).
+Importing files and folders is the process of copying files from arbitrary locations on your iPad onto VMPC2000XL's default virtual disk volume.
 
 .. figure:: images/controls/import.png
    :width: 50 px
@@ -184,10 +184,56 @@ When a file or folder already exists, you will be asked if you want to overwrite
 
 The imported files and folders are located in the MPC2000XL ROOT. Navigate to the ROOT like this:
 
-1. Shift + 3 to go to the LOAD screen
+1. Shift + 3 to go to the :code:`LOAD` screen
 2. Open Window to open the Directory window
 3. Press left arrow repeatedly until arriving at ROOT
 
 .. note::  In the standalone version of VMPC2000XL for iPadOS, you can also copy sounds, programs and other files into VMPC2000XL's documents in the Files app by going to the "On My iPad" location. You will find a VMPC2O00XL folder there, with the usual file locations. Typically you will want to place some sounds, and maybe some programs and sequences, in VMPC2000XL/Volumes/MPC2000XL (the default virtual disk of VMPC2000XL).
 
     Due to a limitation beyond my control, in the AUv3 version this is not possible.
+
+
+.. _export_share_files_and_folders:
+
+Export/share files and folders (iPadOS)
+---------------------------------------
+Exporting files and folders is the process of exposing files that are only accessible via VMPC2000XL. This includes any beats you made, sounds and other files in the virtual MPC2000XL volume, and direct-to-disk recordings.
+
+.. figure:: images/controls/export.png
+   :width: 50 px
+   :align: center
+
+   The "Export" button
+
+After tapping the "Export" button, you are presented with the below options:
+
+.. figure:: images/controls/ipados-export-options.png
+   :width: 300 px
+   :align: center
+
+   The options after tapping the "Export" button
+
+After tapping any of the options, you are greeted with the usual options when sharing things on your iPad, for example:
+
+.. figure:: images/controls/ipados-share-options.png
+   :width: 300 px
+   :align: center
+
+
+Share APS, SNDs and ALL of current project
+++++++++++++++++++++++++++++++++++++++++++
+With this option you can export/share the complete state of VMPC2000XL, including all programs, sounds and sequences that are currently in memory.
+
+Share selected file/directory
++++++++++++++++++++++++++++++
+This option will show up as "Share selected file" or "Share selected directory", depending on what is currently selected in the :code:`LOAD` screen (Shift + 3). The name of the file/directory you're about to share is shown in the option. If you're sharing a directory, it will be shared as a ZIP archive.
+
+Share Direct to Disk Recordings
++++++++++++++++++++++++++++++++
+Any bounces/direct-to-disk recordings you have made via :ref:`direct-to-disk recording <direct_to_disk_recording>` can be shared via this option. Tapping this option will show you a list of your recordings:
+
+.. figure:: images/controls/ipados-share-recordings.png
+   :width: 300 px
+   :align: center
+
+Tap any of the recordings to export/share it as a ZIP archive.

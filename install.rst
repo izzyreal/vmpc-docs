@@ -173,11 +173,9 @@ macOS
 
 iPadOS
 ++++++
-**Documents standalone** :file:`On My iPad/VMPC2000XL`
+**Documents standalone and AUv3** App group sandbox. The exact location is undisclosed (by iPadOS) and the only way to access these is via VMPC2000XL itself. You can share documents (via AirDrop or to save them to Files) via the :ref:`Export button <export_share_files_and_folders>`.
 
-**AUv3** Not visible due to a limitation beyond my control, subject to change
-
-**Configuration files** Unknown
+**Configuration files** App group sandbox.
 
 Windows
 +++++++
