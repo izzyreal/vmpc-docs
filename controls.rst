@@ -237,3 +237,25 @@ Any bounces/direct-to-disk recordings you have made via :ref:`direct-to-disk rec
    :align: center
 
 Tap any of the recordings to export/share it as a ZIP archive.
+
+.. _manage_recordings:
+
+Manage Recordings (iPadOS)
+--------------------------
+Since the direct-to-disk recordings are not visible in the LOAD, SAVE and Directory screens, we need some other way to remove them when we don't need them anymore. That's what the Recording Manager is for.
+
+.. figure:: images/controls/folder.png
+   :width: 50 px
+   :align: center
+
+   The "Recording Manager" button
+
+After tapping the "Recording Manager" button, you are presented with the following view:
+
+.. figure:: images/controls/ipados-recording-manager.png
+   :width: 500 px
+   :align: center
+
+   The Recording Manager
+
+You can listen back to a recording by pressing the play button, and delete it by pressing the trashcan button.

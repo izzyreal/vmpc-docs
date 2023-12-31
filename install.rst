@@ -173,7 +173,7 @@ macOS
 
 iPadOS
 ++++++
-**Documents standalone and AUv3** App group sandbox. The exact location is undisclosed (by iPadOS) and the only way to access these is via VMPC2000XL itself. You can share documents (via AirDrop or to save them to Files) via the :ref:`Export button <export_share_files_and_folders>`.
+**Documents standalone and AUv3** App group sandbox. The exact location is undisclosed (by iPadOS) and the only way to access these is via VMPC2000XL itself. You can share documents (via AirDrop or to save them to Files) via the :ref:`Export button <export_share_files_and_folders>`. You can listen to, and remove, your direct-to-disk recordings via the :ref:`Recording Manager button <manage_recordings>`.
 
 **Configuration files** App group sandbox.
 
