@@ -182,16 +182,7 @@ After tapping a single file or folder, or after making a multi-selection and tap
 
 When a file or folder already exists, you will be asked if you want to overwrite the existing file. You can also choose to overwrite none or all of the existing files of your selection.
 
-The imported files and folders are located in the MPC2000XL ROOT. Navigate to the ROOT like this:
-
-1. Shift + 3 to go to the :code:`LOAD` screen
-2. Open Window to open the Directory window
-3. Press left arrow repeatedly until arriving at ROOT
-
-.. note::  In the standalone version of VMPC2000XL for iPadOS, you can also copy sounds, programs and other files into VMPC2000XL's documents in the Files app by going to the "On My iPad" location. You will find a VMPC2O00XL folder there, with the usual file locations. Typically you will want to place some sounds, and maybe some programs and sequences, in VMPC2000XL/Volumes/MPC2000XL (the default virtual disk of VMPC2000XL).
-
-    Due to a limitation beyond my control, in the AUv3 version this is not possible.
-
+The files and folders that you import are copied into the current directory as per your LOAD, SAVE and Directory screens. To check what your current directory is, press Shift + 3 to go to the :code:`LOAD` screen, and your current directory is mentioned in the top-right of the LCD.
 
 .. _export_share_files_and_folders:
 
