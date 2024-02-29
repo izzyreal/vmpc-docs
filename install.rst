@@ -30,7 +30,6 @@ On 32 bit systems the LV2 will be installed in :command:`/usr/lib/lv2`, and the 
 
 Manual installation (Ubuntu 20)
 -------------------------------
-At the moment there is no package of VMPC2000XL for Ubuntu yet, but word on the street is it's in the making.
 
 .. note::
    For Linux packager people: As per version 0.5.0, VMPC2000XL's Linux build process fully relies on CMake, and portable source packages suitable for offline builds can be generated with ease.
