@@ -13,9 +13,9 @@ __version_full__ = __version__
 
 def setup(app):
     """Setup conntects events to the sitemap builder"""
-    app.connect('html-page-context', add_html_link)
-    app.connect('build-finished', create_sitemap)
-    app.sitemap_links = []
+    # app.connect('html-page-context', add_html_link)
+    # app.connect('build-finished', create_sitemap)
+    # app.sitemap_links = []
 
 def get_html_theme_path():
     """Return list of HTML theme paths."""
