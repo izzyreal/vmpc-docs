@@ -10,13 +10,13 @@ On the other hand, the usefulness of a DAW can't be denied -- it's great to load
 
 By releasing VMPC2000XL in standalone, LV2, AU, AUv3 and VST3 formats it's completely up to you where and how you run it.
 
-Install ZYpp packages (openSUSE, Ubuntu, Debian and Fedora)
------------------------------------------------------------
+Install ZYpp packages (openSUSE, Ubuntu, Debian, Raspbian, Mageia and Fedora)
+-----------------------------------------------------------------------------
 Please follow the instructions below for
 
-* `standalone <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=vmpc2000xl>`_ (openSUSE, Ubuntu, Debian and Fedora)
-* `LV2 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=lv2-vmpc2000xl>`_ (Fedora, openSUSE)
-* `VST3 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=vst3-vmpc2000xl>`_ (Fedora, openSUSE)
+* `standalone <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=vmpc2000xl>`_ (openSUSE, Ubuntu, Debian, Raspbian, Mageia and Fedora)
+* `LV2 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=lv2-vmpc2000xl>`_ (Fedora, Mageia, openSUSE)
+* `VST3 <https://software.opensuse.org//download.html?project=multimedia%3Aproaudio&package=vst3-vmpc2000xl>`_ (Fedora, Mageia, openSUSE)
 
 There are binaries available for x86_64, and for Tumbleweed aarch64 as well. There are also some Fedora binaries.
 
