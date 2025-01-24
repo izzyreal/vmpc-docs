@@ -34,9 +34,9 @@ sys.path.insert(0, os.path.abspath('./_themes'))
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'vmpc2000xl',
     'sphinx_sitemap',
-    'notfound.extension'
+    'notfound.extension',
+    'sphinx_rtd_theme'
 ]
 
 # The short X.Y version.
@@ -133,14 +133,11 @@ todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
-import vmpc2000xl
+
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-# html_theme = 'sphinx_rtd_theme'
-html_theme = "vmpc2000xl"
-html_theme_path = vmpc2000xl.get_html_theme_path()
-
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -164,7 +161,7 @@ html_baseurl = html_theme_options['base_url']
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "_static/vmpc-logo.png"
+#html_logo = "_static/vmpc-logo.png"
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

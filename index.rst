@@ -1,5 +1,5 @@
 Welcome to VMPC2000XL Documentation
-====================================================
+===================================
 
 `VMPC2000XL <https://izmar.nl>`_ is an emulator of the `Akai MPC2000XL <https://www.akaipro.com/mpc2000xl>`_ sampling sequencer intended for vintage studio equipment enthousiasts.
 
