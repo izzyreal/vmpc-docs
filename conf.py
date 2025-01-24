@@ -154,7 +154,7 @@ html_theme_options = {
 }
 
 # for sphinx-sitemap
-html_baseurl = 'https://vmpc-docs.izmar.nl'
+html_baseurl = 'https://vmpcdocs.izmar.nl'
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = [ './_themes' ]
