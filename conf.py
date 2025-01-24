@@ -65,7 +65,7 @@ html_context = {
     "github_user": "izzyreal", # Username
     "github_repo": "vmpc-docs", # Repo name
     "github_version": "master", # Version
-    "conf_py_path": "/" # Path in the checkout to the docs root
+    "conf_py_path": "/", # Path in the checkout to the docs root
 }
 
 # Add any paths that contain templates here, relative to this directory.
@@ -142,12 +142,12 @@ html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {
-  "base_url": "https://vmpc-docs.izmar.nl/en/latest/",
-}
+# html_theme_options = {
+#   "base_url": "https://vmpc-docs.izmar.nl/en/latest/",
+# }
 
 # for sphinx-sitemap
-html_baseurl = html_theme_options['base_url']
+html_baseurl = 'https://vmpc-docs.izmar.nl'
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -161,7 +161,7 @@ html_baseurl = html_theme_options['base_url']
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = "_static/vmpc-logo.png"
+html_logo = "_static/vmpc-logo.png"
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -171,7 +171,8 @@ html_favicon = "_static/vmpc-favicon.png"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
+html_style = "css/theme_customizations.css"
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -262,7 +263,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = "_static/vmpc-logo.png"
+#latex_logo = "_static/vmpc-logo.png"
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
