@@ -137,6 +137,8 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
+import sphinx_rtd_theme
+
 html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -145,12 +147,17 @@ html_theme = 'sphinx_rtd_theme'
 # html_theme_options = {
 #   "base_url": "https://vmpc-docs.izmar.nl/en/latest/",
 # }
+html_theme_options = {
+    'collapse_navigation': False,
+    'sticky_navigation': False,
+    'navigation_depth': 2,
+}
 
 # for sphinx-sitemap
 html_baseurl = 'https://vmpc-docs.izmar.nl'
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+# html_theme_path = [ './_themes' ]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -188,7 +195,10 @@ html_style = "css/theme_customizations.css"
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+# html_sidebars = {
+#     '**': [],
+# }
+html_sidebars = {'index': ['localtoc.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

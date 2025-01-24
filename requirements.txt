@@ -3,4 +3,3 @@ sphinx-sitemap
 sphinx-notfound-page
 jinja2
 sphinx-autobuild
-sphinx_rtd_theme
