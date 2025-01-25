@@ -13,13 +13,13 @@ Linux
 ^^^^^
 If you have followed the recommendations of the :ref:`Manual installation (Ubuntu 18) <manual_installation_for_ubuntu>` section, your standalone application is in :file:`/usr/local/bin`.
 
-By default this path is in your :envvar:`PATH` environment variable, so you can run VMPC2000XL from anywhere in the terminal by typing :command:`VMPC2000XL` and pressing enter.
+By default this path is in your :envvar:`PATH` environment variable, so you can run VMPC2000XL from anywhere in the terminal by typing :code:`VMPC2000XL` and pressing enter.
 
-If you want to detach the process from the terminal completely, so you can use it for something else or close it, run :command:`VMPC2000XL &; disown`.
+If you want to detach the process from the terminal completely, so you can use it for something else or close it, run :code:`VMPC2000XL &; disown`.
 
 macOS
 ^^^^^
-Navigate to :file:`Applications` in Finder, locate :file:`VMPC2000XL` and double-click it. Alternatively use Spotlight and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
+Navigate to :file:`/Applications` in Finder, locate :file:`VMPC2000XL` and double-click it. Alternatively use Spotlight and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
 
 iPadOS
 ^^^^^^
