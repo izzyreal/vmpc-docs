@@ -11,15 +11,15 @@ Standalone
 
 Linux
 ^^^^^
-If you have followed the recommendations of the :ref:`Manual installation (Ubuntu 18) <manual_installation_for_ubuntu>` section, your standalone application is in :file:`/usr/local/bin`.
+If you have installed VMPC2000XL via your package manager, you can run VMPC2000XL from anywhere in the terminal by typing :code:`VMPC2000XL` and pressing Enter.
 
-By default this path is in your :envvar:`PATH` environment variable, so you can run VMPC2000XL from anywhere in the terminal by typing :command:`VMPC2000XL` and pressing enter.
+If you have followed the recommendations of the :ref:`Manual installation (Ubuntu 20) <manual_installation_for_ubuntu>` section, your standalone application is in :file:`/usr/local/bin`. By default this path is in your :envvar:`PATH` environment variable, so you can run VMPC2000XL in the same way: type :code:`VMPC2000XL` and press Enter.
 
-If you want to detach the process from the terminal completely, so you can use it for something else or close it, run :command:`VMPC2000XL &; disown`.
+If you want to detach the process from the terminal completely, in order to use it for something else or close it, run :code:`VMPC2000XL &; disown`.
 
 macOS
 ^^^^^
-Navigate to :file:`Applications` in Finder, locate :file:`VMPC2000XL` and double-click it. Alternatively use Spotlight and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
+Navigate to :file:`/Applications` in Finder, locate :file:`VMPC2000XL` and double-click it. Alternatively use Spotlight and start typing "VMPC2000XL". Pretty soon the application shows up and you can press Enter to start it.
 
 iPadOS
 ^^^^^^
@@ -42,7 +42,20 @@ For more information on capabilities within each plugin and DAW combination, con
 
 Plugin (iPadOS)
 +++++++++++++++
-On iPadOS, VMPC2000XL comes as an AUv3 plugin. Most of the testing has been done in AUM, but in theory the AUv3 should work in other hosts too.
+On iPadOS, VMPC2000XL comes as an AUv3 plugin. It can be used as an instrument, or as an effect plugin. The instrument gives you:
+
+* Audio out
+* MIDI in/out
+
+And the effect gives you:
+
+* Audio in/out
+* MIDI in
+
+Most of the testing has been done in AUM, but in theory the AUv3 should work in other hosts too.
+
+.. note::
+   For the AUv3 to be detectable by the host, you need to have run the standalone version first.
 
 .. _audio_midi_configuration:
 
@@ -56,17 +69,17 @@ Audio output/input
 ^^^^^^^^^^^^^^^^^^
 VMPC2000XL can function fine on audio output only, but this is also the absolute minimum you will need to configure correctly. Audio input and MIDI in/out can be configured to your liking.
 
-Note that for audio out to work well, an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has the M208P 8 output expansion board.
+Note that for audio out to work well, an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has the M208P output expansion board.
 
-Up to 2 mono inputs can be activated. A single mono input, such as the internal microphone of a MacBook, also works (though VMPC2000XL will treat this single input as a left channel and duplicate it to the right channel).
+Up to 2 mono inputs can be activated at a time. A single mono input, such as the internal microphone of a MacBook, also works. Note, however, that such a mono input is treated by VMPC2000XL as a stereo input where both channels are the same.
 
 .. note::
 
-  On iPadOS, VMPC2000XL does not allow recording from Bluetooth devices, because this would result in 16KHz playback rates. This playback rate is beyond the control of the application and the user. When you connect for example a pair of Bluetooth headphones that have a built-in mic, this built-in mic will be ignored, and VMPC2000XL will keep using the iPad's internal mic for recording new sounds, while playback will keep going over the Bluetooth headphones.
+  On iPadOS, VMPC2000XL does not allow recording from Bluetooth devices, because this would result in a playback and recording sample rate of 16kHz. So, when you connect, for example, a pair of Bluetooth headphones that have a built-in mic, this built-in mic will be ignored, and VMPC2000XL will keep using the iPad's internal mic for recording new sounds, while playback will be going over the Bluetooth headphones.
 
 Sample rate
 ^^^^^^^^^^^
-The sample rate is generally best left at 44.1KHz or 48KHz, but you can run VMPC2000XL at any sampling rate that suits your needs.
+The sample rate is generally best left at 44.1kHz or 48kHz, but you can run VMPC2000XL at any sampling rate that suits your needs.
 
 Audio buffer size
 ^^^^^^^^^^^^^^^^^
@@ -74,16 +87,14 @@ Keep the buffer size as low as possible. You generally want to keep the buffer s
 
 Below is an overview of the smallest buffer sizes that still work well on most modern systems:
 
-* Windows Audio: 192
+* Windows Audio (WASAPI): 192
 * Windows ASIO: 128
-* macOS CoreAudio: 64
+* macOS/iPadOS CoreAudio: 64
 * Linux JACK: 128
 
 .. note::
 
-    These are very rough approximations. Depending on what other software you are running and various system configurations, you may need a larger buffer, or maybe you can go lower than the suggested buffer sizes without audio artifacts.
-
-    If you are on Windows or Linux and you are picky about your latencies (fully understandable when you're recording MIDI), it is highly recommended to explore all your options until you find the best response-time.
+    These are approximations. Depending on what other software you are running and various system configurations, you may need a larger buffer, or maybe you can go lower than the suggested buffer sizes, without introducing audio artifacts.
 
 Plugin
 ++++++
@@ -93,16 +104,18 @@ For some suggested buffer size settings, see `Audio buffer size`_.
 
 .. note::
 
-  If the :code:`PLAY` LED lights up but :code:`Now:001.01.00` does not start counting, or if it starts counting but you don't hear the metronome, verify your :ref:`Audio output <audio_midi_configuration>` settings.
+  If the :code:`PLAY` LED lights up but :code:`Now:001.01.00` does not start counting, this means that no valid audio output is configured. Verify your :ref:`audio output <audio_midi_configuration>` settings. If it does start counting, but you're not hearing any audio output while you should be hearing something, verify that you have made the desired output channels active by putting a checkmark in front of them in the "Active output channels" section of the Audio/MIDI Settings.
 
 Loading the TEST1 sounds
 ------------------------
 When you start VMPC2000XL for the first time, there are no sounds in memory. Let's load some sounds and assign them to a pad. In this section we will discuss two ways to achieve this:
 
-1. Via the :code:`LOAD` screen
-2. Drag-and-drop a WAV or SND file onto a pad
+#. Via the :code:`LOAD` screen
+#. Drag-and-drop a WAV or SND file onto a pad
 
-Another way to load sounds is by loading a :file:`PGM` or :file:`APS` file. After having learned how to load individual WAV or SND files in the section you are reading, it's fairly simple to figure out how to load :file:`PGM` and :file:`APS` files. Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p164-167) to see the details of this process.
+.. note::
+
+  Another way to load sounds is by loading a :file:`PGM` or :file:`APS` file. After having learned how to load individual WAV or SND files via the :code:`LOAD` screen, it's easy to figure out how to load :file:`PGM`, :file:`APS` and other files. Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p164-167) to see the details of this process.
 
 LOAD screen
 +++++++++++
