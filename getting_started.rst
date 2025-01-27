@@ -126,24 +126,18 @@ To open the :code:`LOAD` screen:
 * Press the ↓ key to navigate to the :code:`File:` field
 * Press the :code:`-` and :code:`+` keys, or drag the DATA wheel with the mouse, to change :code:`File:` to :file:`TEST1`
 
-.. image:: images/getting_started/file_test1.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/getting_started/file_test1.png
 
 * Press :code:`F6` to enter the :file:`TEST1` directory
 * Turn the DATA wheel to change :code:`File:` to :file:`KICK1           .SND`
 
-.. image:: images/getting_started/file_kick1.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/getting_started/file_kick1.png
 
 * Press :code:`F5` to play a preview of the sound
 * Press :code:`F6` to open the :code:`Load a Sound` screen
 * Click on pad 1 or press :code:`z` to change the :code:`Assign to note:` to :code:`35/A01`
 
-.. image:: images/getting_started/assign_to_note.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/getting_started/assign_to_note.png
 
 * Press :code:`F5` to confirm
 

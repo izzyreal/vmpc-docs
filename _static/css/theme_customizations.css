@@ -4,3 +4,10 @@
 .wy-side-nav-search>a img.logo {
 	height: 60px;
 }
+.vmpc-lcd-screenshot {
+    margin-top: -0.4em !important;
+    margin-bottom: 1em !important;
+    width: 400px;
+    align: center;
+    display: block;
+}

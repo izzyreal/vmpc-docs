@@ -29,9 +29,7 @@ Press :kbd:`Shift + <PLAY START>` to access the :code:`Direct-to-Disk Recorder` 
 
 The :code:`Direct-to-Disk Recorder` screen looks like this:
 
-.. image:: images/vmpc_specific_settings/direct_to_disk_recorder.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/direct_to_disk_recorder.png
 
 In the :code:`Record:` field you can select what to record: a :code:`SEQUENCE`, a :code:`LOOP` (i.e. a part of a sequence as selected in the :code:`Loop` window that is accessed via the :code:`MAIN` screen), a :code:`CUSTOM RANGE` or a :code:`SONG`. Different settings appear depending on what you have selected, to further configure what to record.
 
@@ -39,9 +37,7 @@ In the :code:`Offline:` field select :code:`YES` to enable silent, non-realtime 
 
 When recording has finished the following screen appears:
 
-.. image:: images/vmpc_specific_settings/recording_finished.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/recording_finished.png
 
 In the specified directory there will always be a set of 5 stereo recordings: :file:`L-R.WAV` and :file:`1-2.WAV` ... :file:`7-8.WAV`, even if one of these output pairs is 100% silent. Each recording reflects the output of a given stereo output of VMPC2000XL. If a particular pad is routed only to :code:`ASSIGNABLE MIX OUT 1/2` in the :code:`MIXER` screen, this is respected while recording directly to disk. This allows you to create up to 5 different stereo parts or stems that can be mixed and mastered in a DAW.
 
@@ -65,9 +61,7 @@ Whatever its origins, it causes confusion the moment you connect a MIDI keyboard
 
 VMPC2000XL defaults to a chromatic mapping: 35, 36, 37, 38 ... 95, 96, 97, 98 for pads 1, 2, 3, 4 ... 61, 62, 63, 64. You can verify this is the initial pad mapping in the :code:`SETNGS` tab. The :code:`Initial pad mapping` field should be set to :code:`VMPC2000XL` like below:
 
-.. image:: images/vmpc_specific_settings/initial_pad_mapping.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/initial_pad_mapping.png
 
 To get the original pad mapping, set :code:`Initial pad mapping` to :code:`ORIGINAL`.
 
@@ -83,9 +77,7 @@ If this is what you want, leave the :code:`16 levels erase mode` field at its de
 
 If you only want to erase note events that match the level of the pad you're pressing, set this field to :code:`Only pressed level` like below:
 
-.. image:: images/vmpc_specific_settings/16_levels_erase_mode.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/16_levels_erase_mode.png
 
 Auto-convert WAVs
 +++++++++++++++++
@@ -93,9 +85,7 @@ VMPC2000XL has the ability to convert PCM WAV files that are unsupported on the 
 
 By default VMPC2000XL will always try to convert WAV files to a supported format. If you prefer to get a dialog instead, so you are aware of such conversions, set :code:`Auto-convert WAVs` to :code:`ASK`.
 
-.. image:: images/vmpc_specific_settings/auto_convert_wavs.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/auto_convert_wavs.png
 
 .. _midi_control_mode:
 
@@ -107,9 +97,7 @@ VMPC2000XL supports 2 different modes in terms of MIDI controllability:
 
 2. :code:`ORIGINAL`. VMPC2000XL will respond like the original would. This means that incoming MIDI note events will be routed to pads according to how you've programmed your pad-to-MIDI note associations in the PROGRAM ASSIGN screen (Shift + 6, F1 - F4). Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p185) to see the details of assigning MIDI Continuous Controllers to MPC2000XL functionality in this mode, via the :code:`MIDIsw` screen.
 
-.. image:: images/vmpc_specific_settings/midi_control_mode.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/midi_control_mode.png
 
 Continue reading below in the :ref:`MIDI control <midi_control>` section.
 
@@ -121,9 +109,7 @@ After pressing :kbd:`Shift + 0`, press :kbd:`F2` to go to the :code:`KEYBRD` tab
 
 If you can't use the keyboard as expected, you can also click the keyboard icon in the far top-right.
 
-.. image:: images/vmpc_specific_settings/keyboard_tab.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/keyboard_tab.png
 
 Once you are in the :code:`KEYBRD` tab, VMPC2000XL internally switches to a restricted keyboard input mode that ignores any keyboard configuration you may have. The only keys that work in this tab are:
 
@@ -138,9 +124,7 @@ Changing a mapping
 
 Use **up** and **down** to scroll through the list of functions. To change one of the mappings, highlight the mapping and press :code:`F4`. The UI will change to indicate learn mode is active. Some elements start blinking to indicate VMPC2000XL is awaiting your keypress:
 
-.. image:: images/vmpc_specific_settings/keyboard_tab_learn.gif
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/keyboard_tab_learn.gif
 
 As long as the elements are blinking and you see :code:`CANCEL` and :code:`ACCEPT`, you can press another key that you wish to assign to the selected function.
 
@@ -151,9 +135,7 @@ Reset mapping to default
 
 To go back to the original mapping that is based on the US keyboard layout, press :code:`F5`:
 
-.. image:: images/vmpc_specific_settings/reset_keyboard_mapping.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/reset_keyboard_mapping.png
 
 Saving mapping changes
 ++++++++++++++++++++++
@@ -162,18 +144,14 @@ Press :code:`F6` to save your changes. A popup will appear saying "Keyboard mapp
 
 If your configuration is the same as what it was, a popup will appear saying "Keyboard mapping unchanged":
 
-.. image:: images/vmpc_specific_settings/keyboard_mapping_unchanged.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/keyboard_mapping_unchanged.png
 
 Discard mapping changes
 +++++++++++++++++++++++
 
 To discard the changes you made in the :code:`KEYBRD` screen, press :code:`Esc` or click the :code:`MAIN SCREEN` button. If you actually have unsaved changes, the following window appears:
 
-.. image:: images/vmpc_specific_settings/discard_mapping_changes.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/discard_mapping_changes.png
 
 Besides discarding your changes, you can choose to stay in the :code:`KEYBRD` screen and continue making changes, or you can save your changes, after which you'll go to the Main screen.
 
@@ -209,9 +187,7 @@ The default configuration is to enable auto-save, and to ask whether the user wa
 
 When :code:`Auto-load on start` is set to :code:`Ask`, the following dialog appears upon startup if an auto-saved session is detected:
 
-.. image:: images/vmpc_specific_settings/continue_previous_session.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/continue_previous_session.png
 
 Configuring (USB) disk devices in the DISKS tab
 -----------------------------------------------
@@ -221,9 +197,7 @@ Configuring (USB) disk devices in the DISKS tab
 
 After pressing :kbd:`Shift + 0`, press :kbd:`F4` to go to the :code:`DISKS` tab. The default configuration is like this:
 
-.. image:: images/vmpc_specific_settings/default_disks_configuration.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/default_disks_configuration.png
 
 The DEFAULT volume
 ++++++++++++++++++
@@ -293,9 +267,7 @@ Enabling a USB volume
 ^^^^^^^^^^^^^^^^^^^^^
 When you first connect a USB pendrive or CF card with a FAT16 volume, the configuration in the DISKS screen will look like this:
 
-.. image:: images/vmpc_specific_settings/default_disks_configuration_usb_disabled.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/default_disks_configuration_usb_disabled.png
 
 .. note::
 
@@ -305,9 +277,7 @@ Navigate to the volume you want to enable and set its :code:`Mode` to :code:`REA
 
 Any enabled volumes will now be available in the :code:`LOAD` screen's :code:`Device:` field. The volume name will be used to identify each volume. Where the real MPC2000XL instantly makes SCSI and other connected devices your active disk device as you cycle through them, one additional action is required on VMPC2000XL to make a USB volume active -- pressing :kbd:`F5` to :code:`APPLY` that setting:
 
-.. image:: images/vmpc_specific_settings/load_apply.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/load_apply.png
 
 The reason for this deviation from the real MPC2000XL is to allow the user to explore any options before actually changing the active disk device.
 
@@ -321,9 +291,7 @@ MIDI control
 ------------
 From the :code:`SETNGS` screen press :kbd:`F5` to access the :code:`MIDI` tab:
 
-.. image:: images/vmpc_specific_settings/vmpc-midi.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/vmpc-midi.png
 
 Each row shows an association between an interactable component of VMPC2000XL, and a specific kind of MIDI input message that should control it.
 
@@ -341,9 +309,7 @@ MIDI control preset management
 ++++++++++++++++++++++++++++++
 In the :code:`MIDI` screen press :kbd:`OPEN WINDOW` to open the :code:`MIDI controller presets` window:
 
-.. image:: images/vmpc_specific_settings/vmpc-midi-controller-presets.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/vmpc-midi-controller-presets.png
 
 To load the default preset, press :kbd:`F5` while :code:`New preset` is selected. The default preset is very basic: notes 35 - 50 are associated with pads 1 - 16, and CC 7 is associated with the slider.
 
@@ -357,9 +323,7 @@ Bundled presets for known controllers
 +++++++++++++++++++++++++++++++++++++
 VMPC2000XL aims to support common pad controllers out-of-the-box. When a known controller is connected, VMPC2000XL detects this and asks if you want to switch the active MIDI control mapping to one for your controller:
 
-.. image:: images/vmpc_specific_settings/vmpc-known-controller-detected.png
-   :width: 400 px
-   :align: center
+.. vmpc-lcd-screenshot:: images/vmpc_specific_settings/vmpc-known-controller-detected.png
 
 The process of adding known controller mappings has just started, so the current list is quite small:
 

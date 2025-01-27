@@ -22,7 +22,7 @@ import json
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
 sys.path.insert(0, os.path.abspath('./_themes'))
-
+sys.path.insert(0, os.path.abspath('./_directives'))
 
 # -- General configuration ------------------------------------------------
 
@@ -36,7 +36,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx_sitemap',
     'notfound.extension',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'vmpc-directives'
 ]
 
 # The short X.Y version.
