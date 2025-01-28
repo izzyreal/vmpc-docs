@@ -3,3 +3,5 @@ sphinx-sitemap
 sphinx-notfound-page
 jinja2
 sphinx-autobuild
+rinohtype
+pillow
