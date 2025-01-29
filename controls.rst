@@ -9,12 +9,6 @@ There are 3 ways to control VMPC2000XL:
 
 It is **strongly recommended** to get familiar with :ref:`basic keyboard shortcuts <basic_operations>` rather than relying on the mouse. The more keyboard shortcuts you use, likely the greater the sense of immersion.
 
-The other buttons are also mapped to keyboard shortcuts, but you can pick these up as you go.
-
-.. note::
-
-  The degree of MIDI controllability is the same as on the real MPC2000XL, i.e. not every button can be mapped to a MIDI control change parameter, and there's a limit to 4 mappings at a given moment.
-
 Keyboard
 --------
 For most controls you can display a tooltip that shows you which key on the keyboard is associated with it. In the case of the DATA wheel it's 2 keys -- one for clockwise and one for anti-clockwise. To display a control's keyboard shortcut in a tooltip hover over the control while holding one of the modifier keys on your keyboard (Shift, Control, Alt/Option, Command):
@@ -36,98 +30,99 @@ In the same vein some special characters are clarified by appending their name i
 Basic operations
 ++++++++++++++++
 
-================== ==================
-Operation          Key(s)
-================== ==================
-Up/Down/Left/Right Up/Down/Left/Right
-Data wheel up/down +/-
-Numeric keypad     0 ... 9
-Shift              Left shift
-Record             L
-Overdub            ; (semicolon)
-Stop               ' (quote)
-Play               Space
-Play start         \\ (backslash)
-F1 ... F6          F1 ... F6
-Main screen        Escape
-Open window        i
-================== ==================
+===================== ==================
+Operation             Key(s)
+===================== ==================
+Up, Down, Left, Right :kbd:`Up`/:kbd:`Down`/:kbd:`Left`/:kbd:`Right`
+Data wheel plus       :kbd:`+` (to the left of the :kbd:`Tab` key)
+Data wheel minus      :kbd:`-` (to the left of the :kbd:`Tab` key)
+Numeric keypad        :kbd:`0` ... :kbd:`9`
+Shift                 :kbd:`Left shift`
+Record                :kbd:`L`
+Overdub               :kbd:`;` (semicolon)
+Stop                  :kbd:`'` (quote)
+Play                  :kbd:`Space`
+Play start            :kbd:`\\` (backslash)
+F1 ... F6             :kbd:`F1` ... :kbd:`F6`
+Main screen           :kbd:`Escape`
+Open window           :kbd:`I`
+===================== ==================
 
-Hold 1 modifier (Ctrl, Alt or Shift) to increase DATA wheel by 10. Hold 2 to increase it by 100. Hold 3 to increase it by 1000. Note that increment modifiers in the TRIM, LOOP and ZONE screens are relative to the sound length: the bigger the sound length, the bigger the jumps.
+Hold one modifier -- :kbd:`Shift`, :kbd:`Ctrl`, or :kbd:`Alt/Option` -- to turn the DATA wheel 10 steps. Hold two modifiers to turn it 100 steps, and hold three to turn it 1000 steps. In the :code:`TRIM`, :code:`LOOP` and :code:`ZONE` screens, the number of steps per combination of modifiers are tailored to the sound length: the longer the sound, the bigger the number of steps.
 
 Pads
 ++++
 
-+-+-+-+-+
-|g|h|j|k|
-+-+-+-+-+
-|b|n|m|,|
-+-+-+-+-+
-|a|s|d|f|
-+-+-+-+-+
-|z|x|c|v|
-+-+-+-+-+
++--------+--------+--------+--------+
+|:kbd:`g`|:kbd:`h`|:kbd:`j`|:kbd:`k`|
++--------+--------+--------+--------+
+|:kbd:`b`|:kbd:`n`|:kbd:`m`|:kbd:`,`|
++--------+--------+--------+--------+
+|:kbd:`a`|:kbd:`s`|:kbd:`d`|:kbd:`f`|
++--------+--------+--------+--------+
+|:kbd:`z`|:kbd:`x`|:kbd:`c`|:kbd:`v`|
++--------+--------+--------+--------+
 
 Advanced operations
 +++++++++++++++++++
 
-====================== ======
-Operation              Key(s)
-====================== ======
-Bank A                 Home
-Bank B                 End
-Bank C                 Insert
-Bank D                 Delete
-Previous step/event    q
-Next step/event        w
-Locate/Go to           e
-Previous bar/Start     r
-Next bar/End           t
-Tap tempo/Note repeat  y
-Erase                  F8
-Full level             o
-16 levels              p
-Next seq               [
-Track mute             ]
-After/Assign           F9
-Undo seq               F10
-====================== ======
+====================== =============
+Operation              Key
+====================== =============
+Bank A                 :kbd:`Home`
+Bank B                 :kbd:`End`
+Bank C                 :kbd:`Insert`
+Bank D                 :kbd:`Delete`
+Previous step/event    :kbd:`Q`
+Next step/event        :kbd:`W`
+Locate/Go to           :kbd:`E`
+Previous bar/Start     :kbd:`R`
+Next bar/End           :kbd:`T`
+Tap tempo/Note repeat  :kbd:`Y`
+Erase                  :kbd:`F8`
+Full level             :kbd:`O`
+16 levels              :kbd:`P`
+Next seq               :kbd:`[`
+Track mute             :kbd:`]`
+After/Assign           :kbd:`F9`
+Undo seq               :kbd:`F10`
+====================== =============
 
 VMPC-specific operations
 ++++++++++++++++++++++++
 
-======================= ==================================
-Operation               Key(s)
-======================= ==================================
-Direct-to-disk recorder Shift + Play start (defaults to L)
-======================= ==================================
+======================= ================
+Operation               Key
+======================= ================
+Direct-to-disk recorder :kbd:`Shift + L`
+======================= ================
 
 Mouse & touchscreen
 -------------------
 
 Pads
 ++++
-The pads can be hit by by clicking them with the mouse, or, if you have a touchscreen, by touching them. The further away from the center of the pad, the lower the velocity. When a pad is hit, it will light up blue.
+The pads can be hit by clicking them with the mouse, or, if you have a touchscreen, by touching them. The further away from the center of the pad, the lower the velocity. When a pad is hit, it will light up blue.
 
 Buttons
 +++++++
 All buttons can be pressed by clicking them with the mouse, or, if you have a touchscreen, by touching them.
 
-Data wheel
+DATA wheel
 ++++++++++
-The data wheel can be turned by dragging or scrolling. Precise, single-step changes can be performed by holding any of the modifier keys (Shift, Ctrl, Alt/Option) while dragging.
+The DATA wheel can be turned by dragging or scrolling. Precise, single-step changes can be performed by holding any of the modifier keys -- :kbd:`Shift`, :kbd:`Ctrl`, or :kbd:`Alt/Option` -- while dragging.
 
-On iPadOS you can drag the data wheel with one finger for precise, single-step changes, or with 2 fingers for large increments.
+On iPadOS you can drag the DATA wheel with one finger for precise, single-step changes, or with two fingers for large increments.
 
 Slider/Rec gain/Main volume
 +++++++++++++++++++++++++++
 These controls can be operated by dragging or scrolling.
 
-Note that, like on the original MPC2000XL, you can use the slider to change many of the values in the TRIM, LOOP and ZONE screens, by holding SHIFT while moving the slider.
+Note that, like on the original MPC2000XL, you can use the slider to change many of the values in the :code:`TRIM`, :code:`LOOP` and :code:`ZONE` screens, by holding :code:`SHIFT` while moving the slider.
 
 .. note::
 
-  If your mouse or touchpad emits momentum/inertia events, VMPC2000XL will process these accordingly. The data wheel, slider, rec gain and main volume controls will come to a gradual stop.
+  If your mouse or touchpad emits momentum/inertia events, VMPC2000XL will process these accordingly. The DATA wheel, slider, record gain and main volume controls will come to a gradual stop.
 
 Resize and Reset window size
 ++++++++++++++++++++++++++++
@@ -217,7 +212,7 @@ With this option you can export/share the complete state of VMPC2000XL, includin
 
 Share selected file/directory
 +++++++++++++++++++++++++++++
-This option will show up as "Share selected file" or "Share selected directory", depending on what is currently selected in the :code:`LOAD` screen (Shift + 3). The name of the file/directory you're about to share is shown in the option. If you're sharing a directory, it will be shared as a ZIP archive.
+This option will show up as "Share selected file" or "Share selected directory", depending on what is currently selected in the :code:`LOAD` screen (:kbd:`Shift + 3`). The name of the file/directory you're about to share is shown in the option. If you're sharing a directory, it will be shared as a ZIP archive.
 
 Share Direct to Disk Recordings
 +++++++++++++++++++++++++++++++
@@ -233,7 +228,7 @@ Tap any of the recordings to export/share it as a ZIP archive.
 
 Manage Recordings (iPadOS)
 --------------------------
-Since the direct-to-disk recordings are not visible in the LOAD, SAVE and Directory screens, we need some other way to remove them when we don't need them anymore. That's what the Recording Manager is for.
+Since the direct-to-disk recordings are not visible in the :code:`LOAD`, :code:`SAVE` and :code:`Directory` screens, we need some other way to remove them when we don't need them anymore. That's what the Recording Manager is for.
 
 .. figure:: images/controls/folder.png
    :width: 50 px

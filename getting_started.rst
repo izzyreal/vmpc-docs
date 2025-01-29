@@ -122,20 +122,20 @@ LOAD screen
 To open the :code:`LOAD` screen:
 
 * Make sure the sequencer is not playing
-* Press :code:`Shift` and :code:`3` simultaneously to open the :code:`LOAD` screen
-* Press the ↓ key to navigate to the :code:`File:` field
-* Press the :code:`-` and :code:`+` keys, or drag the DATA wheel with the mouse, to change :code:`File:` to :file:`TEST1`
+* Press :kbd:`Shift + 3` simultaneously to open the :code:`LOAD` screen
+* Press :kbd:`↓` to navigate to the :code:`File:` field
+* Press :kbd:`-` or :kbd:`+` (to the left of :kbd:`Tab`), or drag the DATA wheel with the mouse, to change :code:`File:` to :file:`TEST1`
 
 .. vmpc-lcd-screenshot:: images/getting_started/file_test1.png
 
-* Press :code:`F6` to enter the :file:`TEST1` directory
+* Press :kbd:`F6` to enter the :file:`TEST1` directory
 * Turn the DATA wheel to change :code:`File:` to :file:`KICK1           .SND`
 
 .. vmpc-lcd-screenshot:: images/getting_started/file_kick1.png
 
-* Press :code:`F5` to play a preview of the sound
-* Press :code:`F6` to open the :code:`Load a Sound` screen
-* Click on pad 1 or press :code:`z` to change the :code:`Assign to note:` to :code:`35/A01`
+* Press :kbd:`F5` to play a preview of the sound
+* Press :kbd:`F6` to open the :code:`Load a Sound` screen
+* Click on pad 1 or press :kbd:`z` to set :code:`Assign to note:` to :code:`35/A01`
 
 .. vmpc-lcd-screenshot:: images/getting_started/assign_to_note.png
 
@@ -143,7 +143,7 @@ To open the :code:`LOAD` screen:
 
 Now when you click pad 1 or press :code:`z` you should hear a kick drum.
 
-Go through the same process for the :file:`HAT1` and :file:`SNARE4` sounds from the same directory and you have assembled a basic kit.
+Go through the same process for the :file:`HAT1` and :file:`SNARE4` sounds from the same directory, and you have assembled a basic kit.
 
 Drag-and-drop
 +++++++++++++
