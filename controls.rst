@@ -211,6 +211,7 @@ After tapping any of the options, you are greeted with the usual options when sh
    :width: 300 px
    :align: center
 
+|
 
 Share APS, SNDs and ALL of current project
 ++++++++++++++++++++++++++++++++++++++++++
@@ -222,13 +223,13 @@ This option will show up as "Share selected file" or "Share selected directory",
 
 Share Direct to Disk Recordings
 +++++++++++++++++++++++++++++++
-Any bounces/direct-to-disk recordings you have made via :ref:`direct-to-disk recording <direct_to_disk_recording>` can be shared via this option. Tapping this option will show you a list of your recordings:
+Any bounces/direct-to-disk recordings you have made via :ref:`direct-to-disk recording <direct_to_disk_recording>` can be shared via this option. Tapping this option will show you a list of your recordings, where you can tap any of the recordings to export/share it as a ZIP archive:
 
 .. figure:: images/controls/ipados-share-recordings.png
    :width: 300 px
    :align: center
 
-Tap any of the recordings to export/share it as a ZIP archive.
+|
 
 .. _manage_recordings:
 
