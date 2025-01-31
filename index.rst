@@ -1,6 +1,8 @@
 Welcome to VMPC2000XL Documentation
 ===================================
 
+.. image:: images/index/vmpc2000xl-full-gui-screenshot.jpg
+
 `VMPC2000XL <https://izmar.nl>`_ is an emulator of the `Akai MPC2000XL <https://www.akaipro.com/mpc2000xl>`_ sampling sequencer, intended for vintage studio equipment enthousiasts.
 
 VMPC2000XL comes in standalone desktop application, as well as DAW plugin formats for Linux, macOS, iPadOS and Windows. The recommended mode of use is very much like how the original MPC2000XL was intended -- as the centerpiece of your project. This workflow can be achieved most easily when using the standalone desktop variety of VMPC2000XL.
