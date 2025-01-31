@@ -11,7 +11,7 @@ It is **strongly recommended** to get familiar with :ref:`basic keyboard shortcu
 
 Keyboard
 --------
-For most controls you can display a tooltip that shows you which key on the keyboard is associated with it. In the case of the DATA wheel it's 2 keys -- one for clockwise and one for anti-clockwise. To display a control's keyboard shortcut in a tooltip hover over the control while holding one of the modifier keys on your keyboard (Shift, Control, Alt/Option, Command):
+For most controls you can display a tooltip that shows you which key on the keyboard is associated with it. In the case of the DATA wheel it's 2 keys -- one for clockwise and one for anti-clockwise. To display a control's keyboard shortcut in a tooltip hover over the control while holding one of the following keys on your keyboard: :kbd:`Shift`, :kbd:`Ctrl`, :kbd:`Alt/Option`, :kbd:`Cmd/Windows/Meta`. It looks like this:
 
 .. image:: animations/keyboard-tooltips.gif
 
