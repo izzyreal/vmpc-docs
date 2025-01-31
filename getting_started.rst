@@ -63,7 +63,7 @@ Audio/MIDI configuration
 ------------------------
 Standalone
 ++++++++++
-When you start VMPC2000XL for the first time, it is highly recommended that you configure your audio and MIDI devices. Click on the gear icon in the top-right.
+When you start VMPC2000XL for the first time, it is highly recommended that you configure your audio and MIDI devices. Click on the speaker icon in the bottom-right menu.
 
 Audio output/input
 ^^^^^^^^^^^^^^^^^^
