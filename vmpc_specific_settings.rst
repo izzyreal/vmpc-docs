@@ -325,11 +325,13 @@ In some cases it can be useful to have a bigger view of the LCD, maybe even on a
 
 Custom Skin
 -----------
-.. warning:: The bitmap GUI of VMPC2000XL will be replaced in the near future with a vector one, so it's recommended to hold off creating new skins for VMPC2000XL until the vector GUI has been released.
 
-See https://github.com/izzyreal/vmpc-juce/tree/master/resources/img for the original bitmaps. Place files with those file names in :file:`~/Documents/VMPC2000XL/Skin` to override the originals. The files that will be picked up by this feature are:
+First off, the author apologizes to those who have already created skins for the bitmap GUI of VMPC2000XL 0.6 and earlier versions. These skins wil not work with VMPC2000XL anymore.
 
-* :file:`bg.jpg`
-* :file:`datawheels.jpg`
-* :file:`sliders.jpg`
+The latest version of VMPC2000XL has a GUI that is based on vector graphics. Although this is a good foundation for creating skins, at the moment there's no clear process how to do this. So, until this process has been established, some collaboration between the author and the user who wants to create a skin will be required. In this case please reach out, and the author is happy to assist.
 
+For the tech-savvy who want to give it a stab without reaching out first, there are 2 approaches that are readily available:
+
+#. Build VMPC2000XL from `source <https://github.com/izzyreal/vmpc-juce>`_. In this approach, inspect and modify the assets that are in :file:`vmpc-juce/resources/json` and :file:`vmpc-juce/resources/svg`.
+#. If you're running macOS, you can inspect and modify the JSON and SVG assets in the application bundle. Note that these are quite nested, in :file:`VMPC2000XL.app/Contents/PlugIns/VMPC2000XL.appex/Contents/Resources`.
+   
