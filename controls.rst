@@ -128,29 +128,31 @@ Note that, like on the original MPC2000XL, you can use the slider to change many
 
   If your mouse or touchpad emits momentum/inertia events, VMPC2000XL will process these accordingly. The DATA wheel, slider, record gain and main volume controls will come to a gradual stop.
 
-Resize and Reset window size
-++++++++++++++++++++++++++++
-The first time you run VMPC2000XL it opens in its minimum window size, which is 649 x 497 plus the border that your operating system or DAW adds to it. This should fit on most computer screens. Then you have the option to resize it up to two times that resolution, making 1298 x 994. Resizing is done by dragging the bottom right corner of the window.
-
-To reset the window size back to its minimum size, click the "Reset window size" button in the top-right.
-
-.. figure:: images/controls/reset-window-size.png
-   :width: 50 px
-   :align: center
-
-   The "Reset window size" button
-
-Configure computer keyboard
+Restore default window size
 +++++++++++++++++++++++++++
-Click the "Configure computer keyboard" icon in the top-right to go to the KEYBRD tab. See :ref:`Configuring the keyboard <configuring_the_keyboard>` for instructions.
+The first time you run VMPC2000XL, it determines a suitable default window size based on your display's dimensions. After that, you can resize VMPC2000XL's windown to any size you prefer. The window size and position are saved when you exit VMPC2000XL, and they are restored the next time you run VMPC2000XL. 
 
-.. figure:: images/controls/configure-computer-keyboard.png
-   :width: 100 px
+To get the window back to its default size, click the "Restore default window size" button in the bottom-right menu.
+
+.. figure:: images/controls/restore-default-window-size.svg
+   :scale: 200 
    :align: center
 
-   The "Configure computer keyboard" button
+   The "Restore default window size" button
 
-Hover over the button to show an overlay with all current keyboard mappings. Every keyboard-controllable component of VMPC2000XL's UI will temporarily show a glowing square with a description of the key that is mapped to it.
+Show/configure keyboard
++++++++++++++++++++++++
+Click the "Show/configure keyboard" icon in the bottom-right menu to go to the :code:`KEYBRD` tab. See :ref:`Configuring the keyboard <configuring_the_keyboard>` for instructions.
+
+.. figure:: images/controls/show-configure-keyboard.svg
+   :scale: 550
+   :align: center
+
+   The "Show/configure keyboard" button
+
+Hover over this button, or on iPadOS long-press it, to show an overlay with all current keyboard mappings:
+
+.. image:: images/controls/show-all-keys.png
 
 MIDI
 ----
@@ -160,9 +162,9 @@ Import files and folders (iPadOS)
 ---------------------------------
 Importing files and folders is the process of copying files from arbitrary locations on your iPad onto VMPC2000XL's default virtual disk volume.
 
-.. figure:: images/controls/import.png
-   :width: 50 px
+.. figure:: images/controls/import.svg
    :align: center
+   :width: 50
 
    The "Import" button
 
@@ -189,8 +191,8 @@ Export/share files and folders (iPadOS)
 ---------------------------------------
 Exporting files and folders is the process of exposing files that are only accessible via VMPC2000XL. This includes any beats you made, sounds and other files in the virtual MPC2000XL volume, and direct-to-disk recordings.
 
-.. figure:: images/controls/export.png
-   :width: 50 px
+.. figure:: images/controls/export.svg
+   :width: 50
    :align: center
 
    The "Export" button
@@ -234,8 +236,8 @@ Manage Recordings (iPadOS)
 --------------------------
 Since the direct-to-disk recordings are not visible in the :code:`LOAD`, :code:`SAVE` and :code:`Directory` screens, we need some other way to remove them when we don't need them anymore. That's what the Recording Manager is for.
 
-.. figure:: images/controls/folder.png
-   :width: 50 px
+.. figure:: images/controls/folder.svg
+   :width: 50
    :align: center
 
    The "Recording Manager" button
