@@ -31,11 +31,11 @@ Open the Start Menu and start typing "VMPC2000XL". Pretty soon the application s
 
 Plugin (all platforms except iPadOS)
 ++++++++++++++++++++++++++++++++++++
-If your DAW or plugin host is compatible with the format of VMPC2000XL that you installed (LV2, VST3, AU or AUv3), it should detect VMPC2000XL as a software instrument with 10x mono audio out, 2x mono audio in and MIDI in/out.
+If your DAW or plugin host is compatible with the format of VMPC2000XL that you installed (LV2, VST3, AUv2 or AUv3), it should detect VMPC2000XL as a software instrument. The AUv2 and AUv3 also come as effects, because in some cases, such as using the AUv3 in AUM, that's the only way to get audio input to work.
 
-Please refer to your DAW's manual if you are not familiar with adding software instruments to your projects.
+Please refer to your DAW's manual if you are not familiar with adding software instruments and effects to your projects.
 
-For more information on capabilities within each plugin and DAW combination, consult `the plugin compatibility matrix <https://github.com/izzyreal/vmpc-juce/blob/master/plugin-compatibility-matrix.md>`_.
+For more information on capabilities and limitations within each plugin and DAW combination, consult `the plugin compatibility matrix <https://github.com/izzyreal/vmpc-juce/blob/master/plugin-compatibility-matrix.md>`_. The matrix is a must-read in case you run into any plugin issues, including those that are related to multiple outputs, keyboard shortcuts, and plugin window resizing.
 
 .. note::
    For the AUv3 to be detectable by the host, you need to have run the standalone version first.
@@ -44,7 +44,7 @@ Plugin (iPadOS)
 +++++++++++++++
 On iPadOS, VMPC2000XL comes as an AUv3 plugin. It can be used as an instrument, or as an effect plugin. The instrument gives you:
 
-* Audio out
+* Audio out: 5x stereo out, 8x mono out
 * MIDI in/out
 
 And the effect gives you:
@@ -52,7 +52,9 @@ And the effect gives you:
 * Audio in/out
 * MIDI in
 
-Most of the testing has been done in AUM, but in theory the AUv3 should work in other hosts too.
+Most of the testing has been done in AUM, but in theory the AUv3 should work in other hosts too. In hosts other than AUM, you might see audio input working when using the instrument. In Logic on macOS this works via the Sidechain feature, so be sure to look at all the facilities the host offers before you give up on routing audio input into the instrument.
+
+For more information on capabilities and limitations of the AUv3 in various hosts, consult `the plugin compatibility matrix <https://github.com/izzyreal/vmpc-juce/blob/master/plugin-compatibility-matrix.md>`_. The matrix is a must-read in case you run into any AUv3 issues, including those that are related to multiple outputs, keyboard shortcuts, and plugin window resizing.
 
 .. note::
    For the AUv3 to be detectable by the host, you need to have run the standalone version first.
