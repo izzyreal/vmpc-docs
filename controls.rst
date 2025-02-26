@@ -13,9 +13,9 @@ Keyboard
 --------
 For most controls you can display a tooltip that shows you which key on the keyboard is associated with it. In the case of the DATA wheel it's 2 keys -- one for clockwise and one for anti-clockwise.
 
-To display all controls' keys, hover over the keyboard icon in the bottom-right menu, or, if you're on iPadOS, you can long-press the keyboard icon.
+To display all controls' keys, hover over the keyboard icon in the bottom-right menu, or, if you're on iPadOS, you can press the keyboard icon (and release your finger somewhere else if you don't want to go the :code:`KEYBRD` screen).
 
-To display just a single control's key in a tooltip, on systems with a mouse, hover over the control while holding one of the following keys on your keyboard: :kbd:`Shift`, :kbd:`Ctrl`, :kbd:`Alt/Option`, :kbd:`Cmd/Windows/Meta`. On iPadOS you can long-press a control, or long-press a pad with 2 fingers, to display its key.
+To display just a single control's key in a tooltip, on systems with a mouse, hover over the control while holding one of the following keys on your keyboard: :kbd:`Shift`, :kbd:`Ctrl`, :kbd:`Alt/Option`, :kbd:`Cmd/Windows/Meta`. On iPadOS (and other systems too), double-tap the Shift button, and the next control you tap will show the key tooltip.
 
 It looks like this:
 
