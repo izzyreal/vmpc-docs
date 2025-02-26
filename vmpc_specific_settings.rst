@@ -211,7 +211,7 @@ Raw USB volumes (Linux, macOS and Windows only)
 +++++++++++++++++++++++++++++++++++++++++++++++
 Raw USB access lets VMPC2000XL directly access your MPC2000XL CF cards. This is useful for those who own a real MPC2000XL, and who want to use up to 16 characters for sound names, rather than up to 8.
 
-If you plan to use raw USB access, on macOS use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_ (Update: I just noticed on macOS Sonoma it's considered malware so I'll try to work on a fix asap), and on Windows use my `registry patch <https://github.com/izzyreal/win-disable-usbdrive-indexing>`_. Read about these tools on their respective URLs. Note that these tools can also be used independently from VMPC2000XL, by MPC2000XL users who want to be able to access MPC2000XL CF cards and other media on their desktop computer, without corrupting their data.
+If you plan to use raw USB access, on macOS use my `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker/releases/download/0.9/FAT16.Mount.Blocker-0.9.dmg>`_, and on Windows use my `registry patch <https://github.com/izzyreal/win-disable-usbdrive-indexing>`_. Read about these tools on their respective URLs. Note that these tools can also be used independently from VMPC2000XL, by MPC2000XL users who want to be able to access MPC2000XL CF cards and other media on their desktop computer, without corrupting their data.
 
 To my knowledge on most Linux distributions no special tools are necessary to prevent corruption of MPC2000XL media, but you must still stick to the principle of not performing any write operations (including creating, deleting and updating files) outside VMPC2000XL.
 
@@ -232,10 +232,10 @@ What's worse, Windows and macOS have a tendency to rewrite the FAT entries of an
 
   #. Never insert the CF card in a USB reader connected to your computer.
   #. Use up to 8 characters for the names of your sounds.
-  #. Use `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_ for macOS (Update: I just noticed on macOS Sonoma it's considered malware so I'll try to work on a fix asap).
+  #. Use `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker/releases/download/0.9/FAT16.Mount.Blocker-0.9.dmg>`_ for macOS.
   #. Use this `registry patch <https://github.com/izzyreal/win-disable-usbdrive-indexing>`_ for Windows.
 
-.. warning:: Always keep backups of important work! If you don't have a hotswappable CF reader or SCSI harddrive connected to your MPC2000XL, your best bet for making backups is a Linux computer, or a Mac that is running `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker>`_ (Update: I just noticed on macOS Sonoma it's considered malware so I'll try to work on a fix asap).
+.. warning:: Always keep backups of important work! If you don't have a hotswappable CF reader or SCSI harddrive connected to your MPC2000XL, your best bet for making backups is a Linux computer, or a Mac that is running `FAT16 Mount Blocker <https://github.com/izzyreal/macos-fat16-mount-blocker/releases/download/0.9/FAT16.Mount.Blocker-0.9.dmg>`_.
 
 Raw USB volume access under the hood
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
