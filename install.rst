@@ -65,15 +65,19 @@ Install using the installers (macOS/Windows)
 #. Download the installer you need and run it.
 #. Follow the installer's instructions.
 
-The installers allow you to select which formats (standalone, VST3 and AU) to install. After installation you can move plugins from their default directories (see below) to anywhere you like.
+The installers allow you to select which formats (standalone, LV2, VST3 and AU) to install. After installation you can move plugins from their default directories (see below) to anywhere you like.
 
 macOS
 +++++
-The macOS installer deploys Universal 2 binaries of VMPC2000XL standalone, VST3 and AU. When you install the standalone variety, the AUv3 comes with it -- it is embedded in the application. You need to run the standalone application at least once in order for AUv3 hosts to detect the AUv3. The other plugin formats are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
+The macOS installer deploys Universal 2 binaries of VMPC2000XL standalone, LV2, VST3 and AU. When you install the standalone variety, the AUv3 comes with it -- it is embedded in the application. You need to run the standalone application at least once in order for AUv3 hosts to detect the AUv3. The other plugin formats are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
+
+.. admonition:: Important note regarding AUv3 on macOS
+
+    Currently the AUv3 implementation is lacking a way to import and export documents (sounds, sequences and other files that make up your projects). The iPadOS AUv3 implementation has this functionality, and it will come to macOS as well, but it's currently not certain when. This renders the macOS AUv3 less interesting for many serious applications. If you are affected by this, for now it is recommended to use the AUv2 implementation. If your host only reveals the AUv3, and not the AUv2, even though you have both installed, you can remove either the complete :file:`VMPC2000XL.app` standalone bundle from :file:`/Applications`, or you can remove the AUv3 :file:`PlugIns` directory that is embedded in :file:`/Applications/VMPC2000XL.app/Contents/PlugIns`. In some hosts, it's not obvious which format of VMPC2000XL you're currently running. To verify which format you're running, see :ref:`The About window <the_about_window>`.
 
 Windows
 +++++++
-The Windows installer deploys 64 bit binaries on 64 bit systems, and 32 bit binaries on 32 bit systems, in standalone and VST3 formats. The VST3 is installed into :file:`C:\\Program Files\\Common Files\\VST3` on 64 bit systems, :file:`C:\\Program Files (x86)\\Common Files\\VST3` on 32 bit systems.
+The Windows installer deploys 64 bit binaries on 64 bit systems, and 32 bit binaries on 32 bit systems, in standalone, LV2 and VST3 formats. The LV2 is installed into :file:`C:\\Program Files\\Common Files\\LV2` on 64 bit systems, :file:`C:\\Program Files (x86)\\Common Files\\LV2` on 32 bit systems. The VST3 is installed into :file:`C:\\Program Files\\Common Files\\VST3` on 64 bit systems, :file:`C:\\Program Files (x86)\\Common Files\\VST3` on 32 bit systems.
 
 .. admonition:: Important note for Windows users
 

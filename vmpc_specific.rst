@@ -3,6 +3,8 @@ VMPC2000XL Specific Settings & Functionality
 
 In this section we will discuss settings and functionality that can't be found on the real MPC2000XL.
 
+.. _the_about_window:
+
 The About window
 ----------------
 To open the About window, click the "About" button in the bottom-right menu.
