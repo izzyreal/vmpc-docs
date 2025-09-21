@@ -456,6 +456,7 @@ Presets for the following controllers are bundled with VMPC2000XL:
 
 * Akai MPD16 and early MPC family
 * Akai MPD218
+* Akai MPC Studio
 * iRig PADS
 
 If you have accidentally overwritten a bundled preset, delete its file from :file:`~/Documents/VMPC2000XL/MidiControlPresets` and the next time you start VMPC2000XL the original preset will be restored.
