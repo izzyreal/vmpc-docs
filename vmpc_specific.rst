@@ -422,9 +422,11 @@ Each row shows an association between an interactable component of VMPC2000XL, a
 
 The first column allows you to specify a MIDI status, which can be either :code:`CC` or :code:`Note`.
 
-The second column lets you specify a MIDI channel, or you can set it to :code:`all` to respond to MIDI messages from any channel.
+The second column lets you specify a CC or note number to match against. This number can be set to :code:`OFF` to disable a row.
 
-The third column lets you specify a value to filter by, which for a note message applies to the note number, and for a continuous controller message it applies to the controller number. This value can be set to :code:`OFF` to disable a row.
+CC rows have a third column where you can specify a specific controller value. Set it to :code:`all` to match against any incoming value. Set it to a specific value between 0 and 127 to only respond when that value is received.
+
+The last column lets you specify a MIDI channel, or you can set it to :code:`all` to respond to MIDI messages from any channel.
 
 Press :kbd:`F4` to toggle :code:`LEARN` mode. You can also use the cursors and DATA wheel to modify associations.
 
