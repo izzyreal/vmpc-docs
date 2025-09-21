@@ -144,7 +144,7 @@ There are two categories of files, each in their platform-specific locations. Th
     * Keyboard mapping: :file:`config/keys.txt` (only present when you have changed the default mapping)
     * NVRAM data (main screen user defaults): :file:`config/nvram.vmp`
     * VMPC2000XL-specific: :file:`config/vmpc-specific.ini`
-    * Audio/MIDI configuration: :file:`VMPC2000XL.settings`
+    * Audio/MIDI configuration (only for standalone, not plugins): :file:`VMPC2000XL.settings`
     * USB volumes: :file:`volumes.json`
 
 Demo beats are bundled into the application. When you start VMPC2000XL, a check is performed to see if a :file:`DEMOS` directory exists in your user data directory. If not, a fresh copy of the original demo data will be placed in :file:`VMPC2000XL/Volumes/MPC2000XL/DEMOS`.
@@ -163,7 +163,11 @@ macOS
 
 **Documents** :file:`/Users/you/Documents/VMPC2000XL`
 
+**Documents (AUv3)** :file:`~/Library/Containers/nl.izmar.vmpc2000xl.vmpc2000xlAUv3/Data/Documents`
+
 **Configuration files** :file:`/Users/you/Library/Application Support/VMPC2000XL/config` and :file:`/Users/you/Library/Application Support/VMPC2000XL.settings`
+
+**Configuration files (AUv3)** :file:`~/Library/Containers/nl.izmar.vmpc2000xl.vmpc2000xlAUv3/Data/Library/Application Support/VMPC2000XL/config`
 
 iPadOS
 ++++++
