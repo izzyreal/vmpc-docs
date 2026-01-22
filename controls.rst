@@ -4,7 +4,7 @@ Controls
 There are 3 ways to control VMPC2000XL:
 
 * Keyboard
-* Mouse/touchscreen
+* Mouse/touchpad/touchscreen
 * MIDI
 
 It is **strongly recommended** to get familiar with :ref:`basic keyboard shortcuts <basic_operations>` rather than relying on the mouse. The more keyboard shortcuts you use, likely the greater the sense of immersion.
@@ -23,7 +23,7 @@ It looks like this:
 
 Below are the default keyboard shortcuts for most of the UI components.
 
-Some letter keys are written in uppercase for disambiguation. For example, :code:`Record` is mapped to the letter :kbd:`L` and is written in uppercase to clarify it is not letter :kbd:`i` or number :kbd:`1`, so there is no need to press :kbd:`Shift` here. Special characters are clarified by appending their name in parentheses, for example :kbd:`; (semicolon)`.
+Some letter keys are written in uppercase for disambiguation. For example, :code:`REC` is mapped to the letter :kbd:`L` and is written in uppercase to clarify it is not letter :kbd:`i` or number :kbd:`1`, so there is no need to press :kbd:`Shift` here. Special characters are clarified by appending their name in parentheses, for example :kbd:`; (semicolon)`.
 
 .. note::
 
@@ -106,7 +106,7 @@ Mouse & touchscreen
 
 Pads
 ++++
-The pads can be hit by clicking them with the mouse, or, if you have a touchscreen, by touching them. The closer to the top of the pad, the higher the velocity. When a pad is hit, it will light up blue.
+The pads can be hit by clicking them with the mouse, or, if you have a touchscreen, by touching them. The closer to the top of the pad, the higher the velocity. When a pad is hit, it gets an orange glow.
 
 Buttons
 +++++++
@@ -114,7 +114,7 @@ All buttons can be pressed by clicking them with the mouse, or, if you have a to
 
 DATA wheel
 ++++++++++
-The DATA wheel can be turned by dragging or scrolling. Precise, single-step changes can be performed by holding any of the modifier keys -- :kbd:`Shift`, :kbd:`Ctrl`, or :kbd:`Alt/Option` -- while dragging.
+The DATA wheel can be turned by dragging or scrolling.
 
 On iPadOS you can drag the DATA wheel with one finger for precise, single-step changes, or with two fingers for large increments.
 
@@ -126,7 +126,7 @@ Note that, like on the original MPC2000XL, you can use the slider to change many
 
 .. note::
 
-  If your mouse or touchpad emits momentum/inertia events, VMPC2000XL will process these accordingly. The DATA wheel, slider, record gain and main volume controls will come to a gradual stop.
+  If your mouse or touchpad emits momentum/inertia events, VMPC2000XL will process these accordingly. The DATA wheel, slider, record gain and main volume controls will come to a gradual stop. On Linux there's virtually no case where applications automagically receive momentum/inertia events from the driver or OS. Maybe in the future, if there's enough demand, VMPC2000XL will synthesize momentum itself (just like most browsers on Linux do).
 
 Show/configure keyboard
 +++++++++++++++++++++++
@@ -144,4 +144,6 @@ Hover over this button, or on iPadOS long-press it, to show an overlay with all 
 
 MIDI
 ----
-Read more about MIDI control in the :ref:`MIDI control mode <midi_control_mode>` and :ref:`MIDI control <midi_control>` sections.
+Just like the real MPC2000XL, VMPC2000XL can be controlled via the MIDI. The original MPC2000XL's MIDI control capabilities are slightly limited in comparison to what most users would want for a software emulator. For that reason, VMPC2000XL offers extended MIDI controllability. Via this feature, all interactable hardware (buttons, slider, gain and volume knobs, DATA wheel and pads) can be controlled via note and control change events. Read more about extended MIDI control in the VMPC2000XL-specific :ref:`MIDI control <midi_control>` section.
+
+For those interested in the authentic rather than the extended MIDI control capabilities, please refer to the "MIDI Footswitch Assignment" section on p. 185 of the `original MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_. MIDI footswitch assignments, combined with MIDI note input that is routed to track note events, as well as program change events, together form the bulk of how one would control the real MPC2000XL via MIDI. The manual also contains a MIDI implementation chart (p. 195) where more details can be found. It's quite possible that, in terms of original MIDI handling, you encounter missing or incomplete features in VMPC2000XL. The MIDI footswitch assignments that are configured in the :code:`MIDIsw` screen are fully implemented, but if you encounter missing features that you'd like to see implemented, please `submit a feature request <https://izmar.nl/support/bug-reports-feature-requests>`_.

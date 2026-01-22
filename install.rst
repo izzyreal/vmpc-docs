@@ -28,8 +28,8 @@ On 32 bit systems the LV2 will be installed in :code:`/usr/lib/lv2`, and the VST
 
 .. _manual_installation_for_ubuntu:
 
-Manual installation (Ubuntu 20)
--------------------------------
+Manual installation (Ubuntu 20, amd64)
+--------------------------------------
 
 #. Visit https://izmar.nl/downloads.
 #. Download the binary you need.
@@ -69,7 +69,7 @@ The installers allow you to select which formats (standalone, LV2, VST3 and AU) 
 
 macOS
 +++++
-The macOS installer deploys Universal 2 binaries of VMPC2000XL standalone, LV2, VST3 and AU. When you install the standalone variety, the AUv3 comes with it -- it is embedded in the application. You need to run the standalone application at least once in order for AUv3 hosts to detect the AUv3. The other plugin formats are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
+The macOS installer deploys Universal 2 binaries of VMPC2000XL standalone, LV2, VST3 and AU. When you install the standalone variety, the AUv3 comes with it -- it is embedded in the application. The other plugin formats are installed in :file:`/Users/you/Library/Audio/Plug-Ins`.
 
 .. admonition:: Important note regarding AUv3 on macOS
 
@@ -78,10 +78,6 @@ The macOS installer deploys Universal 2 binaries of VMPC2000XL standalone, LV2, 
 Windows
 +++++++
 The Windows installer deploys 64 bit binaries on 64 bit systems, and 32 bit binaries on 32 bit systems, in standalone, LV2 and VST3 formats. The LV2 is installed into :file:`C:\\Program Files\\Common Files\\LV2` on 64 bit systems, :file:`C:\\Program Files (x86)\\Common Files\\LV2` on 32 bit systems. The VST3 is installed into :file:`C:\\Program Files\\Common Files\\VST3` on 64 bit systems, :file:`C:\\Program Files (x86)\\Common Files\\VST3` on 32 bit systems.
-
-.. admonition:: Important note for Windows users
-
-    If you experience missing DLL errors when attempting to run VMPC2000XL after a successful installation procedure, you are probably missing a Microsoft update which you can grab from here: https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
 
 Update
 ------
@@ -141,7 +137,7 @@ There are two categories of files, each in their platform-specific locations. Th
      * Auto-save data: :file:`VMPC2000XL/AutoSave`
 
 #. **Configuration files**
-    * Keyboard mapping: :file:`config/keys.txt` (only present when you have changed the default mapping)
+    * Keyboard mapping: :file:`config/keyboard_bindings.json` (only present when you have changed the default mapping, in older versions named :file:`keys.txt`)
     * NVRAM data (main screen user defaults): :file:`config/nvram.vmp`
     * VMPC2000XL-specific: :file:`config/vmpc-specific.ini`
     * Audio/MIDI configuration (only for standalone, not plugins): :file:`VMPC2000XL.settings`

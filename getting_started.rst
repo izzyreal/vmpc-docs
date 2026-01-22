@@ -37,9 +37,6 @@ Please refer to your DAW's manual if you are not familiar with adding software i
 
 For more information on capabilities and limitations within each plugin and DAW combination, consult `the plugin compatibility matrix <https://github.com/izzyreal/vmpc-juce/blob/master/plugin-compatibility-matrix.md>`_. The matrix is a must-read in case you run into any plugin issues, including those that are related to multiple outputs, keyboard shortcuts, and plugin window resizing.
 
-.. note::
-   For the AUv3 to be detectable by the host, you need to have run the standalone version first.
-
 Plugin (iPadOS)
 +++++++++++++++
 On iPadOS, VMPC2000XL comes as an AUv3 plugin. It can be used as an instrument, or as an effect plugin. The instrument gives you:
@@ -56,9 +53,6 @@ Most of the testing has been done in AUM, but in theory the AUv3 should work in 
 
 For more information on capabilities and limitations of the AUv3 in various hosts, consult `the plugin compatibility matrix <https://github.com/izzyreal/vmpc-juce/blob/master/plugin-compatibility-matrix.md>`_. The matrix is a must-read in case you run into any AUv3 issues, including those that are related to multiple outputs, keyboard shortcuts, and plugin window resizing.
 
-.. note::
-   For the AUv3 to be detectable by the host, you need to have run the standalone version first.
-
 .. _audio_midi_configuration:
 
 Audio/MIDI configuration
@@ -66,6 +60,12 @@ Audio/MIDI configuration
 Standalone
 ++++++++++
 When you start VMPC2000XL for the first time, it is highly recommended that you configure your audio and MIDI devices. Click on the speaker icon in the bottom-right menu.
+
+.. figure:: images/getting_started/audio-midi-settings.png
+   :scale: 50 
+   :align: center
+
+   The Audio/MIDI Settings window
 
 Audio output/input
 ^^^^^^^^^^^^^^^^^^
@@ -75,13 +75,15 @@ Note that for audio out to work well, an audio device needs to be selected, as w
 
 Up to 2 mono inputs can be activated at a time. A single mono input, such as the internal microphone of a MacBook, also works. Note, however, that such a mono input is treated by VMPC2000XL as a stereo input where both channels are the same.
 
+Note that VMPC2000XL currently does not support advanced channel routing. The first 2 output channels of the selected device are used for the virtual MPC2000XL's STEREO OUT left and right channels. Any remaining output channels are used for the mono ASSIGNABLE MIX OUT channels, of which there may be a maximum of 8. The first 2 input channels of the selected device are used for the RECORD IN left and right channels. If you need advanced routing, please look into products from companies like VB-Audio and Rogue Amoeba. On Linux you could look into JACK. Alternatively use VMPC2000XL as a plugin, so you can rely on your DAW's audio routing capabilities.
+
 .. note::
 
   On iPadOS, VMPC2000XL does not allow recording from Bluetooth devices, because this would result in a playback and recording sample rate of 16kHz. So, when you connect, for example, a pair of Bluetooth headphones that have a built-in mic, this built-in mic will be ignored, and VMPC2000XL will keep using the iPad's internal mic for recording new sounds, while playback will be going over the Bluetooth headphones.
 
 Sample rate
 ^^^^^^^^^^^
-The sample rate is generally best left at 44.1kHz or 48kHz, but you can run VMPC2000XL at any sampling rate that suits your needs.
+The sample rate is generally best left at 44.1kHz or 48kHz, but you can run VMPC2000XL at any sample rate that suits your needs.
 
 Audio buffer size
 ^^^^^^^^^^^^^^^^^
@@ -96,11 +98,11 @@ Below is an overview of the smallest buffer sizes that still work well on most m
 
 .. note::
 
-    These are approximations. Depending on what other software you are running and various system configurations, you may need a larger buffer, or maybe you can go lower than the suggested buffer sizes, without introducing audio artifacts.
+    These are approximations. Depending on what other software you are running and various system configurations, you may need a larger buffer, or maybe you can go lower than the suggested buffer sizes, without introducing audio artifacts. Use trial and error to find a glitch-free buffer size that suits your needs.
 
 Plugin
 ++++++
-When you open VMPC2000XL as a plugin in your DAW or plugin host, there are no audio/MIDI settings that can be configured in VMPC2000XL. It is your DAW/host that determines the buffer size and sampling rate. If you notice a big delay between triggering a pad and hearing the sound, please refer to the documentation of your DAW/host to find out how to change the buffer size.
+When you open VMPC2000XL as a plugin in your DAW or plugin host, there are no audio/MIDI settings that can be configured in VMPC2000XL. It is your DAW/host that determines the buffer size and sample rate. If you notice a big delay between triggering a pad and hearing the sound, please refer to the documentation of your DAW/host to find out how to change the buffer size.
 
 For some suggested buffer size settings, see `Audio buffer size`_.
 

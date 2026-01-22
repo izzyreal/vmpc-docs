@@ -19,7 +19,7 @@ Here you can find acknowledgements, version/build/format information, as well as
 
 "About" gives you a quick way to make sure which version of VMPC2000XL you're running, and whether you're running the VST3, Audio Unit or LV2 in case you have multiple plugin formats installed.
 
-The "Format:" field will also indicate whether you're running the instrument or the effect. Note that VST3 and LV2 only come as instruments, so this detail is most useful to those running the Audio Unit, which comes as instrument as well as effect.
+The "Format:" field will also indicate whether you're running the instrument or the effect. Note that VST3 and LV2 only come as instruments, so this detail is only useful to those running the Audio Unit, which comes as instrument as well as effect.
 
 There are some basic text file viewer operations available in the About window:
 
@@ -27,6 +27,7 @@ There are some basic text file viewer operations available in the About window:
 * Scrolling via the mouse wheel/trackpad.
 * Text selection by dragging from start to end with the mouse.
 * Copy selection to clipboard by pressing :kbd:`Ctrl + C` or :kbd:`Cmd + C`.
+* Hyperlink navigation by clicking any of the URLs.
 * Closing About by clicking the X in the top-right, or clicking outside the About window.
 
 .. figure:: images/vmpc_specific/about.png
@@ -37,7 +38,7 @@ There are some basic text file viewer operations available in the About window:
 
 Restore default window size
 +++++++++++++++++++++++++++
-The first time you run VMPC2000XL, it determines a suitable default window size based on your display's dimensions. After that, you can resize VMPC2000XL's windown to any size you prefer. The window size and position are saved when you exit VMPC2000XL, and they are restored the next time you run VMPC2000XL. 
+The first time you run VMPC2000XL, it determines a suitable default window size based on your display's dimensions. After that, you can resize VMPC2000XL's window to any size you prefer. The window size and position are saved when you exit VMPC2000XL, and they are restored the next time you run VMPC2000XL. 
 
 To get the window back to its default size, click the "Restore default window size" button in the bottom-right menu.
 
@@ -221,17 +222,18 @@ By default VMPC2000XL will always try to convert WAV files to a supported format
 
 .. _midi_control_mode:
 
-MIDI control mode
-+++++++++++++++++
+Name typing with keyboard
++++++++++++++++++++++++++
+On the real MPC2000XL, users can enter names (for sequences, tracks, sounds, etc.) in the Name window in two ways:
 
-VMPC2000XL supports 2 different modes in terms of MIDI controllability:
+* Tapping drum pads, :code:`FULL LEVEL`, and :code:`16 LEVELS`.
+* Turning the DATA wheel and using the cursor keys for navigation.
 
-#. :code:`VMPC`. This is the default mode. In this mode you can use predefined or customized MIDI control presets that match your MIDI controller. Contrary to the real MPC2000XL, this mode allows you to control all buttons, all pads, the slider, and the DATA wheel via MIDI. The default preset maps notes 35 to 50 from any MIDI channel to pads 1 - 16, and control change 7 from any channel to the Note Variation Slider. For more details, scroll through the full list of mappings in the :code:`MIDI` tab by pressing :kbd:`F5` in the :code:`SETNGS` screen. Continue reading below in the :ref:`MIDI control <midi_control>` section, in order to see what can be configured and how.
+Although this works in VMPC2000XL as well, it's quite natural to use the computer keyboard to type a name. By default, VMPC2000XL allows this. Since many letters on the keyboard are by default configured as pad shortcuts, you will notice that the "tapping drum pads" way to enter names won't work via the computer keyboard. Name typing via the keyboard can be disabled via the below option:
 
-#. :code:`ORIGINAL`. VMPC2000XL will respond like the original would. This means that incoming MIDI note events will be routed to pads according to how you've programmed your pad-to-MIDI note associations in the program :code:`ASSIGN` screen (:kbd:`Shift + 6`, and then :kbd:`F1`, :kbd:`F2`, :kbd:`F3` or :kbd:`F4`). It also means that many buttons will not be controllable. Please refer to the `MPC2000XL manual <https://www.platinumaudiolab.com/free_stuff/manuals/Akai/akai_mpc2000xl_manual.pdf>`_ (p185) to see the details of assigning MIDI Continuous Controllers to MPC2000XL functionality in this mode, which is done via the :code:`MIDIsw` screen.
+.. vmpc-lcd-screenshot:: images/vmpc_specific/name_typing_with_keyboard.png
 
-.. vmpc-lcd-screenshot:: images/vmpc_specific/midi_control_mode.png
-
+Doing so, allows you to enter names by tapping drum pads via the pad keyboard shortcuts.
 
 .. _configuring_the_keyboard:
 
@@ -239,7 +241,7 @@ Configuring the keyboard in the KEYBRD tab
 ------------------------------------------
 After pressing :kbd:`Shift + 0`, press :kbd:`F2` to go to the :code:`KEYBRD` tab.
 
-If you can't use the keyboard as expected, you can also click the keyboard icon in the top-right of the window.
+If you can't use the keyboard, you can also click the keyboard icon in the bottom-right to open the :code:`KEYBRD` tab.
 
 .. vmpc-lcd-screenshot:: images/vmpc_specific/keyboard_tab.png
 
@@ -249,7 +251,7 @@ Once you are in the :code:`KEYBRD` tab, VMPC2000XL internally switches to a rest
 * :kbd:`Down`
 * :kbd:`F1` ... :kbd:`F6`
 
-You can also use the mouse to interact with the :kbd:`Up`/:kbd:`Down` cursors and :kbd:`F1` ... :kbd:`F6` buttons in the UI as usual.
+You can also use the mouse, touchpad or touchscreen to interact with the :kbd:`Up`/:kbd:`Down` cursors and :kbd:`F1` ... :kbd:`F6` buttons in the UI as usual.
 
 Changing a mapping
 ++++++++++++++++++
@@ -260,7 +262,7 @@ Use :kbd:`Up` and :kbd:`Down` to scroll through the list of functions. To change
 
 As long as the elements are blinking and you see :code:`CANCEL` and :code:`ACCEPT`, you can press another key that you wish to assign to the selected function.
 
-**To accept your new key you have to use the mouse or touchpad and click** :kbd:`F4`. To cancel the learning process, use the mouse or touchpad and click :kbd:`F3`.
+**To accept your new key you have to use the mouse, touchpad or touchscreen and click/tap** :kbd:`F4`. To cancel the learning process, use the mouse, touchpad or touchscreen and click :kbd:`F3`.
 
 Reset mapping to default
 ++++++++++++++++++++++++
@@ -297,7 +299,7 @@ The following aspects are part of the state that is saved and loaded as part of 
 
 * All programs and sounds
 * All sequences
-* Current screen
+* Current screen (of the first layer, so any open windows will be ignored)
 * Current focus in that screen
 * Current sound selection (in :code:`TRIM`, :code:`LOOP`, :code:`ZONE`, and :code:`PARAMS` screens)
 * Current directory selection (in :code:`LOAD`, :code:`Directory`, and :code:`SAVE` screens)
@@ -424,7 +426,7 @@ The first column allows you to specify a MIDI status, which can be either :code:
 
 The second column lets you specify a CC or note number to match against. This number can be set to :code:`OFF` to disable a row.
 
-CC rows have a third column where you can specify a specific controller value. Set it to :code:`all` to match against any incoming value. Set it to a specific value between 0 and 127 to only respond when that value is received.
+CC rows for button bindings have a third column where you can specify a specific controller value. This value is used as a threshold. By default, this value is set to 64, meaning that CC events with values 64 to 127 count as a press, and values 0 to 63 count as a release. 
 
 The last column lets you specify a MIDI channel, or you can set it to :code:`all` to respond to MIDI messages from any channel.
 
@@ -459,7 +461,22 @@ Presets for the following controllers are bundled with VMPC2000XL:
 * Akai MPC Studio
 * iRig PADS
 
+The Akai MPD218 DATA wheel binding works best if you configure the relevant knob to emit :code:`INC/DEC 2` type CC messages. You can do that using `the MPD218 editor software <https://www.akaipro.com/downloads-and-support/downloads/?product=MPD218>`_. You may need to configure other controllers in similar ways to achieve the best possible set of bindings. `Send a support request <https://izmar.nl/support/contact>`_ if you're having trouble getting the most out of your controller.
+
 If you have accidentally overwritten a bundled preset, delete its file from :file:`~/Documents/VMPC2000XL/MidiControlPresets` and the next time you start VMPC2000XL the original preset will be restored.
+
+Pad glows
+---------
+VMPC2000XL makes pads glow in a variety of ways to indicate what is happening:
+
+* An orange radial glow to indicate a physical pad press. If you use the computer keyboard or a MIDI controller to trigger a pad 1...16 binding, this is the kind of glow you will see. Likewise, if you use the mouse, touchpad, or touchscreen to interact with one of the 16 pads on the screen, you will see this kind of glow.
+* An orange glowing border to indicate a program pad press within the currently active bank. Program pad presses that are the result of a physical pad press are not visualized in this way. Only already sequenced events are visualized this way. Additionally, if you hook up a MIDI controller and send note events outside the extended MIDI control range, and they yield a program pad press, you will also see this kind of glow.
+* A blue glowing border to indicate a program pad press outside the currently active bank.
+
+.. figure:: images/vmpc_specific/pad_glows.png
+   :align: center
+
+   All varieties of pad glows: physical pad presses (radial orange), program pad presses in currently active bank (orange border), and program pad presses outside currently active bank (blue border).
 
 Auxiliary LCD
 -------------
