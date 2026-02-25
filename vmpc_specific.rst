@@ -235,6 +235,14 @@ Although this works in VMPC2000XL as well, it's quite natural to use the compute
 
 Doing so, allows you to enter names by tapping drum pads via the pad keyboard shortcuts.
 
+Big time shift
+++++++++++++++
+By default, VMPC2000XL follows the original MPC2000XL shift timing limits, where the maximum shift amount depends on the selected timing value (for example 1/16 allows up to 11 ticks, and OFF allows no shift).
+
+If you set :code:`Big time shift` to :code:`YES`, VMPC2000XL allows shift amounts from 0 to 99 ticks, including when timing is set to :code:`OFF`.
+
+.. vmpc-lcd-screenshot:: images/vmpc_specific/big_time_shift.png
+
 .. _configuring_the_keyboard:
 
 Configuring the keyboard in the KEYBRD tab
