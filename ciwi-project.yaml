@@ -1,0 +1,102 @@
+version: 1
+project:
+  name: VMPC2000XL Documentation
+
+pipelines:
+  - id: build
+    trigger: manual
+    vcs_source:
+      repo: https://github.com/izzyreal/vmpc-docs.git
+      ref: master
+    jobs:
+      - id: linux
+        runs_on:
+          executor: script
+          shell: posix
+          os: linux
+          arch: amd64
+          container_image: vmpcsphinx
+        requires:
+          tools:
+            git: "*"
+            docker: "*"
+          container:
+            tools:
+              rinoh: "*"
+              sphinx-build: "*"
+        timeout_seconds: 1800
+        artifacts:
+          - _build/**
+          - _build_pdf/**
+        steps:
+          - run: rm -rf _build _build_pdf
+          - run: mkdir -p /tmp/ciwi-home/.cache /tmp/ciwi-home/.local/share
+          - run: sphinx-build . _build
+          - run: sphinx-build -b rinoh . _build_pdf
+            env:
+              HOME: /tmp/ciwi-home
+              XDG_CACHE_HOME: /tmp/ciwi-home/.cache
+              XDG_DATA_HOME: /tmp/ciwi-home/.local/share
+          - run: test -f _build/index.html
+          - run: test -f _build_pdf/vmpc2000xl.pdf
+
+  - id: publish
+    trigger: manual
+    depends_on:
+      - build
+    jobs:
+      - id: ftp
+        runs_on:
+          executor: script
+          shell: posix
+          os: linux
+          arch: amd64
+        requires:
+          tools:
+            lftp: "*"
+        timeout_seconds: 900
+        steps:
+          - run: test -d _build
+          - run: test -f _build_pdf/vmpc2000xl.pdf
+          - run: |
+              FTP_HOST="server056.mijndomeinhosting.nl"
+              FTP_TARGET_DIR="vmpcdocs.izmar.nl"
+
+              test -n "$FTP_USER"
+              test -n "$FTP_PASS"
+
+              lftp -e "
+              set ftp:ssl-force true;
+              set ftp:ssl-protect-data true;
+              set ftp:passive-mode true;
+              open -u $FTP_USER,$FTP_PASS $FTP_HOST;
+              lcd _build;
+              cd $FTP_TARGET_DIR;
+              mirror --reverse --verbose .;
+              lcd ../_build_pdf;
+              put vmpc2000xl.pdf;
+              bye;
+              "
+            skip_dry_run: true
+            vault:
+              connection: home-vault
+              secrets:
+                - name: ftp-user
+                  mount: kv
+                  path: izmarnl
+                  key: ftp-user
+                  kv_version: 2
+                - name: ftp-password
+                  mount: kv
+                  path: izmarnl
+                  key: ftp-password
+                  kv_version: 2
+            env:
+              FTP_USER: "{{ secret.ftp-user }}"
+              FTP_PASS: "{{ secret.ftp-password }}"
+
+pipeline_chains:
+  - id: build-publish
+    pipelines:
+      - build
+      - publish
