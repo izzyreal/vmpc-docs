@@ -37,17 +37,9 @@ Manual installation (Ubuntu 20, amd64)
 
 As per the `Filesystem Hierarchy Standard <https://www.pathname.com/fhs/pub/fhs-2.3.html#PURPOSE23>`_, the recommended location to store the portable `VMPC2000XL` executable, is in :file:`/usr/local/bin`.
 
-As per the `LV2 docs <https://lv2plug.in/pages/filesystem-hierarchy-standard.html>`_, the recommended location to store :file:`VMPC2000XL.lv2` is one of these:
+The recommended location to store :file:`VMPC2000XL.lv2` is :file:`~/.lv2/`.
 
-* :file:`~/.lv2/`
-* :file:`/usr/local/lib/lv2/`
-* :file:`/user/lib/lv2/`
-
-As per the `VST3 docs <https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Locations+Format/Plugin+Locations.html#on-linux-platform>`_, the recommended location to store :file:`VMPC2000XL.vst3` is one of these:
-
-* :file:`~/.vst3/`
-* :file:`/usr/local/lib/vst3/`
-* :file:`/user/lib/vst3/`
+The recommended location to store :file:`VMPC2000XL.vst3` is :file:`~/.vst3/`.
 
 Building from source
 --------------------
