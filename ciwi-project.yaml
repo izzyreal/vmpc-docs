@@ -46,6 +46,9 @@ pipelines:
       - build
     jobs:
       - id: ftp
+        artifact_sources:
+          - pipeline: build
+            job: linux
         runs_on:
           executor: script
           shell: posix
