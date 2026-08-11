@@ -99,7 +99,7 @@ pipelines:
               FTP_PASS: "{{ secret.ftp-password }}"
 
 pipeline_chains:
-  - id: build-publish
+  - name: Build and publish
     pipelines:
       - build
       - publish
