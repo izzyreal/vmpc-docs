@@ -243,6 +243,46 @@ If you set :code:`Big time shift` to :code:`YES`, VMPC2000XL allows shift amount
 
 .. vmpc-lcd-screenshot:: images/vmpc_specific/big_time_shift.png
 
+.. _physical_interaction_sounds:
+
+Physical interaction sounds
++++++++++++++++++++++++++++
+VMPC2000XL can play recordings of the physical noises made by a real MPC2000XL. These include button presses and releases, pad strikes,
+DATA wheel turns, slider movement and the power-on and power-off sounds. The pad, DATA wheel and slider sounds respond to the speed or
+velocity of the interaction. The power-on sound plays when VMPC2000XL starts producing audio. In the standalone application, the
+power-off sound plays when VMPC2000XL is exited. Plugin instances do not play the power-off sound when they are removed or when the host
+exits, because plugin hosts do not provide audio processing time during teardown.
+
+Physical interaction sounds are disabled by default. Scroll down in the :code:`SETNGS` tab to access their settings:
+
+.. vmpc-lcd-screenshot:: images/vmpc_specific/physical_sounds_settings.png
+
+The settings are:
+
+* :code:`Physical sounds`: enables or disables all physical interaction sounds.
+* :code:`Physical mix mode`: :code:`STEREO OUT` mixes the sounds into :code:`STEREO OUT L/R`; :code:`PHYSICAL BUS` sends them exclusively
+  to the dedicated stereo output named :code:`Physical sounds`.
+* :code:`Physical level`: sets the overall physical interaction sound level from 0 to 100. Its default value is 15.
+
+The physical interaction sound level is independent of the :code:`MAIN VOLUME` knob. In :code:`STEREO OUT` mode, changing
+:code:`MAIN VOLUME` therefore does not change the level of the physical sounds.
+
+In a plugin host, the dedicated output appears as an additional stereo bus named :code:`Physical sounds`. VST3 and LV2 hosts may require
+you to enable and route this output explicitly. Audio Unit versions declare their additional outputs enabled by default, although the
+way they are presented still depends on the host.
+
+In the standalone application, :code:`Physical Sounds` appears as an additional output section in the Audio/MIDI Settings window. It
+uses audio output channels 11 and 12. The section is empty when the selected audio device provides fewer than 12 output channels. Leave
+the mix mode at :code:`STEREO OUT` when a separate output is not needed or available.
+
+Highlight any of the three physical sound settings and press :kbd:`OPEN WINDOW` to configure an additional level for each sound group:
+
+.. vmpc-lcd-screenshot:: images/vmpc_specific/physical_sound_levels.png
+
+The available groups are :code:`Buttons`, :code:`Pads`, :code:`Slider`, :code:`Data wheel` and :code:`Power`. Each group defaults to 100
+and is multiplied by :code:`Physical level`. For example, a physical level of 15 and a button level of 50 produce an effective button
+level of 7.5 percent. These settings are saved and restored between sessions.
+
 .. _configuring_the_keyboard:
 
 Configuring the keyboard in the KEYBRD tab

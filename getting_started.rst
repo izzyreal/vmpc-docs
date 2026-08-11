@@ -41,7 +41,7 @@ Plugin (iPadOS)
 +++++++++++++++
 On iPadOS, VMPC2000XL comes as an AUv3 plugin. It can be used as an instrument, or as an effect plugin. The instrument gives you:
 
-* Audio out: 5x stereo out, 8x mono out
+* Audio out: 6x stereo out (including :code:`Physical sounds`), 8x mono out
 * MIDI in/out
 
 And the effect gives you:
@@ -67,15 +67,26 @@ When you start VMPC2000XL for the first time, it is highly recommended that you 
 
    The Audio/MIDI Settings window
 
+.. TODO: Replace this screenshot with one that includes PHYSICAL SOUNDS.
+
 Audio output/input
 ^^^^^^^^^^^^^^^^^^
 VMPC2000XL can function fine on audio output only, but this is also the absolute minimum you will need to configure correctly. Audio input and MIDI in/out can be configured to your liking.
 
-Note that for audio out to work well, an audio device needs to be selected, as well as which output channels of this device you want to activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. Up to 10 mono outputs can be used simultaneously, congruent with an MPC2000XL that has the M208P output expansion board.
+Note that for audio out to work well, an audio device needs to be selected, as well as which output channels of this device you want to
+activate. If your device supports more than 2 mono outputs, VMPC2000XL can make use of them. The first 10 mono outputs correspond to an
+MPC2000XL with the M208P output expansion board. When the device provides at least 12 outputs, the final pair appears in a separate
+:code:`PHYSICAL SOUNDS` section and can carry VMPC2000XL's dedicated stereo
+:ref:`physical interaction sounds <physical_interaction_sounds>` output.
 
 Up to 2 mono inputs can be activated at a time. A single mono input, such as the internal microphone of a MacBook, also works. Note, however, that such a mono input is treated by VMPC2000XL as a stereo input where both channels are the same.
 
-Note that VMPC2000XL currently does not support advanced channel routing. The first 2 output channels of the selected device are used for the virtual MPC2000XL's STEREO OUT left and right channels. Any remaining output channels are used for the mono ASSIGNABLE MIX OUT channels, of which there may be a maximum of 8. The first 2 input channels of the selected device are used for the RECORD IN left and right channels. If you need advanced routing, please look into products from companies like VB-Audio and Rogue Amoeba. On Linux you could look into JACK. Alternatively use VMPC2000XL as a plugin, so you can rely on your DAW's audio routing capabilities.
+Note that VMPC2000XL currently does not support advanced channel routing. Output channels 1 and 2 of the selected device are used for the
+virtual MPC2000XL's STEREO OUT left and right channels. Channels 3 through 10 are used for the eight mono ASSIGNABLE MIX OUT channels.
+When physical interaction sounds use their dedicated bus, channels 11 and 12 carry that stereo output. The first 2 input channels of the
+selected device are used for RECORD IN left and right. If you need advanced routing, please look into products from companies like
+VB-Audio and Rogue Amoeba. On Linux you could look into JACK. Alternatively use VMPC2000XL as a plugin, so you can rely on your DAW's
+audio routing capabilities.
 
 .. note::
 
