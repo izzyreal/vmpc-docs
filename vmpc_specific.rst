@@ -528,7 +528,22 @@ VMPC2000XL makes pads glow in a variety of ways to indicate what is happening:
 
 Auxiliary LCD
 -------------
-In some cases it can be useful to have a bigger view of the LCD, maybe even on a dedicated display. This can be done with ease using the auxiliary LCD, which is an additional window that displays just the LCD. To open it, double-click on the normal LCD. A window that mirrors the contents of the LCD will show up. You can drag the window around, resize it and maximize it. To close it, double-click it. Alternatively it can be closed by double-clicking the normal LCD.
+In some cases it can be useful to have a bigger view of the LCD, maybe even on a dedicated display. The auxiliary LCD provides an
+additional window that displays just the LCD.
+
+To open it, click or tap the "Open auxiliary LCD" button in the bottom-right menu:
+
+.. figure:: images/vmpc_specific/auxlcd.svg
+   :width: 70 px
+   :align: center
+
+   The "Open/close auxiliary LCD" button
+
+A window that mirrors the contents of the LCD will show up. You can drag the window around, resize it and maximize it. While the auxiliary
+LCD is open, the menu button is highlighted and its tooltip changes to "Close auxiliary LCD". Click or tap it again to close the window.
+
+The auxiliary LCD is controlled exclusively from this menu button, leaving clicks, drags and mouse-wheel gestures on both LCDs available
+for interacting with the fields and function keys shown on the display.
 
 Custom Skin
 -----------
