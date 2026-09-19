@@ -114,13 +114,16 @@ All buttons can be pressed by clicking them with the mouse, or, if you have a to
 
 DATA wheel
 ++++++++++
-The DATA wheel can be turned by dragging or scrolling.
+The DATA wheel can be turned by dragging or scrolling. By default, drag up to increase the value or down to decrease it.
+To use circular dragging instead, change :ref:`Rotary control drag <rotary_control_drag>` in the :kbd:`Shift + 0` settings.
 
 On iPadOS you can drag the DATA wheel with one finger for precise, single-step changes, or with two fingers for large increments.
 
 Slider/Rec gain/Main volume
 +++++++++++++++++++++++++++
-These controls can be operated by dragging or scrolling.
+These controls can be operated by dragging or scrolling. The REC GAIN and MAIN VOLUME knobs share the DATA wheel's
+:ref:`Rotary control drag <rotary_control_drag>` setting, which offers vertical, circular or starting-position-based dragging.
+The slider always uses vertical dragging.
 
 Note that, like on the original MPC2000XL, you can use the slider to change many of the values in the :code:`TRIM`, :code:`LOOP` and :code:`ZONE` screens, by holding :code:`SHIFT` while moving the slider.
 

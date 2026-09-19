@@ -283,6 +283,26 @@ The available groups are :code:`Buttons`, :code:`Pads`, :code:`Slider`, :code:`D
 and is multiplied by :code:`Physical level`. For example, a physical level of 15 and a button level of 50 produce an effective button
 level of 7.5 percent. These settings are saved and restored between sessions.
 
+.. _rotary_control_drag:
+
+Rotary control drag
++++++++++++++++++++
+Press :kbd:`Shift + 0` and scroll down in the :code:`SETNGS` tab to :code:`Rotary control drag`. This setting applies to the DATA wheel,
+:code:`MAIN VOLUME` and :code:`REC GAIN` knobs when using a mouse or touchscreen.
+
+.. vmpc-lcd-screenshot:: images/vmpc_specific/rotary_control_drag.png
+
+Choose one of three modes:
+
+* :code:`VERTICAL` (the default): drag up to increase the value, or down to decrease it.
+* :code:`CIRCULAR`: drag clockwise around the control's center to increase the value, or counterclockwise to decrease it.
+  Pressing the control does not jump its value to the pointer's position.
+* :code:`BY POSITION`: starting in the outer half of the control's radius selects circular dragging; starting nearer the center
+  selects vertical dragging. The choice stays fixed until you release, even if you move into the other area.
+
+The setting is saved and restored between sessions. Existing configurations default to :code:`VERTICAL`. Scroll-wheel input,
+keyboard shortcuts and MIDI control are unaffected, and the slider continues to use vertical dragging.
+
 .. _configuring_the_keyboard:
 
 Configuring the keyboard in the KEYBRD tab
